@@ -1,57 +1,97 @@
+/* Reset basic margins and set a dark background for the page body */
 body {
-    background-color: #2A2A2A;
-    font-family: Helvetica, sans-serif;
-    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.talent-tree-container {
+    width: 600px;
+    height: 800px;
+    background-image: url('./Background.png');
+    background-size: cover;
+    background-position: center;
+
+    /* Set up the 4 Column, 7 Row Grid */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    gap: 15px; /* Spacing between icons */
+    padding: 40px;
+    
+    /* Border and shadow to the whole panel */
+    border: 2px solid #333;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.8);
+
+    /* Anchors the absolute SVG to this container */
+    position: relative;
+}
+
+/* The base styling for talent icons */
+.talent-node {
+    width: 80px; 
+    height: 80px;
+    background-image: url('./wow_icon_bg.png');
+    background-size: cover;
+    background-position: center;
+    
+    /* Center the text inside the box */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    margin: 0px;
+    
+    /* Text styling */
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+    
+    /* Center the icon itself within its grid cell */
+    justify-self: center;
+    align-self: center;
+    cursor: pointer;
+
+    /* Ensures icons sit on top of the lines */
+    z-index: 2;
 }
 
-header{
-    border-bottom: 0.75vh solid #ad8c2e;
-    margin-bottom: 5vh;
+.talent-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Sits below icons, above background */
+    pointer-events: none; /* lets your mouse click'through the invisible SVG box to hit the icons */
 }
 
-.grid-wrapper{
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-rows: 75vh;
-}
+/* 
+   Mapping each node to its Grid Row / Grid Column 
+   Format: grid-area: [Row Start] / [Column Start];
+*/
+.design-concepts { grid-area: 1 / 2; }
+.sketching       { grid-area: 1 / 3; }
 
-.grid-wrapper > div{
-    background-color: white;
-  }
+.audio           { grid-area: 2 / 1; }
+.writing         { grid-area: 2 / 2; }
+.figure-drawing  { grid-area: 2 / 4; }
 
-.grid-wrapper > div:nth-child(2){
-      margin-left: 0;
-      margin-right: 0;
-}
+.art-3d          { grid-area: 3 / 2; }
+.art-2d          { grid-area: 3 / 3; }
 
-#programming{
-    background-color: rgb(24, 94, 185);
-    margin-left: 3.0vw;
-    margin-right: 1.0vw;
-}
+.texture-uv      { grid-area: 4 / 2; }
+.raster          { grid-area: 4 / 3; }
+.vector          { grid-area: 4 / 4; }
 
+.rigging         { grid-area: 5 / 1; }
+.anim-3d         { grid-area: 5 / 2; }
+.anim-2d         { grid-area: 5 / 3; }
 
-#games{
-    background-color: green;
-    margin-left: 2.0vw;
-    margin-right: 2.0vw;
-}
-
-#art{
-    background-color: rgb(161, 29, 29);
-    margin-left: 1.0vw;
-    margin-right: 3.0vw;
-}
-
-.inner-grid{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 30vh;
-}
-
-.item{
-    background-color:black;
-    margin: 1vh;
-}
+.ui-ux           { grid-area: 6 / 2; }
+.web-design      { grid-area: 7 / 2; }

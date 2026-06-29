@@ -5,47 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' type = 'text/css' href='mainstyle.css'>
-    <title>Ben Samara</title>
+    <title>Ben Samara Skill Tree</title>
 </head>
 <body>
-    <header>
-        <h1>
-            Ben Samara
-        </h1>
+    <header>]
     </header>
 
-    <div class = 'grid-wrapper'>
 
-        <div class='large-card' id='programming'>
-            <h4>Programming</h4>
-            <div class = 'inner-grid'>
-                <div class="item">test</div>
-                <div class="item">test</div>
-                <div class="item">test</div>
-                <div class="item">test</div>
-            </div>
-        </div>
+    <div class="talent-tree-container">
+        
+        <svg class="talent-lines" xmlns="http://www.w3.org/2000/svg">
 
-        <div class="large-card" id='games'>
-            <h4>Games</h4>
-            <div class = 'inner-grid'>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-            </div>
-        </div>
+            <defs>
+                <!-- refX and refY define the exact center point of the arrow that attaches to the line -->
+                <!-- orient="auto" makes the arrow automatically rotate to match the angle of your line -->
+                <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+                    <polygon points="0 0, 10 5, 0 10" fill="#FFD700" />
+                </marker>
+            </defs>
+            
+            <!-- x1,y1 is the start point. x2,y2 is the end point. -->
+            <line x1="61.5%" y1="14%" x2="61.5%" y2="22%" stroke="#FFD700" stroke-width="12" marker-end="url(#arrow)" />
 
-        <div class='large-card' id='art'>
-            <h4>Art</h4>
-            <div class = 'inner-grid'>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-            </div>
-        </div>
+            <!-- right-angle line -->
+            <!-- 'M' moves to start point. 'L' draws a line to the next point. -->
+            <path d="M 450 100 L 570 100 L 570 170" fill="none" stroke="#FFD700" stroke-width="12" />
+            <!-- <path d="M 70% 14% L 49% 14% L 49% 24%" fill="none" stroke="#FFD700" stroke-width="12" /> -->
 
+            <line x1="39%" y1="14%" x2="39%" y2="20%" stroke="#FFD700" stroke-width="12" />
+
+        </svg>
+        
+        <!-- Row 1 -->
+        <div class="talent-node design-concepts">Design<br>Concepts</div>
+        <div class="talent-node sketching">Sketching</div>
+
+        <!-- Row 2 -->
+        <div class="talent-node audio">Audio</div>
+        <div class="talent-node writing">Writing</div>
+        <div class="talent-node figure-drawing">Figure<br>Drawing</div>
+
+        <!-- Row 3 -->
+        <div class="talent-node art-3d">3D</div>
+        <div class="talent-node art-2d">2D</div>
+
+        <!-- Row 4 -->
+        <div class="talent-node texture-uv">Texture<br>UV</div>
+        <div class="talent-node raster">Raster</div>
+        <div class="talent-node vector">Vector</div>
+
+        <!-- Row 5 -->
+        <div class="talent-node rigging">Rigging</div>
+        <div class="talent-node anim-3d">3D Anim.</div>
+        <div class="talent-node anim-2d">2D Anim.</div>
+
+        <!-- Row 6 -->
+        <div class="talent-node ui-ux">UI/UX<br>Design</div>
+
+        <!-- Row 7 -->
+        <div class="talent-node web-design">Web<br>Design</div>
 
     </div>
 
