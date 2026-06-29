@@ -17,22 +17,36 @@
         <svg class="talent-lines" xmlns="http://www.w3.org/2000/svg">
 
             <defs>
-                <!-- refX and refY define the exact center point of the arrow that attaches to the line -->
-                <!-- orient="auto" makes the arrow automatically rotate to match the angle of your line -->
-                <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse">
-                    <polygon points="0 0, 10 5, 0 10" fill="#FFD700" />
+                <!-- markerWidth/Height="24" scales with a 12px thick line -->
+                <!-- refX="0" anchors the flat base of the arrow to the end of the line -->
+                <marker class="arrow" id="arrow" 
+                        markerWidth="24" 
+                        markerHeight="24" 
+                        viewBox="0 0 10 10" 
+                        refX="0" 
+                        refY="5" 
+                        orient="auto" 
+                        markerUnits="userSpaceOnUse">
+                    <polygon points="0 0, 6 5, 0 10" fill="#FFD700" />
                 </marker>
             </defs>
             
+            <!-- test line to see arrow head -->
+            <line x1="10%" y1="5%" x2="10%" y2="5%" 
+            stroke="#FFD700" stroke-width="12" marker-end="url(#arrow)"/>
+
             <!-- x1,y1 is the start point. x2,y2 is the end point. -->
-            <line x1="61.5%" y1="14%" x2="61.5%" y2="22%" stroke="#FFD700" stroke-width="12" marker-end="url(#arrow)" />
+            <line x1="61.5%" y1="14%" x2="61.5%" y2="31%" 
+            stroke="#FFD700" stroke-width="12" marker-end="url(#arrow)" />
 
             <!-- right-angle line -->
             <!-- 'M' moves to start point. 'L' draws a line to the next point. -->
-            <path d="M 450 100 L 570 100 L 570 170" fill="none" stroke="#FFD700" stroke-width="12" />
+            <path d="M 456 100 L 570 100 L 570 160" 
+            fill="none" stroke="#FFD700" stroke-width="12" marker-end="url(#arrow)" />
             <!-- <path d="M 70% 14% L 49% 14% L 49% 24%" fill="none" stroke="#FFD700" stroke-width="12" /> -->
 
-            <line x1="39%" y1="14%" x2="39%" y2="20%" stroke="#FFD700" stroke-width="12" />
+            <line x1="39%" y1="14%" x2="39%" y2="18%" 
+            stroke="#FFD700" stroke-width="12" marker-end="url(#arrow)" />
 
         </svg>
         

@@ -61,6 +61,7 @@ body {
     z-index: 2;
 }
 
+
 .talent-lines {
     position: absolute;
     top: 0;
@@ -70,6 +71,20 @@ body {
     z-index: 1; /* Sits below icons, above background */
     pointer-events: none; /* lets your mouse click'through the invisible SVG box to hit the icons */
 }
+
+#arrow {
+    z-index: 3;
+}
+
+.arrow {
+    z-index: 3;
+}
+
+marker {
+    z-index: 3;
+}
+
+
 
 /* 
    Mapping each node to its Grid Row / Grid Column 
