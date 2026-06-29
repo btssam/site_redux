@@ -1,0 +1,57 @@
+body {
+    background-color: #2A2A2A;
+    font-family: Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-align: center;
+    margin: 0px;
+}
+
+header{
+    border-bottom: 0.75vh solid #ad8c2e;
+    margin-bottom: 5vh;
+}
+
+.grid-wrapper{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 75vh;
+}
+
+.grid-wrapper > div{
+    background-color: white;
+  }
+
+.grid-wrapper > div:nth-child(2){
+      margin-left: 0;
+      margin-right: 0;
+}
+
+#programming{
+    background-color: rgb(24, 94, 185);
+    margin-left: 3.0vw;
+    margin-right: 1.0vw;
+}
+
+
+#games{
+    background-color: green;
+    margin-left: 2.0vw;
+    margin-right: 2.0vw;
+}
+
+#art{
+    background-color: rgb(161, 29, 29);
+    margin-left: 1.0vw;
+    margin-right: 3.0vw;
+}
+
+.inner-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 30vh;
+}
+
+.item{
+    background-color:black;
+    margin: 1vh;
+}
