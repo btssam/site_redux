@@ -92,10 +92,10 @@ body {
 .writing         { grid-area: 2 / 2; }
 .figure-drawing  { grid-area: 2 / 4; }
 
-.art-3d          { grid-area: 3 / 2; }
+.art-3d          { grid-area: 3 / 1; }
 .art-2d          { grid-area: 3 / 3; }
 
-.texture-uv      { grid-area: 4 / 2; }
+.texture-uv      { grid-area: 4 / 1; }
 .raster          { grid-area: 4 / 3; }
 .vector          { grid-area: 4 / 4; }
 

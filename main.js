@@ -2,17 +2,26 @@
 
 // define connection using html class names of the lines
 const talentConnections = [
-    {from: 'design-concepts', to: 'writing', type: 'straight'},
+    {from: 'sketching', to: 'art-2d', type: 'straight'},
     {from: 'sketching', to: 'figure-drawing', type: 'elbow'},
-    {from: 'art-3d', to: 'texture-uv', type: 'straight'}
-    //tbc
+
+    {from: 'art-3d', to: 'texture-uv', type: 'straight'},
+    {from: 'art-3d', to: 'anim-3d', type: 'elbow'},
+    {from: 'art-2d', to: 'raster', type: 'straight'},
+    {from: 'art-2d', to: 'vector', type: 'elbow'},
+
+    {from: 'raster', to: 'anim-2d', type: 'straight'},
+
+    {from: 'rigging', to: 'anim-3d', type: 'straight'},
+
+    {from: 'ui-ux', to: 'web-design', type: 'straight'}
 ];
 
 const svgCanvas = document.getElementById('svg-canvas');
 const container = document.querySelector('.talent-tree-container');
 
 //half the width/height of the icon (40)
-//add +-2 so arrowhead overlaps and start is right at the edge
+//+-2 so arrowhead overlaps and start is right at the edge
 const START_RADIUS = 38;
 const END_RADIUS = 42;
 
