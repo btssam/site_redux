@@ -6,15 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' type = 'text/css' href='mainstyle.css'>
     <title>Ben Samara Skill Tree</title>
+    <script src="main.js" defer></script>
 </head>
 <body>
-    <header>]
+
+    <header>
     </header>
 
 
     <div class="talent-tree-container">
         
-        <svg class="talent-lines" xmlns="http://www.w3.org/2000/svg">
+        <svg class="talent-lines" id = "svg-canvas" xmlns="http://www.w3.org/2000/svg">
 
             <defs>
                 <!-- markerWidth/Height="24" scales with a 12px thick line -->
@@ -30,23 +32,23 @@
                     <polygon points="0 0, 6 5, 0 10" fill="#FFD700" />
                 </marker>
             </defs>
-            
+
             <!-- test line to see arrow head -->
-            <line x1="10%" y1="5%" x2="10%" y2="5%" 
-            stroke="#FFD700" stroke-width="12" marker-end="url(#arrow)"/>
+            <!-- <line x1="10%" y1="5%" x2="10%" y2="5%" 
+            stroke="#FFD700" stroke-width="12" marker-end="url(#arrow)"/> -->
 
             <!-- x1,y1 is the start point. x2,y2 is the end point. -->
-            <line x1="61.5%" y1="14%" x2="61.5%" y2="31%" 
-            stroke="#FFD700" stroke-width="12" marker-end="url(#arrow)" />
+            <!-- <line x1="61.5%" y1="14%" x2="61.5%" y2="31%" 
+            stroke="#FFD700" stroke-width="12" marker-end="url(#arrow)" /> -->
 
             <!-- right-angle line -->
             <!-- 'M' moves to start point. 'L' draws a line to the next point. -->
-            <path d="M 456 100 L 570 100 L 570 160" 
-            fill="none" stroke="#FFD700" stroke-width="12" marker-end="url(#arrow)" />
+            <!-- <path d="M 456 100 L 570 100 L 570 160" 
+            fill="none" stroke="#FFD700" stroke-width="12" marker-end="url(#arrow)" /> -->
             <!-- <path d="M 70% 14% L 49% 14% L 49% 24%" fill="none" stroke="#FFD700" stroke-width="12" /> -->
 
-            <line x1="39%" y1="14%" x2="39%" y2="18%" 
-            stroke="#FFD700" stroke-width="12" marker-end="url(#arrow)" />
+            <!-- <line x1="39%" y1="14%" x2="39%" y2="18%" 
+            stroke="#FFD700" stroke-width="12" marker-end="url(#arrow)" /> -->
 
         </svg>
         
@@ -86,5 +88,7 @@
 
         </nav>
     </footer>
+
+
 </body>
 </html>

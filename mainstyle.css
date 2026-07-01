@@ -58,7 +58,7 @@ body {
     cursor: pointer;
 
     /* Ensures icons sit on top of the lines */
-    z-index: 2;
+    z-index: 1;
 }
 
 
@@ -68,20 +68,15 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1; /* Sits below icons, above background */
+    z-index: 2; /* Sits below icons, above background */
     pointer-events: none; /* lets your mouse click'through the invisible SVG box to hit the icons */
 }
 
-#arrow {
-    z-index: 3;
-}
-
-.arrow {
-    z-index: 3;
-}
-
-marker {
-    z-index: 3;
+.dynamic-connection {
+    stroke: #FFD700;
+    stroke-width: 12px;
+    marker-end: url(#arrow);
+    fill: none; /* Good to have here so paths don't accidentally fill with black */
 }
 
 
