@@ -1,5 +1,3 @@
-// console.log("Hello World");
-
 // define connection using html class names of the lines
 const talentConnections = [
     {from: 'sketching', to: 'art-2d', type: 'straight'},
@@ -24,6 +22,49 @@ const container = document.querySelector('.talent-tree-container');
 //+-2 so arrowhead overlaps and start is right at the edge
 const START_RADIUS = 38;
 const END_RADIUS = 42;
+
+//for tooltips
+const tooltip = document.getElementById('global-tooltip');
+const titleEl = tooltip.querySelector('.tooltip-title');
+const typeEl = tooltip.querySelector('.tooltip-type');
+const reqEl = tooltip.querySelector('.tooltip-req');
+const descEl = tooltip.querySelector('.tooltip-desc');
+const greenEl = tooltip.querySelector('.tooltip-green');
+
+const talentNodes = document.querySelectorAll('.talent-node');
+
+//tooltip
+talentNodes.forEach(node => {
+
+    //when mouse enters, populate data and fade in
+    node.addEventListener('mouseenter', () => {
+        titleEl.textContent = node.getAttribute('data-title');
+        typeEl.textContent = node.getAttribute('data-type');
+        descEl.textContent = node.getAttribute('data-desc');
+        greenEl.textContent = node.getAttribute('data-green');
+        reqEl.textContent = node.getAttribute('data-req');
+
+        ////can do differently if I need to maintain height even if no requirements. not sure what I prefer
+        // const reqText = node.getAttribute('data-req');
+        ////if true, use text. if not, use space character \u00A0
+        // reqEl.textContent = reqText ? reqText : '\u00A0';
+
+
+        tooltip.classList.add('visible');
+    });
+
+    //make tooltip follow cursor
+    node.addEventListener('mousemove', (e) => {
+        tooltip.style.left = (e.pageX+ 15) + 'px';
+        tooltip.style.top = (e.pageY+15) + 'px';
+    });
+
+    //when mouse leaves the icon, fade out
+    node.addEventListener('mouseleave', () => {
+        tooltip.classList.remove('visible');
+    });
+
+});
 
 function drawDynamicLines(){
     //Clear any lines currently on the screen

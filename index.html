@@ -55,14 +55,21 @@
         <!-- Row 1 -->
         <div class="talent-node design-concepts"
             data-title="Design Concepts"
-            data-type="Core Skill"
-            data-req="Requires Brainstorming"
-            data-desc="">
+            data-type="Arts Skill"
+            data-req=""
+            data-desc="My understanding of Design Concepts, such as Gestalt, was established in my Associate's program."
+            data-green="Click to Learn More">
             Design<br>Concepts
             <span class ="skill-points full">5/5</span>
         </div>
 
-        <div class="talent-node sketching">
+        <div class="talent-node sketching"
+             data-title="Sketching"
+             data-type="Arts Skill"
+             data-req=""
+             data-desc="I have doodled periodically throughout my life. In my Associate's program, I took two classes
+             that involved sketching with pencil, colored pencils, and graphite."
+             data-green="Click to Learn More">
             Sketching
             <span class ="skill-points full">5/5</span>
         </div>
@@ -78,7 +85,14 @@
             <span class ="skill-points partial">1/3</span>
         </div>
 
-        <div class="talent-node figure-drawing">
+        <div class="talent-node figure-drawing"
+             data-title="Figure Drawing"
+             data-type="Arts Skill"
+             data-req="Requires Sketching"
+             data-desc="In my Associate's program, I took a course called Drawing the Human Form. In it, we drew on
+             easels using live models. I continued to explore gesture drawing for some time after my program, using
+             pencils."
+             data-green="Click to Learn More">
             Figure<br>Drawing
             <span class ="skill-points partial">1/3</span>
         </div>
@@ -145,6 +159,14 @@
 
         </nav>
     </footer>
+
+    <div id="global-tooltip" class="wow-tooltip">
+        <div class="tooltip-title"></div>
+        <div class="tooltip-type"></div>
+        <div class="tooltip-req"></div>
+        <div class="tooltip-desc"></div>
+        <div class="tooltip-green"></div>
+    </div>
 
 
 </body>
