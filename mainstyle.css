@@ -179,23 +179,23 @@ body {
    Mapping each node to its Grid Row / Grid Column 
    Format: grid-area: [Row Start] / [Column Start];
 */
-.design-concepts { grid-area: 1 / 2; }
-.sketching       { grid-area: 1 / 3; }
+/*.design-concepts { grid-area: 1 / 2; }*/
+/*.sketching       { grid-area: 1 / 3; }*/
 
-.audio           { grid-area: 2 / 1; }
-.writing         { grid-area: 2 / 2; }
-.figure-drawing  { grid-area: 2 / 4; }
+/*.audio           { grid-area: 2 / 1; }*/
+/*.writing         { grid-area: 2 / 2; }*/
+/*.figure-drawing  { grid-area: 2 / 4; }*/
 
-.art-3d          { grid-area: 3 / 1; }
-.art-2d          { grid-area: 3 / 3; }
+/*.art-3d          { grid-area: 3 / 1; }*/
+/*.art-2d          { grid-area: 3 / 3; }*/
 
-.texture-uv      { grid-area: 4 / 1; }
-.raster          { grid-area: 4 / 3; }
-.vector          { grid-area: 4 / 4; }
+/*.texture-uv      { grid-area: 4 / 1; }*/
+/*.raster          { grid-area: 4 / 3; }*/
+/*.vector          { grid-area: 4 / 4; }*/
 
-.rigging         { grid-area: 5 / 1; }
-.anim-3d         { grid-area: 5 / 2; }
-.anim-2d         { grid-area: 5 / 3; }
+/*.rigging         { grid-area: 5 / 1; }*/
+/*.anim-3d         { grid-area: 5 / 2; }*/
+/*.anim-2d         { grid-area: 5 / 3; }*/
 
-.ui-ux           { grid-area: 6 / 2; }
-.web-design      { grid-area: 7 / 2; }
+/*.ui-ux           { grid-area: 6 / 2; }*/
+/*.web-design      { grid-area: 7 / 2; }*/

@@ -1,29 +1,87 @@
-// define connection using html class names of the lines
-const talentConnections = [
-    {from: 'sketching', to: 'art-2d', type: 'straight'},
-    {from: 'sketching', to: 'figure-drawing', type: 'elbow'},
-
-    {from: 'art-3d', to: 'texture-uv', type: 'straight'},
-    {from: 'art-3d', to: 'anim-3d', type: 'elbow'},
-    {from: 'art-2d', to: 'raster', type: 'straight'},
-    {from: 'art-2d', to: 'vector', type: 'elbow'},
-
-    {from: 'raster', to: 'anim-2d', type: 'straight'},
-
-    {from: 'rigging', to: 'anim-3d', type: 'straight'},
-
-    {from: 'ui-ux', to: 'web-design', type: 'straight'}
-];
+const treeDatabase = {
+    arts: {
+        nodes: [
+            {
+                id: "design-concepts",
+                label: "Design<br>Concepts",
+                title: "Design Concepts",
+                type: "Arts Skill",
+                req: "",
+                desc: "My understanding of Design Concepts...",
+                green: "Click To Learn More",
+                points: "5/5",
+                pointClass: "full",
+                gridPos: "1 / 2"
+            },
+            {
+                id: "sketching",
+                label: "Sketching",
+                title: "Sketching",
+                type: "Arts Skill",
+                req: "",
+                desc: "I have doodled periodically throughout my life. In my Associate's program...",
+                green: "Click To Learn More",
+                points: "5/5",
+                pointClass: "full",
+                gridPos: "1 / 3"
+            },
+            {
+                id: "audio",
+                label: "Audio",
+                title: "Audio",
+                type: "Arts Skill",
+                req: "Requires Something",
+                desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply...",
+                green: "Click To Learn More",
+                points: "5/5",
+                pointClass: "full",
+                gridPos: "2 / 1"
+            },
+            {
+                id: "writing",
+                label: "Writing",
+                title: "Writing",
+                type: "Arts Skill",
+                req: "Requires Something",
+                desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply...",
+                green: "Click To Learn More",
+                points: "5/5",
+                pointClass: "full",
+                gridPos: "2 / 2"
+            },
+            {
+                id: "figure-drawing",
+                label: "Figure Drawing",
+                title: "Figure Drawing",
+                type: "Arts Skill",
+                req: "Requires Something",
+                desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply...",
+                green: "Click To Learn More",
+                points: "5/5",
+                pointClass: "full",
+                gridPos: "2 / 4"
+            },
+            {
+                id: "art-2d",
+                label: "2D Art",
+                title: "2D Art",
+                type: "Arts Skill",
+                req: "Requires Something",
+                desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply...",
+                green: "Click To Learn More",
+                points: "5/5",
+                pointClass: "full",
+                gridPos: "3 / 3"
+            },
+        ],
+        connections: [
+            {from: 'sketching', to: 'art-2d', type: 'straight'},
+            {from: 'sketching', to: 'figure-drawing', type: 'elbow'},
+        ]
+    }
+};
 
 const svgCanvas = document.getElementById('svg-canvas');
-const container = document.querySelector('.talent-tree-container');
-
-//half the width/height of the icon (40)
-//+-2 so arrowhead overlaps and start is right at the edge
-const START_RADIUS = 38;
-const END_RADIUS = 42;
-
-//for tooltips
 const tooltip = document.getElementById('global-tooltip');
 const titleEl = tooltip.querySelector('.tooltip-title');
 const typeEl = tooltip.querySelector('.tooltip-type');
@@ -31,52 +89,69 @@ const reqEl = tooltip.querySelector('.tooltip-req');
 const descEl = tooltip.querySelector('.tooltip-desc');
 const greenEl = tooltip.querySelector('.tooltip-green');
 
-const talentNodes = document.querySelectorAll('.talent-node');
+const START_RADIUS = 38;
+const END_RADIUS = 42;
 
-//tooltip
-talentNodes.forEach(node => {
+//html generator (based on database)
+function buildTreeHTML(treeKey, containerId) {
+    const targetContainer = document.getElementById(containerId);
+    const treeData = treeDatabase[treeKey];
 
-    //when mouse enters, populate data and fade in
-    node.addEventListener('mouseenter', () => {
-        titleEl.textContent = node.getAttribute('data-title');
-        typeEl.textContent = node.getAttribute('data-type');
-        descEl.textContent = node.getAttribute('data-desc');
-        greenEl.textContent = node.getAttribute('data-green');
-        reqEl.textContent = node.getAttribute('data-req');
+    if (!targetContainer || !treeData) return;
 
-        ////can do differently if I need to maintain height even if no requirements. not sure what I prefer
-        // const reqText = node.getAttribute('data-req');
-        ////if true, use text. if not, use space character \u00A0
-        // reqEl.textContent = reqText ? reqText : '\u00A0';
+    treeData.nodes.forEach(nodeData => {
+        const nodeDiv = document.createElement('div');
+        nodeDiv.className = `talent-node ${nodeData.id}`;
+        nodeDiv.style.gridArea = nodeData.gridPos;
 
+        nodeDiv.innerHTML = `
+            ${nodeData.label}
+            <span class="skill-points ${nodeData.pointClass}">${nodeData.points}</span>
+        `;
 
-        tooltip.classList.add('visible');
+        // Attach Tooltip Listeners right as the node is created!
+        nodeDiv.addEventListener('mouseenter', () => {
+            titleEl.textContent = nodeData.title;
+            typeEl.textContent = nodeData.type;
+            descEl.textContent = nodeData.desc;
+            reqEl.textContent = nodeData.req;
+            // reqEl.textContent = nodeData.req ? nodeData.req : '\u00A0';
+            greenEl.textContent = nodeData.green;
+            tooltip.classList.add('visible');
+        });
+
+        //make tooltip follow cursor
+        nodeDiv.addEventListener('mousemove', (e) => {
+            tooltip.style.left = (e.pageX + 15) + 'px';
+            tooltip.style.top = (e.pageY + 15) + 'px';
+        });
+
+        //when mouse leaves the icon, fade out
+        nodeDiv.addEventListener('mouseleave', () => {
+            tooltip.classList.remove('visible');
+        });
+
+        targetContainer.appendChild(nodeDiv);
     });
+}
 
-    //make tooltip follow cursor
-    node.addEventListener('mousemove', (e) => {
-        tooltip.style.left = (e.pageX+ 15) + 'px';
-        tooltip.style.top = (e.pageY+15) + 'px';
-    });
-
-    //when mouse leaves the icon, fade out
-    node.addEventListener('mouseleave', () => {
-        tooltip.classList.remove('visible');
-    });
-
-});
-
-function drawDynamicLines(){
-    //Clear any lines currently on the screen
+//pass the treeKey and the specific container to this function
+function drawDynamicLines(treeKey, containerId) {
+    //clear old lines
     svgCanvas.querySelectorAll('.dynamic-connection').forEach(el => el.remove());
+
+    const treeData = treeDatabase[treeKey];
+    const container = document.getElementById(containerId);
+
+    if (!treeData || !treeData.connections || !container) return;
 
     //get absolute position of main container
     const containerRect = container.getBoundingClientRect();
 
     //loop through every connection
-    talentConnections.forEach(link => {
+    treeData.connections.forEach(link => {
         const startNode = document.querySelector('.' + link.from);
-        const endNode = document.querySelector('.' + link. to);
+        const endNode = document.querySelector('.' + link.to);
 
         //skip if node is missing
         if (!startNode || !endNode) return;
@@ -87,11 +162,9 @@ function drawDynamicLines(){
         //calculate the centers of both boxes, relative to the container
         const startX = (startRect.left - containerRect.left) + (startRect.width / 2);
         const startY = (startRect.top - containerRect.top) + (startRect.height / 2);
-
         const endX = (endRect.left - containerRect.left) + (endRect.width / 2);
         const endY = (endRect.top - containerRect.top) + (endRect.height / 2);
 
-        //draw based on the type of line
         if (link.type === 'straight'){
             //calculate angle to stop line at edge of target box
             const angle = Math.atan2(endY- startY, endX - startX);
@@ -137,17 +210,22 @@ function drawDynamicLines(){
 
             applyStandardStyles(path);
             svgCanvas.appendChild(path);
-        }
+            }
     });
-
 }
 
 //helper function to apply styling to lines and path
 function applyStandardStyles(svgElement){
     svgElement.classList.add('dynamic-connection');
+    svgElement.setAttribute('stroke', '#FFD700');
+    svgElement.setAttribute('stroke-width', '12');
 }
 
-drawDynamicLines();
+buildTreeHTML('arts', 'tree-arts');
 
-//redraw on zoom
-window.addEventListener('resize', drawDynamicLines);
+//tiny setTimeout here.
+//CSS Grid takes a millisecond to physically place the new HTML on the screen.
+//If we draw lines instantly, they might draw to coordinates 0,0 before the grid updates.
+setTimeout(() => {
+    drawDynamicLines('arts', 'tree-arts');
+}, 50);
