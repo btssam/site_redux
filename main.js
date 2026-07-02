@@ -28,7 +28,7 @@ function buildTreeHTML(treeKey, containerId) {
             <span class="skill-points ${nodeData.pointClass}">${nodeData.points}</span>
         `;
 
-        // Attach Tooltip Listeners right as the node is created!
+        //attach tooltip listeners right as the node is created
         nodeDiv.addEventListener('mouseenter', () => {
             titleEl.textContent = nodeData.title;
             typeEl.textContent = nodeData.type;
@@ -123,10 +123,10 @@ function drawDynamicLines(treeKey, containerId) {
 
             //createElementsNS is required for generating SVG via JS
             const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-            line.setAttribute('x1', startX_edge);
-            line.setAttribute('y1', startY_edge);
-            line.setAttribute('x2', finalX);
-            line.setAttribute('y2', finalY);
+            line.setAttribute('x1', String(startX_edge));
+            line.setAttribute('y1', String(startY_edge));
+            line.setAttribute('x2', String(finalX));
+            line.setAttribute('y2', String(finalY));
 
             applyStandardStyles(line);
             svgCanvas.appendChild(line);
@@ -161,8 +161,6 @@ function drawDynamicLines(treeKey, containerId) {
 //helper function to apply styling to lines and path
 function applyStandardStyles(svgElement){
     svgElement.classList.add('dynamic-connection');
-    svgElement.setAttribute('stroke', '#FFD700');
-    svgElement.setAttribute('stroke-width', '12');
 }
 
 buildTreeHTML('arts', 'tree-arts');
