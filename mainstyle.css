@@ -3,11 +3,31 @@ body {
     margin: 0;
     padding: 0;
     background-color: #111;
+    color: white;
     font-family: sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    /*min-height: 100vh;*/
+}
+
+.top-title-bar{
+    text-align: center;
+    padding: 20px 0;
+    background-color: #1a1a1a;
+    /*border-bottom: 2px solid #333;*/
+}
+.top-title-bar h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+
+.tree-page-wrapper{
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /*overflow: hidden;*/
 }
 
 .carousel-wrapper {
@@ -16,12 +36,17 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+    padding: 40px 0;
 }
 
 .talent-tree{
     position: absolute;
     transition: all 0.5s ease-in-out;
 }
+
+#tree-arts { background-image: url('images/arts_bg.png');}
+#tree-games { background-image: url('images/games_bg.png');}
+#tree-computers { background-image: url('images/computers_bg.png');}
 
 .center-tree {
     transform: scale(1);
@@ -31,26 +56,19 @@ body {
 
 .side-tree{
     /*this scaling seems to screw up line positioning*/
-    transform: scale(0.8);
+    /*transform: scale(0.8);*/
     opacity: 0.5;
     z-index: 5;
     pointer-events: none;
     cursor: pointer;
 }
 
-/*.pos-left {*/
-/*    transform: translateX(-600px) scale(0.6); !* Pushes it to the left *!*/
-/*}*/
+.pos-left {
+    transform: translateX(75px) scale(0.8);
+}
 
-/*.pos-right {*/
-/*    transform: translateX(600px) scale(0.6); !* Pushes it to the right *!*/
-/*}*/
-
-.tree-page-wrapper{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+.pos-right {
+    transform: translateX(-75px) scale(0.8);
 }
 
 
@@ -58,7 +76,7 @@ body {
 .talent-tree-container {
     width: 600px;
     height: 800px;
-    background-image: url('images/Background.png');
+    /*background-image: url('images/arts_bg.png');*/
     background-size: cover;
     background-position: center;
 

@@ -1,6 +1,6 @@
 // import {treeDatabase} from "./treeDatabase";
 
-const svgCanvas = document.getElementById('svg-canvas');
+// const svgCanvas = document.getElementById('svg-canvas');
 const tooltip = document.getElementById('global-tooltip');
 const titleEl = tooltip.querySelector('.tooltip-title');
 const typeEl = tooltip.querySelector('.tooltip-type');
@@ -86,14 +86,16 @@ function drawDynamicLines(treeKey, containerId) {
 
     if (!treeData || !treeData.connections || !container) return;
 
-    // const svgCanvas = container.querySelector('talent-lines');
-
-    //get absolute position of main container
-    const containerRect = container.getBoundingClientRect();
+    //I guess I had to get rid of the global variable svgCanvas.
+    //Also, I get a warning: for talent-line below:
+    //Selector matches unknown element talent-lines
+    const svgCanvas = container.querySelector('.talent-lines');
 
     //clear old lines
     svgCanvas.querySelectorAll('.dynamic-connection').forEach(el => el.remove());
 
+    //get absolute position of main container
+    // const containerRect = container.getBoundingClientRect();
 
 
 
@@ -105,14 +107,23 @@ function drawDynamicLines(treeKey, containerId) {
         //skip if node is missing
         if (!startNode || !endNode) return;
 
-        const startRect = startNode.getBoundingClientRect();
-        const endRect = endNode.getBoundingClientRect();
+        //use offset properties, so help with CSS does scale()
 
-        //calculate the centers of both boxes, relative to the container
-        const startX = (startRect.left - containerRect.left) + (startRect.width / 2);
-        const startY = (startRect.top - containerRect.top) + (startRect.height / 2);
-        const endX = (endRect.left - containerRect.left) + (endRect.width / 2);
-        const endY = (endRect.top - containerRect.top) + (endRect.height / 2);
+
+        // const startRect = startNode.getBoundingClientRect();
+        // const endRect = endNode.getBoundingClientRect();
+        // //calculate the centers of both boxes, relative to the container
+        // const startX = (startRect.left - containerRect.left) + (startRect.width / 2);
+        // const startY = (startRect.top - containerRect.top) + (startRect.height / 2);
+        // const endX = (endRect.left - containerRect.left) + (endRect.width / 2);
+        // const endY = (endRect.top - containerRect.top) + (endRect.height / 2);
+
+        //use offset properties, so help with CSS does scale()
+        const startX = startNode.offsetLeft + (startNode.offsetWidth / 2);
+        const startY = startNode.offsetTop + (startNode.offsetHeight / 2);
+        const endX = endNode.offsetLeft + (endNode.offsetWidth / 2);
+        const endY = endNode.offsetTop + (endNode.offsetHeight / 2);
+
 
         if (link.type === 'straight'){
             //calculate angle to stop line at edge of target box
@@ -169,10 +180,14 @@ function applyStandardStyles(svgElement){
 }
 
 buildTreeHTML('arts', 'tree-arts');
+buildTreeHTML('games', 'tree-games');
+buildTreeHTML('computers', 'tree-computers');
 
 //tiny setTimeout here.
 //CSS Grid takes a millisecond to physically place the new HTML on the screen.
 //If we draw lines instantly, they might draw to coordinates 0,0 before the grid updates.
 setTimeout(() => {
     drawDynamicLines('arts', 'tree-arts');
+    drawDynamicLines('games', 'tree-games');
+    drawDynamicLines('computers', 'tree-computers');
 }, 50);
