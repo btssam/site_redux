@@ -10,6 +10,51 @@ body {
     min-height: 100vh;
 }
 
+.carousel-wrapper {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.talent-tree{
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+}
+
+.center-tree {
+    transform: scale(1);
+    z-index: 10;
+    pointer-events: auto;
+}
+
+.side-tree{
+    /*this scaling seems to screw up line positioning*/
+    transform: scale(0.8);
+    opacity: 0.5;
+    z-index: 5;
+    pointer-events: none;
+    cursor: pointer;
+}
+
+/*.pos-left {*/
+/*    transform: translateX(-600px) scale(0.6); !* Pushes it to the left *!*/
+/*}*/
+
+/*.pos-right {*/
+/*    transform: translateX(600px) scale(0.6); !* Pushes it to the right *!*/
+/*}*/
+
+.tree-page-wrapper{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+
+
 .talent-tree-container {
     width: 600px;
     height: 800px;
@@ -170,4 +215,14 @@ body {
     color: #40FF40;
     margin-top: 24px;
     line-height: 1.3;
+}
+
+.bottom-nav {
+    height: 80px;
+    background-color: #1a1a1a; /* Placeholder color */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    flex-shrink: 0; /* Prevents the nav bar from getting squished by the trees */
 }

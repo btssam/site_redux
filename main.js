@@ -81,16 +81,21 @@ function buildTreeHTML(treeKey, containerId) {
 
 //pass the treeKey and the specific container to this function
 function drawDynamicLines(treeKey, containerId) {
-    //clear old lines
-    svgCanvas.querySelectorAll('.dynamic-connection').forEach(el => el.remove());
-
     const treeData = treeDatabase[treeKey];
     const container = document.getElementById(containerId);
 
     if (!treeData || !treeData.connections || !container) return;
 
+    // const svgCanvas = container.querySelector('talent-lines');
+
     //get absolute position of main container
     const containerRect = container.getBoundingClientRect();
+
+    //clear old lines
+    svgCanvas.querySelectorAll('.dynamic-connection').forEach(el => el.remove());
+
+
+
 
     //loop through every connection
     treeData.connections.forEach(link => {

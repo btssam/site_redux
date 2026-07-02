@@ -14,28 +14,80 @@
     <header>
     </header>
 
-    <div class="carousel-wrapper">
-        <div id="tree-arts" class="talent-tree-container">
-            <svg class="talent-lines" id = "svg-canvas" xmlns="http://www.w3.org/2000/svg">
+<!--    intending to make this take up the whole screen to start-->
+    <main class="tree-page-wrapper">
 
-                <defs>
-                    <!-- markerWidth/Height="24" scales with a 12px thick line -->
-                    <!-- refX="0" anchors the flat base of the arrow to the end of the line -->
-                    <marker id="arrow"
-                            markerWidth="24"
-                            markerHeight="24"
-                            viewBox="0 0 10 10"
-                            refX="0"
-                            refY="5"
-                            orient="auto"
-                            markerUnits="userSpaceOnUse">
-                        <polygon points="0 0, 6 5, 0 10" fill="#FFD700" />
-                    </marker>
-                </defs>
+        <section class="carousel-wrapper">
+            <div id="tree-arts" class="talent-tree-container side-tree pos-left">
+                <svg class="talent-lines" id = "svg-canvas" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <!-- markerWidth/Height="24" scales with a 12px thick line -->
+                        <!-- refX="0" anchors the flat base of the arrow to the end of the line -->
+                        <marker id="arrow"
+                                markerWidth="24"
+                                markerHeight="24"
+                                viewBox="0 0 10 10"
+                                refX="0"
+                                refY="5"
+                                orient="auto"
+                                markerUnits="userSpaceOnUse">
+                            <polygon points="0 0, 6 5, 0 10" fill="#FFD700" />
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
 
-            </svg>
-        </div>
-    </div>
+            <div id="tree-games" class="talent-tree-container center-tree pos-center">
+                <svg class="talent-lines" id = "svg-canvas" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <!-- markerWidth/Height="24" scales with a 12px thick line -->
+                        <!-- refX="0" anchors the flat base of the arrow to the end of the line -->
+                        <marker id="arrow"
+                                markerWidth="24"
+                                markerHeight="24"
+                                viewBox="0 0 10 10"
+                                refX="0"
+                                refY="5"
+                                orient="auto"
+                                markerUnits="userSpaceOnUse">
+                            <polygon points="0 0, 6 5, 0 10" fill="#FFD700" />
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+
+            <div id="tree-computers" class="talent-tree-container side-tree pos-right">
+                <svg class="talent-lines" id = "svg-canvas" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <!-- markerWidth/Height="24" scales with a 12px thick line -->
+                        <!-- refX="0" anchors the flat base of the arrow to the end of the line -->
+                        <marker id="arrow"
+                                markerWidth="24"
+                                markerHeight="24"
+                                viewBox="0 0 10 10"
+                                refX="0"
+                                refY="5"
+                                orient="auto"
+                                markerUnits="userSpaceOnUse">
+                            <polygon points="0 0, 6 5, 0 10" fill="#FFD700" />
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+        </section>
+
+        <nav class="bottom-nav">
+            <div class="nav-title">
+                <h1>Skill Trees</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+    </main>
 
     <div id="global-tooltip" class="wow-tooltip">
         <div class="tooltip-title"></div>
@@ -44,6 +96,13 @@
         <div class="tooltip-desc"></div>
         <div class="tooltip-green"></div>
     </div>
+
+<!--    placeholder for extra content after the skilltree-->
+    <section class="about">
+        <h2>About</h2>
+        <p>Hey this is about me!</p>
+    </section>
+
 
     <footer>
         <nav>
