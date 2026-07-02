@@ -41,8 +41,33 @@ function buildTreeHTML(treeKey, containerId) {
 
         //make tooltip follow cursor
         nodeDiv.addEventListener('mousemove', (e) => {
-            tooltip.style.left = (e.pageX + 15) + 'px';
-            tooltip.style.top = (e.pageY + 15) + 'px';
+            const offset = 15;
+
+            //get the exact dimensions of the tooltip as it currently exists
+            const tooltipWidth = tooltip.offsetWidth;
+            const tooltipHeight = tooltip.offsetHeight;
+
+            //get the visible dimensions of the browser window
+            const viewportWidth = window.innerWidth;
+            const viewportHeight = window.innerHeight;
+
+            //default position is bottom-right based on viewport (client) coordinates
+            let x = e.clientX + offset;
+            let y = e.clientY + offset;
+
+            //if tooltip is over the right edge, flip it to the left
+            if (x + tooltipWidth > viewportWidth) {
+                x = e.clientX - tooltipWidth - offset;
+            }
+
+            //if tooltip is over the bottom edge, flip it to the top
+            if (y + tooltipHeight > viewportHeight) {
+                y = e.clientY - tooltipHeight - offset;
+            }
+
+            //add window.scrollX/Y to convert back to document coordinates, to account for zooming
+            tooltip.style.left = (x + window.scrollX) + 'px';
+            tooltip.style.top = (y + window.scrollY) + 'px';
         });
 
         //when mouse leaves the icon, fade out
