@@ -10,71 +10,36 @@
     <script src="main.js" defer></script>
 </head>
 
-<body>
+<body class="preload">
+<!--    global svg definitions, for the lines-->
+    <svg xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <marker id="arrow" markerWidth="24" markerHeight="24" viewBox="0 0 10 10"
+                    refX="0" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+                <polygon points="0 0, 6 5, 0 10" fill="#FFD700" />
+            </marker>
+        </defs>
+    </svg>
+
     <header class="top-title-bar">
         <h1>Skills</h1>
     </header>
 
-<!--    intending to make this take up the whole screen to start-->
+<!--intending to make this take up the whole screen to start-->
     <main class="tree-page-wrapper">
 
     <!--Arts-->
         <section class="carousel-wrapper">
             <div id="tree-arts" class="talent-tree-container side-tree pos-left">
-                <svg class="talent-lines" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <!-- markerWidth/Height="24" scales with a 12px thick line -->
-                        <!-- refX="0" anchors the flat base of the arrow to the end of the line -->
-                        <marker id="arrow"
-                                markerWidth="24"
-                                markerHeight="24"
-                                viewBox="0 0 10 10"
-                                refX="0"
-                                refY="5"
-                                orient="auto"
-                                markerUnits="userSpaceOnUse">
-                            <polygon points="0 0, 6 5, 0 10" fill="#FFD700" />
-                        </marker>
-                    </defs>
-                </svg>
+                <svg class="talent-lines"></svg>
             </div>
-
+    <!--Games-->
             <div id="tree-games" class="talent-tree-container center-tree pos-center">
-                <svg class="talent-lines" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <!-- markerWidth/Height="24" scales with a 12px thick line -->
-                        <!-- refX="0" anchors the flat base of the arrow to the end of the line -->
-                        <marker id="arrow"
-                                markerWidth="24"
-                                markerHeight="24"
-                                viewBox="0 0 10 10"
-                                refX="0"
-                                refY="5"
-                                orient="auto"
-                                markerUnits="userSpaceOnUse">
-                            <polygon points="0 0, 6 5, 0 10" fill="#FFD700" />
-                        </marker>
-                    </defs>
-                </svg>
+                <svg class="talent-lines"></svg>
             </div>
-
+    <!--Computers-->
             <div id="tree-computers" class="talent-tree-container side-tree pos-right">
-                <svg class="talent-lines" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <!-- markerWidth/Height="24" scales with a 12px thick line -->
-                        <!-- refX="0" anchors the flat base of the arrow to the end of the line -->
-                        <marker id="arrow"
-                                markerWidth="24"
-                                markerHeight="24"
-                                viewBox="0 0 10 10"
-                                refX="0"
-                                refY="5"
-                                orient="auto"
-                                markerUnits="userSpaceOnUse">
-                            <polygon points="0 0, 6 5, 0 10" fill="#FFD700" />
-                        </marker>
-                    </defs>
-                </svg>
+                <svg class="talent-lines"></svg>
             </div>
         </section>
 

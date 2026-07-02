@@ -86,18 +86,10 @@ function drawDynamicLines(treeKey, containerId) {
 
     if (!treeData || !treeData.connections || !container) return;
 
-    //I guess I had to get rid of the global variable svgCanvas.
-    //Also, I get a warning: for talent-line below:
-    //Selector matches unknown element talent-lines
     const svgCanvas = container.querySelector('.talent-lines');
 
     //clear old lines
     svgCanvas.querySelectorAll('.dynamic-connection').forEach(el => el.remove());
-
-    //get absolute position of main container
-    // const containerRect = container.getBoundingClientRect();
-
-
 
     //loop through every connection
     treeData.connections.forEach(link => {
@@ -108,22 +100,10 @@ function drawDynamicLines(treeKey, containerId) {
         if (!startNode || !endNode) return;
 
         //use offset properties, so help with CSS does scale()
-
-
-        // const startRect = startNode.getBoundingClientRect();
-        // const endRect = endNode.getBoundingClientRect();
-        // //calculate the centers of both boxes, relative to the container
-        // const startX = (startRect.left - containerRect.left) + (startRect.width / 2);
-        // const startY = (startRect.top - containerRect.top) + (startRect.height / 2);
-        // const endX = (endRect.left - containerRect.left) + (endRect.width / 2);
-        // const endY = (endRect.top - containerRect.top) + (endRect.height / 2);
-
-        //use offset properties, so help with CSS does scale()
         const startX = startNode.offsetLeft + (startNode.offsetWidth / 2);
         const startY = startNode.offsetTop + (startNode.offsetHeight / 2);
         const endX = endNode.offsetLeft + (endNode.offsetWidth / 2);
         const endY = endNode.offsetTop + (endNode.offsetHeight / 2);
-
 
         if (link.type === 'straight'){
             //calculate angle to stop line at edge of target box
@@ -191,3 +171,10 @@ setTimeout(() => {
     drawDynamicLines('games', 'tree-games');
     drawDynamicLines('computers', 'tree-computers');
 }, 50);
+
+// enable animation/easing once the page actually loads, so that we don't see elements move
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        document.body.classList.remove('preload');
+    }, 150);
+});

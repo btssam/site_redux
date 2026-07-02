@@ -1,35 +1,53 @@
-/* Reset basic margins and set a dark background for the page body */
+/**/
+/*Global Resets*/
+/**/
 body {
     margin: 0;
     padding: 0;
     background-color: #111;
     color: white;
     font-family: sans-serif;
-    /*display: flex;*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
-    /*min-height: 100vh;*/
 }
 
+/*assures that it doesnt animate when moving elements on the dom on inital load*/
+.preload * {
+    transition: none !important;
+}
+
+/**/
+/*Major Page Layout*/
+/**/
 .top-title-bar{
     text-align: center;
     padding: 20px 0;
     background-color: #1a1a1a;
-    /*border-bottom: 2px solid #333;*/
 }
+
 .top-title-bar h1 {
     margin: 0;
     font-size: 32px;
 }
 
-
 .tree-page-wrapper{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    /*overflow: hidden;*/
 }
 
+
+.bottom-nav {
+    height: 80px;
+    background-color: #1a1a1a; /* Placeholder color */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    flex-shrink: 0; /* Prevents the nav bar from getting squished by the trees */
+}
+
+/**/
+/*Carousel and Tree Containers*/
+/**/
 .carousel-wrapper {
     flex-grow: 1;
     display: flex;
@@ -39,8 +57,27 @@ body {
     padding: 40px 0;
 }
 
-.talent-tree{
-    position: absolute;
+.talent-tree-container {
+    width: 600px;
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+
+    /* Set up the 4 Column, 7 Row Grid */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    gap: 15px; /* Spacing between icons */
+    padding: 40px;
+
+    /* Border and shadow to the whole panel */
+    border: 2px solid #333;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.8);
+
+    /* Anchors the absolute SVG to this container */
+    position: relative;
+
+
     transition: all 0.5s ease-in-out;
 }
 
@@ -55,47 +92,20 @@ body {
 }
 
 .side-tree{
-    /*this scaling seems to screw up line positioning*/
-    /*transform: scale(0.8);*/
+    filter: saturate(35%);
     opacity: 0.5;
     z-index: 5;
     pointer-events: none;
     cursor: pointer;
 }
 
-.pos-left {
-    transform: translateX(75px) scale(0.8);
-}
+.pos-left { transform: translateX(75px) scale(0.8); }
 
-.pos-right {
-    transform: translateX(-75px) scale(0.8);
-}
+.pos-right { transform: translateX(-75px) scale(0.8); }
 
-
-
-.talent-tree-container {
-    width: 600px;
-    height: 800px;
-    /*background-image: url('images/arts_bg.png');*/
-    background-size: cover;
-    background-position: center;
-
-    /* Set up the 4 Column, 7 Row Grid */
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(7, 1fr);
-    gap: 15px; /* Spacing between icons */
-    padding: 40px;
-    
-    /* Border and shadow to the whole panel */
-    border: 2px solid #333;
-    box-shadow: 0px 0px 20px rgba(0,0,0,0.8);
-
-    /* Anchors the absolute SVG to this container */
-    position: relative;
-}
-
-/* The base styling for talent icons */
+/**/
+/*Nodes and Skills*/
+/**/
 .talent-node {
     width: 80px; 
     height: 80px;
@@ -146,19 +156,15 @@ body {
     pointer-events: none;
 }
 
-.skill-points.full{
-    color: #FFD700;
-}
+.skill-points.full{ color: #FFD700; }
 
-.skill-points.partial{
-    color: #40FF40;
-}
+.skill-points.partial{ color: #40FF40; }
 
-.skill-points.zero{
-    color: #999999;
-}
+.skill-points.zero{ color: #999999; }
 
-
+/**/
+/*SVG line elements*/
+/**/
 .talent-lines {
     position: absolute;
     top: 0;
@@ -166,10 +172,9 @@ body {
     width: 100%;
     height: 100%;
     z-index: 2; /* Sits below icons, above background */
-    pointer-events: none; /* lets your mouse click'through the invisible SVG box to hit the icons */
+    pointer-events: none; /* lets your mouse click through the invisible SVG box to hit the icons */
 }
 
-/*for talent-lines*/
 .dynamic-connection {
     stroke: #FFD700;
     stroke-width: 12px;
@@ -177,6 +182,9 @@ body {
     fill: none; /* Good to have here so paths don't accidentally fill with black */
 }
 
+/**/
+/*Tooltip*/
+/**/
 .wow-tooltip{
     position: absolute;
     z-index: 10;
@@ -205,9 +213,7 @@ body {
 }
 
 /*boolean toggle to show tooltip (handled by javascript)*/
-.wow-tooltip.visible {
-    opacity: 1;
-}
+.wow-tooltip.visible {opacity: 1;}
 
 .tooltip-title{
     color: white;
@@ -215,13 +221,9 @@ body {
     font-weight: bold;
 }
 
-.tooltip-type{
-    color: #aaaaaa;
-}
+.tooltip-type{ color: #aaaaaa; }
 
-.tooltip-req{
-    color: white;
-}
+.tooltip-req{ color: white; }
 
 .tooltip-desc{
     color: #FFD700;
@@ -233,14 +235,4 @@ body {
     color: #40FF40;
     margin-top: 24px;
     line-height: 1.3;
-}
-
-.bottom-nav {
-    height: 80px;
-    background-color: #1a1a1a; /* Placeholder color */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 40px;
-    flex-shrink: 0; /* Prevents the nav bar from getting squished by the trees */
 }
