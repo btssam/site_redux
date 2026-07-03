@@ -127,9 +127,13 @@ function drawDynamicLines(treeKey, containerId) {
             applyStandardStyles(line);
             svgCanvas.appendChild(line);
 
-        } else if (link.type === 'elbow'){
+        } else if (link.type?.includes('elbow')) {
             //push start point to the right edge of the source icon
-            const startX_edge =  startX + START_RADIUS;
+            let startX_edge = startX + START_RADIUS;
+            if (link.type === 'left-elbow'){
+                startX_edge = startX - START_RADIUS;
+            }
+
             const startY_edge = startY;
 
             //horizontally, then straight down
@@ -150,7 +154,7 @@ function drawDynamicLines(treeKey, containerId) {
 
             applyStandardStyles(path);
             svgCanvas.appendChild(path);
-            }
+        }
     });
 }
 
