@@ -55,6 +55,7 @@ body {
     align-items: center;
     position: relative;
     padding: 40px 0;
+    min-height: 850px;
 }
 
 .talent-tree-container {
@@ -75,8 +76,7 @@ body {
     box-shadow: 0px 0px 20px rgba(0,0,0,0.8);
 
     /* Anchors the absolute SVG to this container */
-    position: relative;
-
+    position: absolute;
 
     transition: all 0.5s ease-in-out;
 }
@@ -85,23 +85,51 @@ body {
 #tree-games { background-image: url('images/games_bg.png');}
 #tree-computers { background-image: url('images/computers_bg.png');}
 
-.center-tree {
-    transform: scale(1);
+.pos-center {
+    transform: translateX(0) scale(1);
     z-index: 10;
-    pointer-events: auto;
+    opacity: 1;
+    filter: saturate(100%);
 }
 
-.side-tree{
-    filter: saturate(35%);
-    opacity: 0.5;
+.pos-left {
+    transform: translateX(-580px) scale(0.8);
     z-index: 5;
-    pointer-events: none;
+    opacity: 0.5;
+    filter: saturate(35%);
     cursor: pointer;
 }
 
-.pos-left { transform: translateX(75px) scale(0.8); }
+.pos-right {
+    transform: translateX(580px) scale(0.8);
+    z-index: 5;
+    opacity: 0.5;
+    filter: saturate(35%);
+    cursor: pointer;
+}
 
-.pos-right { transform: translateX(-75px) scale(0.8); }
+.pos-left .talent-node,
+.pos-right .talent-node {
+    pointer-events: none;
+}
+
+/*.center-tree {*/
+/*    transform: scale(1);*/
+/*    z-index: 10;*/
+/*    pointer-events: auto;*/
+/*}*/
+
+/*.side-tree{*/
+/*    filter: saturate(35%);*/
+/*    opacity: 0.5;*/
+/*    z-index: 5;*/
+/*    pointer-events: none;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*.pos-left { transform: translateX(75px) scale(0.8); }*/
+
+/*.pos-right { transform: translateX(-75px) scale(0.8); }*/
 
 /**/
 /*Nodes and Skills*/

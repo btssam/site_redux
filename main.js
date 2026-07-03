@@ -11,6 +11,7 @@ const greenEl = tooltip.querySelector('.tooltip-green');
 const START_RADIUS = 38;
 const END_RADIUS = 42;
 
+
 //html generator (based on database)
 function buildTreeHTML(treeKey, containerId) {
     const targetContainer = document.getElementById(containerId);
@@ -167,18 +168,71 @@ buildTreeHTML('arts', 'tree-arts');
 buildTreeHTML('games', 'tree-games');
 buildTreeHTML('computers', 'tree-computers');
 
+//carousel logic
+
+//array representing current positiong - left, center, right
+let carouselTrees = ['tree-arts', 'tree-games', 'tree-computers']
+
+document.querySelectorAll('.talent-tree-container').forEach(tree => {
+    tree.addEventListener('click', (e) => {
+        const currentId = e.currentTarget.id;
+        const currentIndex = carouselTrees.indexOf(currentId);
+        console.log(currentIndex);
+
+        if (currentIndex === 0 ) {
+            //left tree click. move to center
+            //pop removes the last item (right) unshift puts it at the front (left)
+            //rotates everything one step to the right
+            carouselTrees.unshift(carouselTrees.pop());
+        }else if (currentIndex === 2) {
+            //inverse of above
+            //shift removes the first item (left). push puts it at the end (right)
+            carouselTrees.push(carouselTrees.shift());
+        }else {
+            //middle tree clicked, do nothing
+            return;
+        }
+
+        updateCarouselUI();
+    });
+});
+
+function updateCarouselUI(){
+    //grab el's based on the new positons
+    const leftEl = document.getElementById(carouselTrees[0]);
+    const centerEl = document.getElementById(carouselTrees[1]);
+    const rightEl = document.getElementById(carouselTrees[2]);
+
+    //appply updated css classes
+    leftEl.className = 'talent-tree-container pos-left';
+    centerEl.className = 'talent-tree-container pos-center';
+    rightEl.className = 'talent-tree-container pos-right';
+
+    //wait for the 0.5s css transition before recalculating lines
+    // setTimeout(() => {
+    //     drawDynamicLines('arts', 'tree-arts');
+    //     drawDynamicLines('games', 'tree-games');
+    //     drawDynamicLines('computers', 'tree-computers');
+    // }, 500);
+}
+
+
+
 //tiny setTimeout here.
 //CSS Grid takes a millisecond to physically place the new HTML on the screen.
 //If we draw lines instantly, they might draw to coordinates 0,0 before the grid updates.
-setTimeout(() => {
-    drawDynamicLines('arts', 'tree-arts');
-    drawDynamicLines('games', 'tree-games');
-    drawDynamicLines('computers', 'tree-computers');
-}, 50);
+// setTimeout(() => {
+//     drawDynamicLines('arts', 'tree-arts');
+//     drawDynamicLines('games', 'tree-games');
+//     drawDynamicLines('computers', 'tree-computers');
+// }, 50);
 
-// enable animation/easing once the page actually loads, so that we don't see elements move
+// enable animation/easing once the page actually loads, so that we don't see elements move on load
 window.addEventListener('load', () => {
     setTimeout(() => {
+        drawDynamicLines('arts', 'tree-arts');
+        drawDynamicLines('games', 'tree-games');
+        drawDynamicLines('computers', 'tree-computers');
         document.body.classList.remove('preload');
-    }, 150);
+    }, 50);
 });
