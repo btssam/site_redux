@@ -34,8 +34,19 @@ function buildTreeHTML(treeKey, containerId) {
             descEl.textContent = nodeData.desc;
             reqEl.textContent = nodeData.req;
             greenEl.textContent = nodeData.green;
+            greenEl.style.display = '';
             tooltip.classList.add('visible');
         });
+
+        //click to lear more, expanding the description
+        nodeDiv.addEventListener('click', () => {
+            // Optional chaining/safety check: only swap if descLong actually exists in the database
+            if (nodeData.descLong) {
+                descEl.innerHTML = nodeData.descLong;
+                greenEl.style.display = 'none';
+            }
+        });
+
         //make tooltip follow cursor
         nodeDiv.addEventListener('mousemove', (e) => {
             const offset = 15;
