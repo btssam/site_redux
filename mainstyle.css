@@ -113,24 +113,6 @@ body {
     pointer-events: none;
 }
 
-/*.center-tree {*/
-/*    transform: scale(1);*/
-/*    z-index: 10;*/
-/*    pointer-events: auto;*/
-/*}*/
-
-/*.side-tree{*/
-/*    filter: saturate(35%);*/
-/*    opacity: 0.5;*/
-/*    z-index: 5;*/
-/*    pointer-events: none;*/
-/*    cursor: pointer;*/
-/*}*/
-
-/*.pos-left { transform: translateX(75px) scale(0.8); }*/
-
-/*.pos-right { transform: translateX(-75px) scale(0.8); }*/
-
 /**/
 /*Nodes and Skills*/
 /**/
