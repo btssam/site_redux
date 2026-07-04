@@ -300,6 +300,7 @@ const treeDatabase = {
             {
                 id: "gameplay-programming",
                 label: "Gameplay<br>Programming",
+                icon: "Game_Icons/gameplay_programming.png",
                 title: "Gameplay Programming",
                 type: "Games Skill",
                 req: "Requires Digital Design",
@@ -481,6 +482,7 @@ const treeDatabase = {
             {
                 id: "databases",
                 label: "Databases",
+                icon: "Computer_Icons/databases.png",
                 title: "Databases",
                 type: "Computers Skill",
                 req: "",
@@ -530,6 +532,7 @@ const treeDatabase = {
             {
                 id: "containers",
                 label: "Containers",
+                icon: "Computer_Icons/containers.png",
                 title: "Containers",
                 type: "Computers Skill",
                 req: "",
