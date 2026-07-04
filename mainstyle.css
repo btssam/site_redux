@@ -161,6 +161,19 @@ body {
     position: relative;
 }
 
+.talent-icon-img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+
+    image-rendering: pixelated;
+
+    z-index: 2;
+    position: relative;
+
+    pointer-events: none;
+}
+
 .skill-points{
     position: absolute;
     bottom: -6px;

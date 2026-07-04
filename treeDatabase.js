@@ -5,6 +5,7 @@ const treeDatabase = {
             {
                 id: "design-concepts",
                 label: "Design<br>Concepts",
+                icon: "Art_Icons/Design_Concepts.png",
                 title: "Design Concepts",
                 type: "Arts Skill",
                 req: "",
@@ -17,6 +18,7 @@ const treeDatabase = {
             {
                 id: "sketching",
                 label: "Sketching",
+                icon: "Art_Icons/Sketching.png",
                 title: "Sketching",
                 type: "Arts Skill",
                 req: "",
@@ -311,6 +313,7 @@ const treeDatabase = {
             {
                 id: "unity",
                 label: "Unity<br>Game<br>Engine",
+                icon: "Game_Icons/Unity.png",
                 title: "Unity Game Engine",
                 type: "Games Skill",
                 req: "Requires Digital Design",
@@ -323,6 +326,7 @@ const treeDatabase = {
             {
                 id: "godot",
                 label: "Godot<br>Game<br>Engine",
+                icon: "Game_Icons/Godot.png",
                 title: "Godot Game Engine",
                 type: "Games Skill",
                 req: "Requires Digital Design",
@@ -335,6 +339,7 @@ const treeDatabase = {
             {
                 id: "unreal",
                 label: "Unreal<br>Game<br>Engine",
+                icon: "Game_Icons/Unreal.png",
                 title: "Unreal Game Engine",
                 type: "Games Skill",
                 req: "Requires Digital Design",
@@ -462,6 +467,7 @@ const treeDatabase = {
             {
                 id: "html-css",
                 label: "HTML/<br>CSS",
+                icon: "Computer_Icons/html.png",
                 title: "HTML/CSS",
                 type: "Computers Skill",
                 req: "",
@@ -537,6 +543,7 @@ const treeDatabase = {
             {
                 id: "os",
                 label: "Operating<br>Systems",
+                icon: "Computer_Icons/os.png",
                 title: "Operating Systems",
                 type: "Computers Skill",
                 req: "",
@@ -562,6 +569,7 @@ const treeDatabase = {
             {
                 id: "sys-admin",
                 label: "System<br>Administration",
+                icon: "Computer_Icons/sysadmin.png",
                 title: "System Administration",
                 type: "Computers Skill",
                 req: "Requires Operating Systems",
@@ -589,6 +597,7 @@ const treeDatabase = {
             {from: 'programming-languages', to: 'web-frameworks', type: 'straight'},
             {from: 'math', to: 'computer-graphics', type: 'straight'},
             {from: 'web-frameworks', to: 'full-stack', type: 'straight'},
+            {from: 'html-css', to: 'web-frameworks', type: 'straight'},
             {from: 'databases', to: 'full-stack', type: 'straight'},
             {from: 'message-brokers', to: 'full-stack', type: 'straight'},
             {from: 'full-stack', to: 'ci-cd', type: 'straight'},

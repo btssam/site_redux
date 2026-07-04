@@ -23,8 +23,12 @@ function buildTreeHTML(treeKey, containerId) {
         nodeDiv.className = `talent-node ${nodeData.id}`;
         nodeDiv.style.gridArea = nodeData.gridPos;
 
+        const nodeContent = nodeData.icon
+            ? `<img src="${nodeData.icon}" class="talent-icon-img" alt="${nodeData.title}">`
+            : nodeData.label;
+
         nodeDiv.innerHTML = `
-            ${nodeData.label}
+            ${nodeContent}
             <span class="skill-points ${nodeData.pointClass}">${nodeData.points}</span>
         `;
         //attach tooltip listeners right as the node is created
