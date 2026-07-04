@@ -33,17 +33,22 @@ function buildTreeHTML(treeKey, containerId) {
             typeEl.textContent = nodeData.type;
             descEl.textContent = nodeData.desc;
             reqEl.textContent = nodeData.req;
-            greenEl.textContent = nodeData.green;
+            greenEl.textContent = "Click To Learn More";
             greenEl.style.display = '';
             tooltip.classList.add('visible');
         });
 
         //click to lear more, expanding the description
-        nodeDiv.addEventListener('click', () => {
-            // Optional chaining/safety check: only swap if descLong actually exists in the database
+        nodeDiv.addEventListener('click', (e) => {
             if (nodeData.descLong) {
                 descEl.innerHTML = nodeData.descLong;
                 greenEl.style.display = 'none';
+
+                //recalculate if tooltip needs shifted/overlapping with bottom edge
+                const tooltipRect = tooltip.getBoundingClientRect();
+                if (tooltipRect.bottom > window.innerHeight - 20) {
+                    tooltip.style.top = `${e.clientY - tooltipRect.height - 15}px`;
+                }
             }
         });
 
@@ -197,7 +202,8 @@ function updateCarouselUI(){
     rightEl.className = 'talent-tree-container pos-right';
 }
 
-// enable animation/easing once the page actually loads, so that we don't see elements move on load
+// enable animation/easing once the page actually loads, so that we don't see elements move on load.
+// also, wait to draw lines, so that it can get the correct placement data
 window.addEventListener('load', () => {
     setTimeout(() => {
         drawDynamicLines('arts', 'tree-arts');

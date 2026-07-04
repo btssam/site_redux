@@ -81,6 +81,21 @@ body {
     transition: all 0.5s ease-in-out;
 }
 
+.talent-tree-container h1 {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: 0;
+    z-index: 10;
+
+    font-size: 1.25rem;
+    font-weight: 300;
+    letter-spacing: 2px;      /* Spaced out letters complement the thin weight */
+    color: rgba(255, 255, 255, 0.6); /* Slightly faded white so it isn't distracting */
+}
+
 #tree-arts { background-image: url('images/arts_bg.png');}
 #tree-games { background-image: url('images/games_bg.png');}
 #tree-computers { background-image: url('images/computers_bg.png');}
