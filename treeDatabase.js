@@ -33,6 +33,7 @@ const treeDatabase = {
             {
                 id: "writing",
                 label: "Writing",
+                icon: "Art_Icons/Writing.png",
                 title: "Writing",
                 type: "Arts Skill",
                 req: "Requires Something",
@@ -45,6 +46,7 @@ const treeDatabase = {
             {
                 id: "audio",
                 label: "Audio",
+                icon: "Art_Icons/Audio.png",
                 title: "Audio",
                 type: "Arts Skill",
                 req: "Requires Something",
@@ -57,6 +59,7 @@ const treeDatabase = {
             {
                 id: "figure-drawing",
                 label: "Figure<br>Drawing",
+                icon: "Art_Icons/Figure_Drawing.png",
                 title: "Figure Drawing",
                 type: "Arts Skill",
                 req: "Requires Something",
@@ -72,6 +75,7 @@ const treeDatabase = {
             {
                 id: "art-3d",
                 label: "3D Art",
+                icon: "Art_Icons/3D.png",
                 title: "3D Art",
                 type: "Arts Skill",
                 req: "Requires Something",
@@ -109,6 +113,7 @@ const treeDatabase = {
             {
                 id: "raster",
                 label: "Raster",
+                icon: "Art_Icons/Raster.png",
                 title: "Raster",
                 type: "Arts Skill",
                 req: "Requires Something",
@@ -121,6 +126,7 @@ const treeDatabase = {
             {
                 id: "vector",
                 label: "Vector",
+                icon: "Art_Icons/Vector.png",
                 title: "Vector",
                 type: "Arts Skill",
                 req: "Requires Something",
