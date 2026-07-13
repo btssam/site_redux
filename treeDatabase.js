@@ -400,6 +400,7 @@ const treeDatabase = {
             {
                 id: "architecture",
                 label: "Architecture",
+                icon: "Computer_Icons/architecture.png",
                 title: "Architecture",
                 type: "Computers Skill",
                 req: "",
@@ -412,6 +413,7 @@ const treeDatabase = {
             {
                 id: "programming-concepts",
                 label: "Programming<br>Concepts",
+                icon: "Computer_Icons/concepts.png",
                 title: "Programming Concepts",
                 type: "Computers Skill",
                 req: "",

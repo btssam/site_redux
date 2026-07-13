@@ -132,7 +132,7 @@ body {
 /*Nodes and Skills*/
 /**/
 .talent-node {
-    width: 80px; 
+    width: 80px;
     height: 80px;
     background-image: url('images/wow_icon_bg.png');
     background-size: cover;
