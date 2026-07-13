@@ -177,6 +177,7 @@ const treeDatabase = {
             {
                 id: "ui-ux",
                 label: "UI/UX<br>Design",
+                icon: "Art_Icons/ui_ux.png",
                 title: "UI/UX Design",
                 type: "Arts Skill",
                 req: "Requires Something",
@@ -359,6 +360,7 @@ const treeDatabase = {
             {
                 id: "game-process",
                 label: "Game<br>Development<br>Process",
+                icon: "Game_Icons/gd_process.png",
                 title: "Game Development Process",
                 type: "Games Skill",
                 req: "",
@@ -451,6 +453,7 @@ const treeDatabase = {
             {
                 id: "math",
                 label: "Math",
+                icon: "Computer_Icons/math.png",
                 title: "Math",
                 type: "Computers Skill",
                 req: "",
@@ -514,7 +517,8 @@ const treeDatabase = {
             },
             {
                 id: "message-brokers",
-                label: "Message Brokers",
+                label: "Message<br>Brokers",
+                icon: "Computer_Icons/message.png",
                 title: "Message Brokers",
                 type: "Computers Skill",
                 req: "",
