@@ -101,7 +101,7 @@ body {
 #tree-computers { background-image: url('images/computers_bg.png');}
 
 .pos-center {
-    transform: translateX(0) scale(1);
+    transform: translateX(0) scale(1.2);
     z-index: 10;
     opacity: 1;
     filter: saturate(100%);
@@ -132,8 +132,8 @@ body {
 /*Nodes and Skills*/
 /**/
 .talent-node {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     background-image: url('images/wow_icon_bg.png');
     background-size: cover;
     background-position: center;
@@ -162,8 +162,8 @@ body {
 }
 
 .talent-icon-img {
-    width: 64px;
-    height: 64px;
+    width: 90px;
+    height: 90px;
     object-fit: contain;
 
     image-rendering: pixelated;

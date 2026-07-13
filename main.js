@@ -6,8 +6,8 @@ const reqEl = tooltip.querySelector('.tooltip-req');
 const descEl = tooltip.querySelector('.tooltip-desc');
 const greenEl = tooltip.querySelector('.tooltip-green');
 
-const START_RADIUS = 38;
-const END_RADIUS = 42;
+const START_RADIUS = 48;
+const END_RADIUS = 52;
 const SVG_NS = 'http://www.w3.org/2000/svg';
 
 
