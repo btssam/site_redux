@@ -219,6 +219,7 @@ const treeDatabase = {
             {
                 id: "game-fundamentals",
                 label: "Game<br>Design<br> Fundamentals",
+                icon: "Game_Icons/gd_fundamentals.png",
                 title: "Game Design Fundamentals",
                 type: "Games Skill",
                 req: "",
@@ -232,6 +233,7 @@ const treeDatabase = {
             {
                 id: "narrative-design",
                 label: "Narrative<br>Design",
+                icon: "Game_Icons/narrative.png",
                 title: "Narrative Design",
                 type: "Games Skill",
                 req: "Requires Game Design Fundamentals",
@@ -508,6 +510,7 @@ const treeDatabase = {
             {
                 id: "full-stack",
                 label: "Full<br>Stack<br>Development",
+                icon: "Computer_Icons/fullstack.png",
                 title: "Full Stack Development",
                 type: "Computers Skill",
                 req: "Requires Web Frameworks, Databases, and Message Brokers",
