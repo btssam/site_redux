@@ -245,6 +245,7 @@ const treeDatabase = {
                 id: "system-design",
                 label: "System<br>Design",
                 title: "System Design",
+                icon: "Game_Icons/system_design.png",
                 type: "Games Skill",
                 req: "Requires Game Design Fundamentals",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
@@ -281,6 +282,7 @@ const treeDatabase = {
             {
                 id: "tabletop",
                 label: "Tabletop<br>Design",
+                icon: "Game_Icons/tabletop_design.png",
                 title: "Tabletop Design",
                 type: "Arts Skill",
                 req: "",
