@@ -384,6 +384,7 @@ const treeDatabase = {
             {
                 id: "pitching",
                 label: "Pitching",
+                icon: "Game_Icons/pitching.png",
                 title: "Pitching",
                 type: "Games Skill",
                 req: "Requires Game Development Process",
@@ -476,6 +477,19 @@ const treeDatabase = {
                 gridPos: "2 / 4"
             },
             //row3
+            {
+                id: "networking",
+                label: "Networking",
+                icon: "Computer_Icons/networking.png",
+                title: "Networking",
+                type: "Computers Skill",
+                req: "",
+                desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
+                descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                points: "1/5",
+                pointClass: "partial",
+                gridPos: "3 / 1"
+            },
             {
                 id: "web-frameworks",
                 label: "Web<br>Frameworks",
@@ -612,6 +626,7 @@ const treeDatabase = {
             {
                 id: "docs",
                 label: "Documentation",
+                icon: "Computer_Icons/documentation.png",
                 title: "Documentation",
                 type: "Computers Skill",
                 req: "",
@@ -621,11 +636,25 @@ const treeDatabase = {
                 pointClass: "partial",
                 gridPos: "7 / 2"
             },
+            {
+                id: "ai",
+                label: "Artificial<br>Intelligence",
+                icon: "Computer_Icons/AI.png",
+                title: "ArtificialIntelligence",
+                type: "Computers Skill",
+                req: "",
+                desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
+                descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                points: "3/5",
+                pointClass: "partial",
+                gridPos: "7 / 3"
+            },
         ],
         connections: [
             {from: 'programming-concepts', to: 'programming-languages', type: 'straight'},
             {from: 'programming-languages', to: 'web-frameworks', type: 'straight'},
             {from: 'math', to: 'computer-graphics', type: 'straight'},
+            {from: 'networking', to: 'web-frameworks', type: 'straight'},
             {from: 'web-frameworks', to: 'full-stack', type: 'straight'},
             {from: 'html-css', to: 'web-frameworks', type: 'straight'},
             {from: 'databases', to: 'full-stack', type: 'straight'},
