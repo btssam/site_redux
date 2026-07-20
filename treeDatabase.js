@@ -75,7 +75,7 @@ const treeDatabase = {
             {
                 id: "art-3d",
                 label: "3D Art",
-                // icon: "Art_Icons/3D.png",
+                icon: "Art_Icons/3D.png",
                 title: "3D Art",
                 type: "Arts Skill",
                 req: "Requires Something",
@@ -142,6 +142,7 @@ const treeDatabase = {
             {
                 id: "rigging",
                 label: "Rigging",
+                icon: "Art_Icons/rigging.png",
                 title: "Rigging",
                 type: "Arts Skill",
                 req: "Requires Something",
@@ -195,6 +196,7 @@ const treeDatabase = {
             {
                 id: "web-design",
                 label: "Web<br>Design",
+                icon: "Art_Icons/web_design.png",
                 title: "Web Design",
                 type: "Arts Skill",
                 req: "Requires Something",
@@ -305,6 +307,7 @@ const treeDatabase = {
             {
                 id: "rapid-prototyping",
                 label: "Rapid<br>Prototyping",
+                icon: "Game_Icons/prototyping.png",
                 title: "Rapid Prototyping",
                 type: "Games Skill",
                 req: "Requires Tabletop Design",
