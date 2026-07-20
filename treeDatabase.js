@@ -75,7 +75,7 @@ const treeDatabase = {
             {
                 id: "art-3d",
                 label: "3D Art",
-                icon: "Art_Icons/3D.png",
+                // icon: "Art_Icons/3D.png",
                 title: "3D Art",
                 type: "Arts Skill",
                 req: "Requires Something",
@@ -601,6 +601,7 @@ const treeDatabase = {
             {
                 id: "computer-graphics",
                 label: "Computer<br>Graphics",
+                icon: "Computer_Icons/CG.png",
                 title: "Computer Graphics",
                 type: "Computers Skill",
                 req: "Requires Math",
