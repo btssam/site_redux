@@ -88,6 +88,7 @@ const treeDatabase = {
             {
                 id: "art-2d",
                 label: "2D Art",
+                icon: "Art_Icons/2D.png",
                 title: "2D Art",
                 type: "Arts Skill",
                 req: "Requires Something",
@@ -101,6 +102,7 @@ const treeDatabase = {
             {
                 id: "texture-uv",
                 label: "Texture<br>UV",
+                icon: "Art_Icons/texture.png",
                 title: "Texture UV",
                 type: "Arts Skill",
                 req: "Requires Something",
@@ -152,6 +154,7 @@ const treeDatabase = {
             {
                 id: "anim-3d",
                 label: "3D Anim.",
+                icon: "Art_Icons/3D_anim.png",
                 title: "3D Anim.",
                 type: "Arts Skill",
                 req: "Requires 3D Art and Rigging",
@@ -164,6 +167,7 @@ const treeDatabase = {
             {
                 id: "anim-2d",
                 label: "2D Anim.",
+                icon: "Art_Icons/2D_anim.png",
                 title: "2D Anim.",
                 type: "Arts Skill",
                 req: "Requires Something",
@@ -246,8 +250,8 @@ const treeDatabase = {
             {
                 id: "system-design",
                 label: "System<br>Design",
-                title: "System Design",
                 icon: "Game_Icons/system_design.png",
+                title: "System Design",
                 type: "Games Skill",
                 req: "Requires Game Design Fundamentals",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
@@ -259,6 +263,7 @@ const treeDatabase = {
             {
                 id: "level-design",
                 label: "Level<br>Design",
+                icon: "Game_Icons/level_design.png",
                 title: "Level Design",
                 type: "Level Design",
                 req: "Requires Something",
@@ -272,6 +277,7 @@ const treeDatabase = {
             {
                 id: "digital",
                 label: "Digital<br>Design",
+                icon: "Game_Icons/digital_design.png",
                 title: "Digital Design",
                 type: "Games Skill",
                 req: "",
@@ -433,6 +439,7 @@ const treeDatabase = {
             {
                 id: "dev-process",
                 label: "Development<br>Process",
+                icon: "Computer_Icons/dev_process.png",
                 title: "Development Process",
                 type: "Computers Skill",
                 req: "",
@@ -445,6 +452,7 @@ const treeDatabase = {
             {
                 id: "programming-languages",
                 label: "Programming<br>Languages",
+                icon: "Computer_Icons/programming_languages.png",
                 title: "Programming Languages",
                 type: "Computers Skill",
                 req: "Requires Programming Concepts",
@@ -471,6 +479,7 @@ const treeDatabase = {
             {
                 id: "web-frameworks",
                 label: "Web<br>Frameworks",
+                icon: "Computer_Icons/web_frameworks.png",
                 title: "Web Frameworks",
                 type: "Computers Skill",
                 req: "Requires Programming Languages",
@@ -535,9 +544,10 @@ const treeDatabase = {
             },
             //row5
             {
-                id: "ci-cd",
-                label: "CI/CD",
-                title: "CI/CD",
+                id: "dev-ops",
+                label: "Dev Ops",
+                icon: "Computer_Icons/dev_ops.png",
+                title: "Dev Ops",
                 type: "Computers Skill",
                 req: "Requires Full Stack Development",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
@@ -620,8 +630,8 @@ const treeDatabase = {
             {from: 'html-css', to: 'web-frameworks', type: 'straight'},
             {from: 'databases', to: 'full-stack', type: 'straight'},
             {from: 'message-brokers', to: 'full-stack', type: 'straight'},
-            {from: 'full-stack', to: 'ci-cd', type: 'straight'},
-            {from: 'containers', to: 'ci-cd', type: 'straight'},
+            {from: 'full-stack', to: 'dev-ops', type: 'straight'},
+            {from: 'containers', to: 'dev-ops', type: 'straight'},
             {from: 'os', to: 'sys-admin', type: 'straight'},
         ]
     }
