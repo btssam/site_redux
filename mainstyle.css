@@ -1,6 +1,10 @@
 /**/
 /*Global Resets*/
 /**/
+*, *::before, *::after {
+    box-sizing: border-box; /*forces padding/borders to calculate inwards, not outwards*/
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -19,13 +23,13 @@ body {
 /**/
 .top-title-bar{
     text-align: center;
-    padding: 20px 0;
+    padding: 1vh 0;
     background-color: #1a1a1a;
 }
 
 .top-title-bar h1 {
     margin: 0;
-    font-size: 32px;
+    font-size: clamp(1.5rem, 3vh, 2.5rem);
 }
 
 .tree-page-wrapper{
@@ -36,12 +40,13 @@ body {
 
 
 .bottom-nav {
-    height: 80px;
+    height: 5vh;
+    min-height: 60px;
     background-color: #1a1a1a; /* Placeholder color */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 40px;
+    padding: 0 4vw;
     flex-shrink: 0; /* Prevents the nav bar from getting squished by the trees */
 }
 
@@ -54,13 +59,16 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    padding: 40px 0;
-    min-height: 850px;
+    padding: 2vh 0;
+    /*min-height: 850px;*/
 }
 
 .talent-tree-container {
-    width: 600px;
-    height: 800px;
+    height: 90vh;
+    max-height: 1200px;
+    min-height: 400px;
+    aspect-ratio: 2 / 3;
+    width: auto;
     background-size: cover;
     background-position: center;
 
@@ -68,12 +76,12 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(7, 1fr);
-    gap: 15px; /* Spacing between icons */
-    padding: 40px;
+    gap: 1%; /* Spacing between icons */
+    padding: 2.5% 1.5% 1.5% 1.5%; /*extra top space for title*/
 
     /* Border and shadow to the whole panel */
     border: 2px solid #333;
-    box-shadow: 0px 0px 20px rgba(0,0,0,0.8);
+    box-shadow: 0 0 2vh rgba(0,0,0,0.8);
 
     /* Anchors the absolute SVG to this container */
     position: absolute;
@@ -83,16 +91,16 @@ body {
 
 .talent-tree-container h1 {
     position: absolute;
-    top: 8px;
+    top: 2%;
     left: 0;
     right: 0;
     text-align: center;
     margin: 0;
     z-index: 10;
 
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 2vh, 1.5rem);;
     font-weight: 300;
-    letter-spacing: 2px;      /* Spaced out letters complement the thin weight */
+    letter-spacing: 0.2vw;      /* Spaced out letters complement the thin weight */
     color: rgba(255, 255, 255, 0.6); /* Slightly faded white so it isn't distracting */
 }
 
@@ -101,14 +109,14 @@ body {
 #tree-computers { background-image: url('images/computers_bg.png');}
 
 .pos-center {
-    transform: translateX(0) scale(1.1);
+    transform: translateX(0) scale(1.0);
     z-index: 10;
     opacity: 1;
     filter: saturate(100%);
 }
 
 .pos-left {
-    transform: translateX(-580px) scale(0.8);
+    transform: translateX(-75%) scale(0.8);
     z-index: 5;
     opacity: 0.5;
     filter: saturate(35%);
@@ -116,7 +124,7 @@ body {
 }
 
 .pos-right {
-    transform: translateX(580px) scale(0.8);
+    transform: translateX(75%) scale(0.8);
     z-index: 5;
     opacity: 0.5;
     filter: saturate(35%);
@@ -132,8 +140,11 @@ body {
 /*Nodes and Skills*/
 /**/
 .talent-node {
-    width: 100px;
-    height: 100px;
+    width: 75%;
+    height: auto;
+    /*height: 100%;*/
+    /*width: auto;*/
+    aspect-ratio: 1 / 1;
     background-image: url('images/wow_icon_bg.png');
     background-size: cover;
     background-position: center;
@@ -146,9 +157,9 @@ body {
     
     /* Text styling */
     color: white;
-    font-size: 12px;
+    font-size: clamp(0.5rem, 1.2vh, 0.8rem);
     font-weight: bold;
-    text-shadow: 1px 1px 2px black;
+    text-shadow: 0.1vh 0.1vh 0.2vh black;
     
     /* Center the icon itself within its grid cell */
     justify-self: center;
@@ -162,8 +173,8 @@ body {
 }
 
 .talent-icon-img {
-    width: 90px;
-    height: 90px;
+    width: 85%;
+    height: 85%;
     object-fit: contain;
 
     image-rendering: pixelated;
@@ -176,17 +187,17 @@ body {
 
 .skill-points{
     position: absolute;
-    bottom: -6px;
-    right: -6px;
+    bottom: -8%;
+    right: -8%;
 
     background-color: black;
-    padding: 2px 5px;
-    border-radius: 4px;
+    padding: 0.2vh 0.5vw;
+    border-radius: 0.5vh;
 
-    font-size: 12px;
+    font-size: clamp(0.6rem, 1.2vh, 0.8rem);
     font-weight: bold;
     font-family: sans-serif;
-    letter-spacing: 1px;
+    letter-spacing: 0.1vw;
     text-shadow: none;
 
     z-index: 5;
@@ -215,7 +226,7 @@ body {
 
 .dynamic-connection {
     stroke: #FFD700;
-    stroke-width: 12px;
+    stroke-width: 1.2vh;
     marker-end: url(#arrow);
     fill: none; /* Good to have here so paths don't accidentally fill with black */
 }
@@ -233,17 +244,17 @@ body {
     /*background and border*/
     background-color: rgba(5, 5, 15, 0.85);
     border: 1px solid #888888;
-    border-radius: 4px;
-    padding: 10px 14px;
-    min-width: 200px;
-    max-width: 280px;
+    border-radius: 0.5vh;
+    padding: 1vh 1vw;
+    min-width: 15vw;
+    max-width: 25vw;
 
     display: flex;
     flex-direction: column;
     gap: 4px;
 
     font-family: sans-serif;
-    font-size: 13px;
+    font-size: clamp(0.7rem, 1.2vh, 0.9rem);
 
     /*//hidden by default*/
     opacity: 0;
@@ -255,7 +266,7 @@ body {
 
 .tooltip-title{
     color: white;
-    font-size: 16px;
+    font-size: clamp(0.9rem, 1.5vh, 1.1rem);
     font-weight: bold;
 }
 
@@ -265,12 +276,12 @@ body {
 
 .tooltip-desc{
     color: #FFD700;
-    margin-top: 2px;
+    margin-top: 0.2vh;
     line-height: 1.3;
 }
 
 .tooltip-green{
     color: #40FF40;
-    margin-top: 24px;
+    margin-top: 2vh;
     line-height: 1.3;
 }

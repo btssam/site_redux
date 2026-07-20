@@ -6,8 +6,8 @@ const reqEl = tooltip.querySelector('.tooltip-req');
 const descEl = tooltip.querySelector('.tooltip-desc');
 const greenEl = tooltip.querySelector('.tooltip-green');
 
-const START_RADIUS = 48;
-const END_RADIUS = 52;
+// const START_RADIUS = 48;
+// const END_RADIUS = 52;
 const SVG_NS = 'http://www.w3.org/2000/svg';
 
 
@@ -113,6 +113,9 @@ function drawDynamicLines(treeKey, containerId) {
         const endX = endNode.offsetLeft + (endNode.offsetWidth / 2);
         const endY = endNode.offsetTop + (endNode.offsetHeight / 2);
 
+        const START_RADIUS = (startNode.offsetWidth / 2) - 2;
+        const END_RADIUS = (endNode.offsetWidth / 2) + 2;
+
         if (link.type === 'straight'){
             //calculate angle to stop line at edge of target box
             const angle = Math.atan2(endY- startY, endX - startX);
@@ -216,3 +219,33 @@ window.addEventListener('load', () => {
         document.body.classList.remove('preload');
     }, 50);
 });
+
+//disable animations so that the proceeding resize works instantly
+let resizeTimer;
+window.addEventListener('resize', () => {
+    document.body.classList.add('preload');
+
+    // 2. Clear the timer if the user is still actively dragging the window
+    clearTimeout(resizeTimer);
+    drawDynamicLines('arts', 'tree-arts');
+    drawDynamicLines('games', 'tree-games');
+    drawDynamicLines('computers', 'tree-computers');
+
+    // 3. Set a timer to fire only AFTER the user stops dragging
+    resizeTimer = setTimeout(() => {
+        // Redraw lines using the final, snapped window dimensions
+        drawDynamicLines('arts', 'tree-arts');
+        drawDynamicLines('games', 'tree-games');
+        drawDynamicLines('computers', 'tree-computers');
+
+        // Re-enable CSS transitions
+        document.body.classList.remove('preload');
+    }, 10); // 10ms after dragging stops feels instantaneous but safe
+});
+
+// // Redraw lines seamlessly if the user resizes the browser window
+// window.addEventListener('resize', () => {
+//     drawDynamicLines('arts', 'tree-arts');
+//     drawDynamicLines('games', 'tree-games');
+//     drawDynamicLines('computers', 'tree-computers');
+// });
