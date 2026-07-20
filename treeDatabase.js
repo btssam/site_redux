@@ -83,7 +83,7 @@ const treeDatabase = {
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                 points: "1/5",
                 pointClass: "partial",
-                gridPos: "3 / 1"
+                gridPos: "3 / 2"
             },
             {
                 id: "art-2d",
@@ -110,7 +110,7 @@ const treeDatabase = {
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                 points: "0/5",
                 pointClass: "zero",
-                gridPos: "4 / 1"
+                gridPos: "4 / 2"
             },
             {
                 id: "raster",
@@ -149,7 +149,7 @@ const treeDatabase = {
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                 points: "3/5",
                 pointClass: "partial",
-                gridPos: "5 / 1"
+                gridPos: "5 / 2"
             },
             {
                 id: "anim-3d",
@@ -162,7 +162,7 @@ const treeDatabase = {
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                 points: "3/5",
                 pointClass: "partial",
-                gridPos: "5 / 2"
+                gridPos: "5 / 1"
             },
             {
                 id: "anim-2d",
@@ -209,11 +209,12 @@ const treeDatabase = {
             {from: 'sketching', to: 'art-2d', type: 'straight'},
             {from: 'sketching', to: 'figure-drawing', type: 'elbow'},
             {from: 'art-3d', to: 'texture-uv', type: 'straight'},
-            {from: 'art-3d', to: 'anim-3d', type: 'elbow'},
+            {from: 'art-3d', to: 'anim-3d', type: 'left-elbow'},
             {from: 'art-2d', to: 'raster', type: 'straight'},
             {from: 'art-2d', to: 'vector', type: 'elbow'},
             {from: 'raster', to: 'anim-2d', type: 'straight'},
             {from: 'rigging', to: 'anim-3d', type: 'straight'},
+            {from: 'rigging', to: 'anim-2d', type: 'straight'},
             {from: 'ui-ux', to: 'web-design', type: 'straight'},
         ]
     },
