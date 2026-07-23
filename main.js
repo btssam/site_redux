@@ -35,7 +35,7 @@ function buildTreeHTML(treeKey, containerId) {
         nodeDiv.addEventListener('mouseenter', () => {
             titleEl.textContent = nodeData.title;
             typeEl.textContent = nodeData.type;
-            descEl.textContent = nodeData.desc;
+            descEl.innerHTML = nodeData.desc;
             reqEl.textContent = nodeData.req;
             greenEl.textContent = "Click To Learn More";
             greenEl.style.display = '';
@@ -45,7 +45,7 @@ function buildTreeHTML(treeKey, containerId) {
         //click to lear more, expanding the description
         nodeDiv.addEventListener('click', (e) => {
             if (nodeData.descLong) {
-                descEl.innerHTML = nodeData.descLong;
+                descEl.innerHTML = nodeData.desc + "<br><br>" +nodeData.descLong;
                 greenEl.style.display = 'none';
 
                 //recalculate if tooltip needs shifted/overlapping with bottom edge

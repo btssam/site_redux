@@ -91,7 +91,7 @@ body {
 
 .talent-tree-container h1 {
     position: absolute;
-    top: clamp(10px, 2.25vh, 30px);
+    top: clamp(8px, 1.5vh, 24px);
     left: 0;
     right: 0;
     /*grid-column: 1 / -1;*/
@@ -99,7 +99,7 @@ body {
     z-index: 10;
 
     text-align: center;
-    font-size: clamp(1rem, 2vh, 1.5rem);;
+    font-size: clamp(1rem, 2.5vh, 1.5rem);;
     font-weight: 300;
     letter-spacing: 0.2vw;      /* Spaced out letters complement the thin weight */
     color: rgba(255, 255, 255, 0.6); /* Slightly faded white so it isn't distracting */

@@ -11,7 +11,7 @@ const treeDatabase = {
                 req: "",
                 desc: "My understanding of Design Concepts, such as Gestalt, was established in my Associate's program.",
                 descLong: "My understanding of Design Concepts, such as Gestalt, was established in my Associate's program. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "5/5",
+                points: "3/3",
                 pointClass: "full",
                 gridPos: "1 / 2"
             },
@@ -25,7 +25,7 @@ const treeDatabase = {
                 desc: `I have doodled periodically throughout my life. In my Associate's program, I took two classes 
                 that involved sketching with pencil, colored pencils, and graphite.`,
                 descLong: "I have doodled periodically throughout my life. In my Associate's program, I took two classes that involved sketching with pencil, colored pencils, and graphite.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "5/5",
+                points: "3/3",
                 pointClass: "full",
                 gridPos: "1 / 3"
             },
@@ -39,7 +39,7 @@ const treeDatabase = {
                 req: "Requires Something",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "5/5",
+                points: "3/3",
                 pointClass: "full",
                 gridPos: "2 / 1"
             },
@@ -52,7 +52,7 @@ const treeDatabase = {
                 req: "Requires Something",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "0/5",
+                points: "0/3",
                 pointClass: "zero",
                 gridPos: "2 / 2"
             },
@@ -67,7 +67,7 @@ const treeDatabase = {
                     easels using live models. I continued to explore gesture drawing for some time after my program, using
                     pencils.`,
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "5/5",
+                points: "3/3",
                 pointClass: "full",
                 gridPos: "2 / 4"
             },
@@ -81,7 +81,7 @@ const treeDatabase = {
                 req: "Requires Something",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "1/5",
+                points: "1/3",
                 pointClass: "partial",
                 gridPos: "3 / 2"
             },
@@ -94,7 +94,7 @@ const treeDatabase = {
                 req: "Requires Something",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "5/5",
+                points: "3/3",
                 pointClass: "full",
                 gridPos: "3 / 3"
             },
@@ -108,7 +108,7 @@ const treeDatabase = {
                 req: "Requires Something",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "0/5",
+                points: "0/3",
                 pointClass: "zero",
                 gridPos: "4 / 2"
             },
@@ -121,7 +121,7 @@ const treeDatabase = {
                 req: "Requires Something",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "0/5",
+                points: "0/3",
                 pointClass: "zero",
                 gridPos: "4 / 3"
             },
@@ -134,7 +134,7 @@ const treeDatabase = {
                 req: "Requires Something",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "3/5",
+                points: "2/3",
                 pointClass: "partial",
                 gridPos: "4 / 4"
             },
@@ -148,7 +148,7 @@ const treeDatabase = {
                 req: "Requires Something",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "3/5",
+                points: "2/3",
                 pointClass: "partial",
                 gridPos: "5 / 2"
             },
@@ -161,7 +161,7 @@ const treeDatabase = {
                 req: "Requires 3D Art and Rigging",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "3/5",
+                points: "2/3",
                 pointClass: "partial",
                 gridPos: "5 / 1"
             },
@@ -174,7 +174,7 @@ const treeDatabase = {
                 req: "Requires Something",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "3/5",
+                points: "2/3",
                 pointClass: "partial",
                 gridPos: "5 / 3"
             },
@@ -188,7 +188,7 @@ const treeDatabase = {
                 req: "Requires Something",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "3/5",
+                points: "2/3",
                 pointClass: "partial",
                 gridPos: "6 / 2"
             },
@@ -202,7 +202,7 @@ const treeDatabase = {
                 req: "Requires Something",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "3/5",
+                points: "2/3",
                 pointClass: "partial",
                 gridPos: "7 / 2"
             },
@@ -232,7 +232,7 @@ const treeDatabase = {
                 req: "",
                 desc: "My understanding of Design Concepts...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "5/5",
+                points: "3/3",
                 pointClass: "full",
                 gridPos: "1 / 2"
             },
@@ -246,7 +246,7 @@ const treeDatabase = {
                 req: "Requires Game Design Fundamentals",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "0/5",
+                points: "0/3",
                 pointClass: "zero",
                 gridPos: "2 / 1"
             },
@@ -259,7 +259,7 @@ const treeDatabase = {
                 req: "Requires Game Design Fundamentals",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "5/5",
+                points: "3/3",
                 pointClass: "full",
                 gridPos: "2 / 2"
             },
@@ -272,7 +272,7 @@ const treeDatabase = {
                 req: "Requires Something",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "5/5",
+                points: "3/3",
                 pointClass: "full",
                 gridPos: "2 / 3"
             },
@@ -286,7 +286,7 @@ const treeDatabase = {
                 req: "",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "1/5",
+                points: "1/3",
                 pointClass: "partial",
                 gridPos: "3 / 2"
             },
@@ -299,7 +299,7 @@ const treeDatabase = {
                 req: "",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "5/5",
+                points: "3/3",
                 pointClass: "full",
                 gridPos: "3 / 4"
             },
@@ -313,7 +313,7 @@ const treeDatabase = {
                 req: "Requires Tabletop Design",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "3/5",
+                points: "2/3",
                 pointClass: "partial",
                 gridPos: "4 / 4"
             },
@@ -327,7 +327,7 @@ const treeDatabase = {
                 req: "Requires Digital Design",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "3/5",
+                points: "2/3",
                 pointClass: "partial",
                 gridPos: "5 / 2"
             },
@@ -341,7 +341,7 @@ const treeDatabase = {
                 req: "Requires Digital Design",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "0/5",
+                points: "0/3",
                 pointClass: "zero",
                 gridPos: "6 / 1"
             },
@@ -354,7 +354,7 @@ const treeDatabase = {
                 req: "Requires Digital Design",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "0/5",
+                points: "0/3",
                 pointClass: "zero",
                 gridPos: "6 / 2"
             },
@@ -367,7 +367,7 @@ const treeDatabase = {
                 req: "Requires Digital Design",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "3/5",
+                points: "2/3",
                 pointClass: "partial",
                 gridPos: "6 / 3"
             },
@@ -380,7 +380,7 @@ const treeDatabase = {
                 req: "",
                 desc: "I have doodled periodically throughout my life. In my Associate's program...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "5/5",
+                points: "3/3",
                 pointClass: "full",
                 gridPos: "6 / 4"
             },
@@ -394,7 +394,7 @@ const treeDatabase = {
                 req: "Requires Game Development Process",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "1/5",
+                points: "1/3",
                 pointClass: "partial",
                 gridPos: "7 / 4"
             },
@@ -421,10 +421,15 @@ const treeDatabase = {
                 title: "Architecture",
                 type: "Computers Skill",
                 req: "",
-                desc: "My understanding of Design Concepts...",
-                descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "5/5",
-                pointClass: "full",
+                desc: "A foundational understanding of how computer hardware and software interface at a low level," +
+                    " including interfacing with RAM and CPU, threading, " +
+                    "and other related concepts.",
+                descLong: "My formal study of architecture is currently in progress, as I am registered for Introduction to Machine Organization and Assembly Language at WPI." +
+                    "This coursework will cement my understanding of lower-level computer operations and hardware interfaces.",
+                //ive learned a fair bit just by learning about computers throughout about cpu, gpu, ram, etc. over 15 years of self taught, hobbyist, and formal learning.
+                // I also learned a fair bit about cpu/gpu interfacing in computer graphics
+                points: "1/3",
+                pointClass: "partial",
                 gridPos: "1 / 1"
             },
             {
@@ -434,9 +439,12 @@ const treeDatabase = {
                 title: "Programming Concepts",
                 type: "Computers Skill",
                 req: "",
-                desc: "I have doodled periodically throughout my life. In my Associate's program...",
-                descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "5/5",
+                desc: "The theoretical and structural paradigms of writing software, including object-oriented design, algorithms, and systems programming.",
+                descLong: "I have a robust foundation in programming concepts established through both academic" +
+                    " coursework and practical application. I have taken core " +
+                    "university courses in Object-Oriented Design, Systems Programming Concepts, and Algorithms. I routinely apply these structures to author" +
+                    "complex game logic and architect scalable backend deployment systems.",
+                points: "3/3",
                 pointClass: "full",
                 gridPos: "1 / 2"
             },
@@ -450,7 +458,7 @@ const treeDatabase = {
                 req: "",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "0/5",
+                points: "0/3",
                 pointClass: "zero",
                 gridPos: "2 / 1"
             },
@@ -463,7 +471,7 @@ const treeDatabase = {
                 req: "Requires Programming Concepts",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "5/5",
+                points: "3/3",
                 pointClass: "full",
                 gridPos: "2 / 2"
             },
@@ -476,7 +484,7 @@ const treeDatabase = {
                 req: "",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "5/5",
+                points: "3/3",
                 pointClass: "full",
                 gridPos: "2 / 4"
             },
@@ -490,7 +498,7 @@ const treeDatabase = {
                 req: "",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "1/5",
+                points: "1/3",
                 pointClass: "partial",
                 gridPos: "3 / 1"
             },
@@ -503,7 +511,7 @@ const treeDatabase = {
                 req: "Requires Programming Languages",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "1/5",
+                points: "1/3",
                 pointClass: "partial",
                 gridPos: "3 / 2"
             },
@@ -516,7 +524,7 @@ const treeDatabase = {
                 req: "",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "5/5",
+                points: "3/3",
                 pointClass: "full",
                 gridPos: "3 / 3"
             },
@@ -530,7 +538,7 @@ const treeDatabase = {
                 req: "",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "0/5",
+                points: "0/3",
                 pointClass: "zero",
                 gridPos: "4 / 1"
             },
@@ -543,7 +551,7 @@ const treeDatabase = {
                 req: "Requires Web Frameworks, Databases, and Message Brokers",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "0/5",
+                points: "0/3",
                 pointClass: "zero",
                 gridPos: "4 / 2"
             },
@@ -556,7 +564,7 @@ const treeDatabase = {
                 req: "",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "3/5",
+                points: "2/3",
                 pointClass: "partial",
                 gridPos: "4 / 3"
             },
@@ -570,7 +578,7 @@ const treeDatabase = {
                 req: "Requires Full Stack Development",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "3/5",
+                points: "2/3",
                 pointClass: "partial",
                 gridPos: "5 / 2"
             },
@@ -583,7 +591,7 @@ const treeDatabase = {
                 req: "",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "3/5",
+                points: "2/3",
                 pointClass: "partial",
                 gridPos: "5 / 3"
             },
@@ -597,7 +605,7 @@ const treeDatabase = {
                 req: "",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "3/5",
+                points: "2/3",
                 pointClass: "partial",
                 gridPos: "6 / 1"
             },
@@ -610,7 +618,7 @@ const treeDatabase = {
                 req: "Requires Math",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "3/5",
+                points: "2/3",
                 pointClass: "partial",
                 gridPos: "6 / 4"
             },
@@ -624,7 +632,7 @@ const treeDatabase = {
                 req: "Requires Operating Systems",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "3/5",
+                points: "2/3",
                 pointClass: "partial",
                 gridPos: "7 / 1"
             },
@@ -637,7 +645,7 @@ const treeDatabase = {
                 req: "",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "3/5",
+                points: "2/3",
                 pointClass: "partial",
                 gridPos: "7 / 2"
             },
@@ -650,7 +658,7 @@ const treeDatabase = {
                 req: "",
                 desc: "This description is entirely temporary. This is a skill. I learned it. Lorem Ipsum is simply placeholder latin text...",
                 descLong: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br><br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                points: "3/5",
+                points: "2/3",
                 pointClass: "partial",
                 gridPos: "7 / 3"
             },
