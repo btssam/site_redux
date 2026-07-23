@@ -77,7 +77,7 @@ body {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(7, 1fr);
     gap: 1%; /* Spacing between icons */
-    padding: 2.5% 1.5% 1.5% 1.5%; /*extra top space for title*/
+    padding: clamp(40px, 9vh, 120px) 1.5% 1.5% 1.5%; /*extra top space for title*/
 
     /* Border and shadow to the whole panel */
     border: 2px solid #333;
@@ -91,13 +91,14 @@ body {
 
 .talent-tree-container h1 {
     position: absolute;
-    top: 2%;
+    top: clamp(10px, 2.25vh, 30px);
     left: 0;
     right: 0;
-    text-align: center;
-    margin: 0;
+    /*grid-column: 1 / -1;*/
+    /*margin: 0 0 4% 0;*/
     z-index: 10;
 
+    text-align: center;
     font-size: clamp(1rem, 2vh, 1.5rem);;
     font-weight: 300;
     letter-spacing: 0.2vw;      /* Spaced out letters complement the thin weight */
