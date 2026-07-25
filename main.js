@@ -51,7 +51,7 @@ function buildTreeHTML(treeKey, containerId) {
                 //recalculate if tooltip needs shifted/overlapping with bottom edge
                 const tooltipRect = tooltip.getBoundingClientRect();
                 if (tooltipRect.bottom > window.innerHeight - 20) {
-                    tooltip.style.top = `${e.clientY - tooltipRect.height - 15}px`;
+                    tooltip.style.top = `${e.clientY + window.scrollY - tooltipRect.height - 15}px`;
                 }
             }
         });

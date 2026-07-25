@@ -11,7 +11,7 @@
 </head>
 
 <body class="preload">
-<!--    global svg definitions, for the lines-->
+    <!--global svg definitions, for the lines-->
     <svg xmlns="http://www.w3.org/2000/svg" style="height: 0; width: 0; position: absolute;">
         <defs>
             <marker id="arrow" markerWidth="24" markerHeight="24" viewBox="0 0 10 10"
@@ -22,11 +22,30 @@
     </svg>
 
     <header class="top-title-bar">
-        <h1>Skills</h1>
+        <h1>Ben Samara</h1>
     </header>
 
-<!--intending to make this take up the whole screen to start-->
-    <main class="tree-page-wrapper">
+    <section id="about" class="content-section">
+        <h2 class="section-title">About</h2>
+        <div class="about-container">
+            <div class="image-placeholder">
+                <img src="images/portrait.png" alt="Ben Samara Portrait">
+            </div>
+            <div class="about-text">
+                <p>Hello! My name's Ben Samara. I programmed my first game for a science fair when I was in middle school in 2009. I graduated from Quinsigamond Community College in May 2020 with an Associate's Degree in Interactive Media - Game Design. I have spent my free time researching game design, art, and programming since around 2015, as well as learning various related tools. I have worked as a Software Engineering Contractor for Cisco, with a focus on deployments and documentation from 2022  to 2024.</p>
+
+                <p>In 2025, I began a double major bachelor's degree in Computer Science (B.S) and Game Development  (B.S.) at Worcester Polytechnic Institute and am currently enrolled there.</p>
+
+                <p>I find all genres of games interesting to design for, but I am most interested in role-playing games,  strategies games and I have an interest in smaller, indie studios. Lately, I have been into the  unique play experiences of tabletop role-playing games like Dungeons and Dragons and Pathfinder. I'm  also a big fan of open source software and have been using the Godot Game Engine for several years now.</p>
+
+                <p>Thank you for your interest and your time.</p>
+            </div>
+        </div>
+    </section>
+
+    <main id="skills-tree" class="tree-page-wrapper">
+
+        <h2 class="section-title">Skill Tree</h2>
 
         <section class="carousel-wrapper">
     <!--Arts-->
@@ -46,18 +65,63 @@
             </div>
         </section>
 
-        <nav class="bottom-nav">
-            <div class="nav-title">
-                <h1>Skill Trees</h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-
     </main>
+
+    <section id="projects" class="content-section">
+        <h2 class="section-title">Projects</h2>
+
+        <!--Project 1-->
+        <div class="project-card">
+            <div class="project-media">
+                <!--put gif or image here-->
+                <span>Acolytes Media</span>
+            </div>
+            <div class="project-info">
+                <h3>Acolytes</h3>
+                <p>Pitched and secured faculty greenlight for an original roguelike tactical combat/deckbuilder Major Qualifying Project, selected as one of only 7 student pitches to enter pre-production.</p>
+                <p>Served as recruiter and producer for a 5-person multidisciplinary team of artists, programmers, and designers, managing core design documentation and project scope.</p>
+            </div>
+        </div>
+
+        <!--Project 2-->
+        <div class="project-card">
+            <div class="project-media">
+                <!--put gif or image here-->
+                <span>Arena Media</span>
+            </div>
+            <div class="project-info">
+                <h3>Arena</h3>
+                <p>Developed a multi-genre action game in Godot that seamlessly transitions players between randomized levels featuring turn-based RPG, tactical, top-down shooter, and platformer mechanics.</p>
+                <p>Engineered a global state-management system to apply persistent player upgrades (Health, Speed, Attack) dynamically across four distinct control schemes and gameplay loops.</p>
+            </div>
+        </div>
+
+        <!--Project 3-->
+        <div class="project-card">
+            <div class="project-media">
+                <!--put gif or image here-->
+                <span>Merc Media</span>
+            </div>
+            <div class="project-info">
+                <h3>Merc</h3>
+                <p>Engineered a narrative state-machine in Twine utilizing custom HTML/CSS to manage dynamic variables for branching morality paths and persistent companion approval metrics.</p>
+                <p>Built a 29,828-word interactive story with 117 passages and 106 linked choices.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <nav class="bottom-nav">
+        <div class="nav-title">
+            <h1>Ben Samara</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills-tree">Skill Tree</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <!--should fix these links-->
+        </ul>
+    </nav>
 
     <div id="global-tooltip" class="wow-tooltip">
         <div class="tooltip-title"></div>
@@ -67,18 +131,6 @@
         <div class="tooltip-green"></div>
     </div>
 
-<!--    placeholder for extra content after the skilltree-->
-    <section class="about" style="padding: 40px; text-align: center;">
-        <h2>About</h2>
-        <p>Hey this is about me!</p>
-    </section>
-
-
-    <footer>
-        <nav>
-
-        </nav>
-    </footer>
-
 </body>
+
 </html>

@@ -7,10 +7,13 @@
 
 body {
     margin: 0;
-    padding: 0;
     background-color: #111;
     color: white;
     font-family: sans-serif;
+    padding: 0;
+    /*padding-bottom: 8vh;*/
+    /*for scrolling nav bar*/
+
 }
 
 /*assures that it doesnt animate when moving elements on the dom on inital load*/
@@ -38,16 +41,90 @@ body {
     flex-direction: column;
 }
 
-
+/**/
+/* Navigation Links Styling */
+/**/
 .bottom-nav {
+    /*position: fixed;*/
+    /*for scrolling nav bar*/
+    bottom: 0;
+    left: 0;
+    width: 100%;
     height: 5vh;
     min-height: 60px;
-    background-color: #1a1a1a; /* Placeholder color */
+    background-color: #1a1a1a;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 4vw;
-    flex-shrink: 0; /* Prevents the nav bar from getting squished by the trees */
+    z-index: 100;
+    box-shadow: 0 -1vh 2vh rgba(0, 0, 0, 0.5);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 3vw;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: clamp(1rem, 1.5vh, 1.2rem);
+    transition: color 0.2s ease-in-out;
+}
+
+.nav-links a:hover { color: #FFD700; }
+
+/**/
+/* General Section Styling */
+/**/
+.content-section {
+    padding: 8vh 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: clamp(2rem, 4vh, 3rem);
+    margin-bottom: 5vh;
+    border-bottom: 2px solid #333;
+    padding-bottom: 1vh;
+    margin-top: 0;
+}
+
+/**/
+/* About Section Grid/Flex */
+/**/
+.about-container {
+    display: flex;
+    gap: 4%;
+    align-items: center;
+    background-color: #1a1a1a;
+    padding: 4vh 4%;
+    border-radius: 1vh;
+    box-shadow: 0 0 2vh rgba(0, 0, 0, 0.5);
+}
+
+.image-placeholder {
+    flex: 0 0 45%;
+}
+
+.image-placeholder img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5vh;
+    box-shadow: 0 0 1vh rgba(0, 0, 0, 0.8);
+}
+
+.about-text {
+    flex: 1; /*take up remaining space*/
+    font-size: clamp(0.9rem, 1.6vh, 1.1rem);
+    line-height: 1.6;
+    color: #ccc;
 }
 
 /**/
@@ -64,7 +141,7 @@ body {
 }
 
 .talent-tree-container {
-    height: 90vh;
+    height: 85vh;
     max-height: 1200px;
     min-height: 400px;
     aspect-ratio: 2 / 3;
@@ -291,4 +368,54 @@ body {
     color: #40FF40;
     margin-top: 2vh;
     line-height: 1.3;
+}
+
+/**/
+/* Projects Section Grid/Flex */
+/**/
+.project-card {
+    display: flex;
+    gap: 3%;
+    background-color: #1a1a1a;
+    padding: 3vh 3%;
+    margin-bottom: 4vh;
+    border-radius: 1vh;
+    align-items: center;
+    box-shadow: 0 0 2vh rgba(0, 0, 0, 0.5);
+}
+
+.project-media {
+    flex: 0 0 40%;
+    aspect-ratio: 16/9;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5vh;
+    border: 1px solid #333;
+    color: #555
+}
+
+.project-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5vh;
+}
+
+.project-info {
+    flex: 1;
+}
+
+.project-info h3 {
+    margin-top: 0;
+    font-size: clamp(1.5rem, 2.5vh, 2rem);
+    color: #FFD700;
+}
+
+.project-info p {
+    font-size: clamp(0.9rem, 1.5vh, 1.1rem);
+    line-height: 1.5;
+    color: #ccc;
+    margin-bottom: 1.5vh;
 }
