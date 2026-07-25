@@ -26,13 +26,26 @@ body {
 /**/
 .top-title-bar{
     text-align: center;
-    padding: 1vh 0;
-    background-color: #1a1a1a;
+    /*padding: 1vh 0;*/
+    /*background-color: #1a1a1a;*/
 }
 
 .top-title-bar h1 {
+    /* font-family: Helvetica, sans-serif; */
+    font-family: 'Lato', sans-serif;
+    color: #FFFFFF;
+    text-align: center;
+    list-style-type: none;
+
+    border-bottom: 0.75vh solid #A94F2A;
+    /*font-size: 1.7vw;*/
+    letter-spacing: 0.6vw;
+    /*line-height: 0%;*/
+    font-weight: normal;
+
+    padding-top: 1vh;
     margin: 0;
-    font-size: clamp(1.5rem, 3vh, 2.5rem);
+    font-size: clamp(3.5rem, 7.5vh, 5rem);
 }
 
 .tree-page-wrapper{
@@ -54,7 +67,7 @@ body {
     min-height: 60px;
     background-color: #1a1a1a;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 0 4vw;
     z-index: 100;
@@ -82,7 +95,8 @@ body {
 /* General Section Styling */
 /**/
 .content-section {
-    padding: 8vh 2rem;
+    /*padding: 8vh 2rem;*/
+    padding: 3vh 2rem 6vh 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -314,6 +328,8 @@ body {
 /**/
 .wow-tooltip{
     position: absolute;
+    top: 0;
+    left: 0;
     z-index: 10;
 
     /*invisible to mouse, so that it doesnt interrupt hovering*/
