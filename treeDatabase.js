@@ -467,7 +467,7 @@ const treeDatabase = {
             {
                 id: "math",
                 label: "Math",
-                icon: "Computer_Icons/math.png",
+                icon: "Computer_Icons/Math.png",
                 title: "Math",
                 type: "Computers Skill",
                 req: "",
