@@ -153,10 +153,14 @@ body {
     z-index: 10;
 
     text-align: center;
-    font-size: clamp(1rem, 2.5vh, 1.5rem);;
+    font-size: clamp(1.25rem, 3.25vh, 1.75rem);
     font-weight: 300;
-    letter-spacing: 0.2vw;      /* Spaced out letters complement the thin weight */
-    color: rgba(255, 255, 255, 0.6); /* Slightly faded white so it isn't distracting */
+    letter-spacing: 0.2vw;
+    color: rgba(255, 255, 255, 1);
+
+    text-shadow: 4px 4px 8px #000000;
+
+
 }
 
 #tree-arts { background-image: url('images/arts_bg.png');}
