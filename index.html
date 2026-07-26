@@ -71,7 +71,7 @@
         <h2 class="section-title">Projects</h2>
 
         <!--Project 1-->
-        <div class="project-card">
+        <div class="project-card" id="first-project">
             <div class="project-media">
                 <!--put gif or image here-->
                 <span>Acolytes Media</span>
@@ -111,7 +111,7 @@
         </div>
 
         <!--Project 4-->
-        <div class="project-card">
+        <div class="project-card" id="last-project">
             <div class="project-media">
                 <!--put gif or image here-->
 
@@ -134,6 +134,10 @@
         </ul>
     </nav>
 
+<!--    <footer>-->
+<!--        <h5> &#169 Ben Samara </h5>-->
+<!--    </footer>-->
+
     <div id="global-tooltip" class="wow-tooltip">
         <div class="tooltip-title"></div>
         <div class="tooltip-type"></div>
@@ -141,6 +145,37 @@
         <div class="tooltip-desc"></div>
         <div class="tooltip-green"></div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Configure the observer
+            const observerOptions = {
+                root: null, // Uses the browser viewport
+                // This creates a bounding box in the middle of the screen.
+                // It ignores the top 30% and bottom 30% of the window.
+                rootMargin: "-49% 0px -49% 0px",
+                threshold: 0 // Triggers the moment the card touches that middle 40% band
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Card is in the center 40% of the screen
+                        entry.target.classList.add('focused');
+                    } else {
+                        // Card has left the center
+                        entry.target.classList.remove('focused');
+                    }
+                });
+            }, observerOptions);
+
+            // Tell the observer to watch all 4 of your project cards
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach(card => observer.observe(card));
+        });
+
+
+    </script>
 
 </body>
 

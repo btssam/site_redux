@@ -13,7 +13,6 @@ body {
     padding: 0;
     /*padding-bottom: 8vh;*/
     /*for scrolling nav bar*/
-
 }
 
 /*assures that it doesnt animate when moving elements on the dom on inital load*/
@@ -22,7 +21,7 @@ body {
 }
 
 /**/
-/*Major Page Layout*/
+/*Title Bar*/
 /**/
 .top-title-bar{
     text-align: center;
@@ -47,50 +46,6 @@ body {
     margin: 0;
     font-size: clamp(3.5rem, 7.5vh, 5rem);
 }
-
-.tree-page-wrapper{
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-/**/
-/* Navigation Links Styling */
-/**/
-.bottom-nav {
-    /*position: fixed;*/
-    /*for scrolling nav bar*/
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 5vh;
-    min-height: 60px;
-    background-color: #1a1a1a;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 4vw;
-    z-index: 100;
-    box-shadow: 0 -1vh 2vh rgba(0, 0, 0, 0.5);
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 3vw;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: clamp(1rem, 1.5vh, 1.2rem);
-    transition: color 0.2s ease-in-out;
-}
-
-.nav-links a:hover { color: #FFD700; }
-
 /**/
 /* General Section Styling */
 /**/
@@ -144,6 +99,12 @@ body {
 /**/
 /*Carousel and Tree Containers*/
 /**/
+.tree-page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 .carousel-wrapper {
     flex-grow: 1;
     display: flex;
@@ -394,10 +355,34 @@ body {
     gap: 3%;
     background-color: #1a1a1a;
     padding: 3vh 3%;
-    margin-bottom: 4vh;
+    margin-bottom: 8vh;
     border-radius: 1vh;
     align-items: center;
     box-shadow: 0 0 2vh rgba(0, 0, 0, 0.5);
+
+    opacity: 0.4;
+    transform: scale(0.8);
+
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.5s ease;
+
+    transform-origin: center center;
+}
+
+.project-card.focused {
+    opacity: 1;
+    transform: scale(1.6);
+
+    position: relative;
+    z-index: 10;
+}
+
+#first-project{
+    margin-top: 10vh;
+}
+
+
+#last-project {
+    margin-bottom: 16vh;
 }
 
 .project-media {
@@ -435,4 +420,44 @@ body {
     line-height: 1.5;
     color: #ccc;
     margin-bottom: 1.5vh;
+}
+
+
+/**/
+/* Navigation Links Styling */
+/**/
+.bottom-nav {
+    /*position: fixed;*/
+    /*for scrolling nav bar*/
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5vh;
+    min-height: 60px;
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4vw;
+    z-index: 100;
+    box-shadow: 0 -1vh 2vh rgba(0, 0, 0, 0.5);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 3vw;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: clamp(1rem, 1.5vh, 1.2rem);
+    transition: color 0.2s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #FFD700;
 }
