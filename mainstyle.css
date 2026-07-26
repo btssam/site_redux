@@ -380,9 +380,8 @@ body {
     margin-top: 10vh;
 }
 
-
 #last-project {
-    margin-bottom: 16vh;
+    margin-bottom: 12vh;
 }
 
 .project-media {
@@ -460,4 +459,29 @@ body {
 
 .nav-links a:hover {
     color: #FFD700;
+}
+
+/**/
+/* Scroll Snapping Rules */
+/**/
+html {
+    /*scroll-snap-type: y proximity;*/
+    scroll-snap-type: y mandatory;
+}
+
+.top-title-bar {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+/*#about,*/
+/*#projects,*/
+#skills-tree {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+.project-card {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
 }
