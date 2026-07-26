@@ -445,7 +445,7 @@ const treeDatabase = {
                 title: "Development Process",
                 type: "Computers Skill",
                 req: "",
-                desc: "The methodologies and pipelines used to plan, construct, test, and deploy software in a professional environment.",
+                desc: "The methodologies and pipelines used to plan, construct, test, and deploy software in a professional environment, including agile software development.",
                 descLong: "I gained experience with the software development process as a Software Engineering Contractor at Cisco and regularly use practices such as version control in my personal projects.<br><br>I have experience with Git, GitHub, and Jira in the context of professional teams.",
                 points: "3/3",
                 pointClass: "full",
