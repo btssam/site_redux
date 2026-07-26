@@ -249,3 +249,31 @@ window.addEventListener('resize', () => {
 //     drawDynamicLines('games', 'tree-games');
 //     drawDynamicLines('computers', 'tree-computers');
 // });
+
+//zooming for projects
+document.addEventListener("DOMContentLoaded", function () {
+    // Configure the observer
+    const observerOptions = {
+        root: null, // Uses the browser viewport
+        // This creates a bounding box in the middle of the screen.
+        // It ignores the top 30% and bottom 30% of the window.
+        rootMargin: "-49% 0px -49% 0px",
+        threshold: 0 // Triggers the moment the card touches that middle 40% band
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Card is in the center 40% of the screen
+                entry.target.classList.add('focused');
+            } else {
+                // Card has left the center
+                entry.target.classList.remove('focused');
+            }
+        });
+    }, observerOptions);
+
+    // Tell the observer to watch all 4 of your project cards
+    const cards = document.querySelectorAll('.project-card');
+    cards.forEach(card => observer.observe(card));
+});
