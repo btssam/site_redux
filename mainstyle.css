@@ -378,6 +378,8 @@ body {
     transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.5s ease;
 
     transform-origin: center center;
+
+    pointer-events: none;
 }
 
 .project-card.focused {
@@ -390,6 +392,8 @@ body {
 
     position: relative;
     z-index: 10;
+
+    pointer-events: auto;
 }
 
 #first-project{
@@ -411,6 +415,8 @@ body {
     border: 1px solid #333;
     color: #555;
 
+    transition: all 0.3s ease;
+
 }
 
 .project-media a {
@@ -420,9 +426,9 @@ body {
     text-decoration: none;
 }
 
-.project-media a:hover img {
-    filter: brightness(75%);
+.project-media:has(a):hover {
     transform: scale(1.02);
+    filter: brightness(75%);
 }
 
 .project-media img {
@@ -430,8 +436,6 @@ body {
     height: 100%;
     object-fit: contain;
     border-radius: 0.5vh;
-
-    transition: all 0.3s ease;
 }
 
 .project-info {
