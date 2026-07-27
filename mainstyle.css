@@ -482,6 +482,7 @@ body {
     text-transform: uppercase;
     font-size: clamp(0.9rem, 1.5vh, 1.1rem);
     transition: all 0.5s ease;
+    /*justify-content: center;*/
 }
 
 .button:hover {
