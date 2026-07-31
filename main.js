@@ -1,4 +1,3 @@
-//dom elements and constants
 const tooltip = document.getElementById('global-tooltip');
 const titleEl = tooltip.querySelector('.tooltip-title');
 const typeEl = tooltip.querySelector('.tooltip-type');
@@ -6,8 +5,7 @@ const reqEl = tooltip.querySelector('.tooltip-req');
 const descEl = tooltip.querySelector('.tooltip-desc');
 const greenEl = tooltip.querySelector('.tooltip-green');
 
-// const START_RADIUS = 48;
-// const END_RADIUS = 52;
+
 const SVG_NS = 'http://www.w3.org/2000/svg';
 
 
@@ -177,7 +175,6 @@ document.querySelectorAll('.talent-tree-container').forEach(tree => {
     tree.addEventListener('click', (e) => {
         const currentId = e.currentTarget.id;
         const currentIndex = carouselTrees.indexOf(currentId);
-        console.log(currentIndex);
 
         if (currentIndex === 0 ) {
             //left tree click. move to center
@@ -242,13 +239,6 @@ window.addEventListener('resize', () => {
         document.body.classList.remove('preload');
     }, 10); // 10ms after dragging stops feels instantaneous but safe
 });
-
-// // Redraw lines seamlessly if the user resizes the browser window
-// window.addEventListener('resize', () => {
-//     drawDynamicLines('arts', 'tree-arts');
-//     drawDynamicLines('games', 'tree-games');
-//     drawDynamicLines('computers', 'tree-computers');
-// });
 
 //zooming for projects
 document.addEventListener("DOMContentLoaded", function () {
