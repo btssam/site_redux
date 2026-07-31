@@ -78,7 +78,6 @@ body {
     margin-bottom: 2vh;
 }
 
-
 .about-container {
     /*padding-top: 0;*/
     display: flex;
@@ -89,6 +88,7 @@ body {
     padding: 3vh 3% 4vh 3%;
     border-radius: 1vh;
     box-shadow: 0 0 2vh rgba(0, 0, 0, 0.5);
+    margin-bottom: 10vh;
 }
 
 .image-placeholder {
@@ -107,7 +107,7 @@ body {
 
 .about-text {
     flex: 1; /*take up remaining space*/
-    font-size: clamp(0.9rem, 1.8vh, 1.1rem);
+    font-size: clamp(0.9rem, 1.9vh, 1.1rem);
     line-height: 1.6;
     color: #ccc;
 }
