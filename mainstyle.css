@@ -74,6 +74,7 @@ body {
 /* About Section Grid/Flex */
 /**/
 .about-container {
+    /*padding-top: 0;*/
     display: flex;
     gap: 4%;
     align-items: center;
@@ -85,13 +86,14 @@ body {
 
 .image-placeholder {
     flex: 0 0 45%;
+    max-width: 46.4vh;
 }
 
 .image-placeholder img {
     width: 100%;
     height: auto;
     max-height: 65vh;
-    max-width: 46.4vh;
+    /*max-width: 46.4vh;*/
     border-radius: 0.5vh;
     box-shadow: 0 0 1vh rgba(0, 0, 0, 0.8);
 }
@@ -102,6 +104,14 @@ body {
     line-height: 1.6;
     color: #ccc;
 }
+
+
+@media (min-width: 1400px) {
+    .about-text {
+        font-size: clamp(0.9rem, 1.8vh, 1.1rem);
+    }
+}
+
 
 /**/
 /*Carousel and Tree Containers*/
@@ -365,7 +375,9 @@ body {
     display: flex;
     gap: 3%;
     background-color: #1a1a1a;
-    padding: 3vh 3%;
+    /*padding: 3vh 2%;*/
+    padding: 1.7% 6% 1.7% 1%;
+
     margin-bottom: 8vh;
     border-radius: 1vh;
     align-items: center;
@@ -402,7 +414,6 @@ body {
     z-index: 10;
 
     pointer-events: auto;
-    padding: 1.2% 6% 1.2% 1%;
     /*padding-top: 1.2%;*/
     /*padding-bottom: 1.2%;*/
     /*padding-left: 1%;*/
@@ -498,10 +509,20 @@ body {
 
 .project-info p {
     margin: 0;
-    font-size: clamp(0.1rem, 1.2vh, 0.95rem);
+    font-size: clamp(0.6rem, 0.7rem, 1.1rem);
+    /*font-size: clamp(0.1rem, 1.2vh, 0.95rem);*/
     line-height: 1.5;
     color: #ccc;
     /*margin-bottom: 1.5vh;*/
+}
+
+@media (min-width: 1400px) {
+    .project-info h3 {
+        font-size: clamp(2.0rem, 2vh, 1.6rem);
+    }
+    .project-info p {
+        font-size: clamp(0.6rem, 0.9rem, 1.1rem);
+    }
 }
 
 .button.project-button {
