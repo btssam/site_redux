@@ -478,34 +478,40 @@ body {
     text-decoration: none;
     color: black;
     padding: clamp(1rem, 2vh, 1.5rem) clamp(2rem, 4vw, 3rem);
-    border-radius: 5vh;
+
+    border-radius: 1vh;
+
     cursor: pointer;
     border: 0;
-    background-color: white;
-    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    background-color: #ffe855;
+
+    box-shadow: 0 1vh 0 #ccac00;
+
     letter-spacing: 0.1rem;
     text-transform: uppercase;
     font-size: clamp(0.9rem, 1.5vh, 1.1rem);
-    transition: all 0.5s ease;
+    transition: all 0.15s ease;
     /*justify-content: center;*/
 }
 
 .button:hover {
-    letter-spacing: 3px;
-    background-color: #FFD700;
-    /*color: white;*/
-    box-shadow: #FFD700 0px 7px 29px 0px;
+    letter-spacing: 0.1rem;
+    /*background-color: #ffed61;*/
+    /*background-color: #FFEA00;*/
+    background-color: #FFEA00;
+    transform: translateY(0.4vh);
+    box-shadow: 0 0.6vh 0 #ccac00;
+    /*box-shadow: #FFD700 0px 7px 29px 0px;*/
 }
 
 .button:active {
-    letter-spacing: 3px;
-    background-color: #FFD700;
+    letter-spacing: 0.1rem;
+    background-color: #FFEA00;
     /*color: white;*/
-    box-shadow: #FFD700 0px 0px 0px 0px;
+    box-shadow: 0 0 0 #ccac00;
     transform: translateY(1vh);
-    transition: 100ms;
+    transition: all 0.05s ease-out;
 }
-/*maybe make this button yellow, just the cv one*/
 
 /*color: #FFD700;*/
 
