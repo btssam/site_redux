@@ -157,7 +157,7 @@ const treeDatabase = {
                 type: "Arts Skill",
                 req: "",
                 desc: "Constructing digital skeletons and control structures to deform and animate models.",
-                descLong: "I understand the mechanical processes required to rig a model for animation. My practical experience of these concepts is focused on implementing 2D bone-based animations within the Godot engine.",
+                descLong: "I understand the mechanical processes required to rig a model for animation including inverse kinematics. My practical experience of these concepts is focused on implementing 2D bone-based animations within the Godot engine.",
                 points: "1/3",
                 pointClass: "partial",
                 gridPos: "5 / 2"
