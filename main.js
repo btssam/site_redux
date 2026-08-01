@@ -4,10 +4,12 @@ const typeEl = tooltip.querySelector('.tooltip-type');
 const reqEl = tooltip.querySelector('.tooltip-req');
 const descEl = tooltip.querySelector('.tooltip-desc');
 const greenEl = tooltip.querySelector('.tooltip-green');
-
-
 const SVG_NS = 'http://www.w3.org/2000/svg';
 
+
+//
+//Build The Tree
+//
 
 //html generator (based on database)
 function buildTreeHTML(treeKey, containerId) {
@@ -29,7 +31,7 @@ function buildTreeHTML(treeKey, containerId) {
             ${nodeContent}
             <span class="skill-points ${nodeData.pointClass}">${nodeData.points}</span>
         `;
-        //attach tooltip listeners right as the node is created
+
         nodeDiv.addEventListener('mouseenter', () => {
             titleEl.textContent = nodeData.title;
             typeEl.textContent = nodeData.type;
@@ -40,7 +42,7 @@ function buildTreeHTML(treeKey, containerId) {
             tooltip.classList.add('visible');
         });
 
-        //click to lear more, expanding the description
+        //click to learn more, expanding the description
         nodeDiv.addEventListener('click', (e) => {
             if (nodeData.descLong) {
                 descEl.innerHTML = nodeData.desc + "<br><br>" +nodeData.descLong;
@@ -54,14 +56,11 @@ function buildTreeHTML(treeKey, containerId) {
             }
         });
 
-        //make tooltip follow cursor
         nodeDiv.addEventListener('mousemove', (e) => {
             const offset = 15;
 
-            //get the exact dimensions of the tooltip as it currently exists
             const tooltipWidth = tooltip.offsetWidth;
             const tooltipHeight = tooltip.offsetHeight;
-            //get the visible dimensions of the browser window
             const viewportWidth = window.innerWidth;
             const viewportHeight = window.innerHeight;
             //default position is bottom-right based on viewport (client) coordinates
@@ -79,7 +78,7 @@ function buildTreeHTML(treeKey, containerId) {
             tooltip.style.left = (x + window.scrollX) + 'px';
             tooltip.style.top = (y + window.scrollY) + 'px';
         });
-        //when mouse leaves the icon, fade out
+
         nodeDiv.addEventListener('mouseleave', () => {
             tooltip.classList.remove('visible');
         });
@@ -89,6 +88,7 @@ function buildTreeHTML(treeKey, containerId) {
 }
 
 //pass the treeKey and the specific container to this function
+//this is called during the 'load' event listener
 function drawDynamicLines(treeKey, containerId) {
     const treeData = treeDatabase[treeKey];
     const container = document.getElementById(containerId);
@@ -105,7 +105,7 @@ function drawDynamicLines(treeKey, containerId) {
         const endNode = document.querySelector('.' + link.to);
         //skip if node is missing
         if (!startNode || !endNode) return;
-        //use offset properties, so help with CSS does scale()
+        //use offset properties, to help with CSS does scale()
         const startX = startNode.offsetLeft + (startNode.offsetWidth / 2);
         const startY = startNode.offsetTop + (startNode.offsetHeight / 2);
         const endX = endNode.offsetLeft + (endNode.offsetWidth / 2);
@@ -124,7 +124,7 @@ function drawDynamicLines(treeKey, containerId) {
             const finalX = endX - (Math.cos(angle) * END_RADIUS);
             const finalY = endY - (Math.sin(angle) * END_RADIUS);
 
-            //createElementsNS is required for generating SVG via JS
+            //createElementNS is required for generating SVG via JS
             const line = document.createElementNS(SVG_NS, 'line');
             line.setAttribute('x1', String(startX_edge));
             line.setAttribute('y1', String(startY_edge));
@@ -167,9 +167,24 @@ buildTreeHTML('arts', 'tree-arts');
 buildTreeHTML('games', 'tree-games');
 buildTreeHTML('computers', 'tree-computers');
 
-//carousel logic
+//
+//Tree Carousel Logic
+//
+
 //array representing current positioning - left, center, right
 let carouselTrees = ['tree-arts', 'tree-games', 'tree-computers']
+
+
+function updateCarouselUI() {
+    //grab elements based on the new positions
+    const leftEl = document.getElementById(carouselTrees[0]);
+    const centerEl = document.getElementById(carouselTrees[1]);
+    const rightEl = document.getElementById(carouselTrees[2]);
+
+    leftEl.className = 'talent-tree-container pos-left';
+    centerEl.className = 'talent-tree-container pos-center';
+    rightEl.className = 'talent-tree-container pos-right';
+}
 
 document.querySelectorAll('.talent-tree-container').forEach(tree => {
     tree.addEventListener('click', (e) => {
@@ -194,18 +209,6 @@ document.querySelectorAll('.talent-tree-container').forEach(tree => {
     });
 });
 
-function updateCarouselUI(){
-    //grab el's based on the new positons
-    const leftEl = document.getElementById(carouselTrees[0]);
-    const centerEl = document.getElementById(carouselTrees[1]);
-    const rightEl = document.getElementById(carouselTrees[2]);
-
-    //appply updated css classes
-    leftEl.className = 'talent-tree-container pos-left';
-    centerEl.className = 'talent-tree-container pos-center';
-    rightEl.className = 'talent-tree-container pos-right';
-}
-
 // enable animation/easing once the page actually loads, so that we don't see elements move on load.
 // also, wait to draw lines, so that it can get the correct placement data
 window.addEventListener('load', () => {
@@ -222,22 +225,22 @@ let resizeTimer;
 window.addEventListener('resize', () => {
     document.body.classList.add('preload');
 
-    // 2. Clear the timer if the user is still actively dragging the window
+    //clear the timer if the user is still actively dragging the window
     clearTimeout(resizeTimer);
     drawDynamicLines('arts', 'tree-arts');
     drawDynamicLines('games', 'tree-games');
     drawDynamicLines('computers', 'tree-computers');
 
-    // 3. Set a timer to fire only AFTER the user stops dragging
+    //set a timer to fire only AFTER the user stops dragging
     resizeTimer = setTimeout(() => {
-        // Redraw lines using the final, snapped window dimensions
+        //redraw lines using the final, snapped window dimensions
         drawDynamicLines('arts', 'tree-arts');
         drawDynamicLines('games', 'tree-games');
         drawDynamicLines('computers', 'tree-computers');
 
-        // Re-enable CSS transitions
+        //re-enable CSS transitions
         document.body.classList.remove('preload');
-    }, 10); // 10ms after dragging stops feels instantaneous but safe
+    }, 10); // 10ms after dragging stops feels instantaneous
 });
 
 //zooming for projects
@@ -254,16 +257,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Card is in the center 40% of the screen
                 entry.target.classList.add('focused');
             } else {
-                // Card has left the center
                 entry.target.classList.remove('focused');
             }
         });
     }, observerOptions);
 
-    // Tell the observer to watch all 4 of your project cards
     const cards = document.querySelectorAll('.project-card');
     cards.forEach(card => observer.observe(card));
 });
