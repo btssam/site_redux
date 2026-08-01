@@ -200,7 +200,8 @@ body {
 }
 
 .pos-left .talent-node,
-.pos-right .talent-node {
+.pos-right .talent-node,
+.carousel-animating .talent-node{
     pointer-events: none;
 }
 

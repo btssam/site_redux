@@ -173,7 +173,7 @@ buildTreeHTML('computers', 'tree-computers');
 
 //array representing current positioning - left, center, right
 let carouselTrees = ['tree-arts', 'tree-games', 'tree-computers']
-
+let carouselAnimTimer;
 
 function updateCarouselUI() {
     //grab elements based on the new positions
@@ -206,6 +206,14 @@ document.querySelectorAll('.talent-tree-container').forEach(tree => {
         }
 
         updateCarouselUI();
+
+        // hide any visible tooltips and prevent any popping up during animation
+        tooltip.classList.remove('visible');
+        document.body.classList.add('carousel-animating');
+        clearTimeout(carouselAnimTimer);
+        carouselAnimTimer = setTimeout(() => {
+            document.body.classList.remove('carousel-animating');
+        }, 500);
     });
 });
 
@@ -220,10 +228,10 @@ window.addEventListener('load', () => {
     }, 50);
 });
 
-//disable animations so that the proceeding resize works instantly
+//recalculate lines when resizing windows
 let resizeTimer;
 window.addEventListener('resize', () => {
-    document.body.classList.add('preload');
+    document.body.classList.add('preload'); //disable animations so that the proceeding resize works instantly
 
     //clear the timer if the user is still actively dragging the window
     clearTimeout(resizeTimer);
@@ -231,7 +239,7 @@ window.addEventListener('resize', () => {
     drawDynamicLines('games', 'tree-games');
     drawDynamicLines('computers', 'tree-computers');
 
-    //set a timer to fire only AFTER the user stops dragging
+    //set a timer to fire only after the user stops dragging
     resizeTimer = setTimeout(() => {
         //redraw lines using the final, snapped window dimensions
         drawDynamicLines('arts', 'tree-arts');
@@ -243,15 +251,14 @@ window.addEventListener('resize', () => {
     }, 10); // 10ms after dragging stops feels instantaneous
 });
 
-//zooming for projects
+//zooming for projects subsection
 document.addEventListener("DOMContentLoaded", function () {
-    // Configure the observer
     const observerOptions = {
         root: null, // Uses the browser viewport
         // This creates a bounding box in the middle of the screen.
-        // It ignores the top 30% and bottom 30% of the window.
+        // It ignores the top and bottom of the window.
         rootMargin: "-49% 0px -49% 0px",
-        threshold: 0 // Triggers the moment the card touches that middle 40% band
+        threshold: 0 // Triggers the moment the card touches that middle band
     };
 
     const observer = new IntersectionObserver((entries) => {
