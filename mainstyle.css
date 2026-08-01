@@ -79,6 +79,9 @@ body {
     .section-title {
         font-size: clamp(1.5rem, 6vw, 2.25rem);
         letter-spacing: 0.08em;
+        margin-bottom: 1vh;
+        padding-bottom: 0.5vh;
+        /*margin-top: 0;*/
     }
 }
 
@@ -104,7 +107,8 @@ body {
     .about-container {
         flex-direction: column;
         align-items: stretch;
-        margin-bottom: 0vh;
+        margin-bottom: 0;
+        padding: 2vh 3% 3vh 3%;
     }
 }
 
@@ -493,7 +497,6 @@ body {
     pointer-events: none;
     height: clamp(12rem, 28vh, 24rem);
 
-
     position: relative;
     z-index: 1;
 }
@@ -501,19 +504,48 @@ body {
 .project-card.focused {
     opacity: 1;
     transform: scale(1.6);
-    margin-left: auto;
-    margin-right: auto;
     z-index: 10;
-
     pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+    .project-card,
+    .project-card.focused {
+        opacity: 1;
+        transform: scale(1.0);
+        pointer-events: auto;
+        transition: none;
+
+        margin-bottom: 2vh;
+        border-radius: 0.5vh;
+        padding: 4% 4% 4% 4%;
+
+        max-width: 98vw;
+
+        height: clamp(12rem, 55vh, 50rem);
+
+        flex-direction: column;
+    }
 }
 
 #first-project{
     margin-top: 10vh;
 }
 
+@media (max-width: 768px) {
+    #first-project{
+        margin-top: 0;
+    }
+}
+
 #last-project {
     margin-bottom: 14vh;
+}
+
+@media (max-width: 768px) {
+    #last-project {
+        margin-bottom: 0;
+    }
 }
 
 .project-media {
@@ -531,7 +563,15 @@ body {
     border: 1px solid #333;
     color: #555;
     transition: all 0.3s ease;
+}
 
+
+@media (max-width: 768px) {
+    .project-media{
+        height: auto;
+        width: 100%;
+        max-width: 100%;
+    }
 }
 
 .project-media a {
@@ -611,12 +651,16 @@ body {
     box-shadow: 0 0.5vh 0 #ccac00;
 }
 
+/*@media (min-width: 1400px) {*/
+/*    .button.project-button {*/
+/*        font-size: clamp(0.3rem, 1.2vh, 0.6rem);*/
+/*    }*/
+/*}*/
+
 .button.project-button:hover {
     transform: translateY(0.2vh);
-
     box-shadow: 0 0.3vh 0 #ccac00;
 }
-
 
 .button.project-button:active {
     box-shadow: 0 0 0 #ccac00;
