@@ -172,6 +172,13 @@ body {
     padding: 2vh 0;
 }
 
+@media (max-width: 768px) {
+    .carousel-wrapper {
+        flex-direction: column;
+        gap: 4vh;
+    }
+}
+
 .talent-tree-container {
     height: 85vh;
     max-height: 1200px;
@@ -181,21 +188,31 @@ body {
     background-size: cover;
     background-position: center;
 
-    /* Set up the 4 Column, 7 Row Grid */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(7, 1fr);
-    gap: 1%; /* Spacing between icons */
+    gap: 1%; /*spacing between icons */
     padding: clamp(40px, 9vh, 120px) 1.5% 1.5% 1.5%; /*extra top space for title*/
 
-    /* Border and shadow to the whole panel */
     border: 2px solid #333;
     box-shadow: 0 0 2vh rgba(0,0,0,0.8);
 
-    /* Anchors the absolute SVG to this container */
     position: absolute;
 
     transition: all 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .talent-tree-container {
+        position: relative;
+        width: 92vw;
+        max-width: 550px;
+        height: auto;
+        min-height: 0;
+        max-height: none;
+        transition: none;
+        padding: clamp(40px, 6vh, 120px) 3% 3% 3%; /*extra top space for title*/
+    }
 }
 
 .talent-tree-container h1 {
@@ -203,8 +220,7 @@ body {
     top: clamp(8px, 1.5vh, 24px);
     left: 0;
     right: 0;
-    /*grid-column: 1 / -1;*/
-    /*margin: 0 0 4% 0;*/
+
     z-index: 10;
 
     text-align: center;
@@ -214,8 +230,12 @@ body {
     color: rgba(255, 255, 255, 1);
 
     text-shadow: 4px 4px 8px #000000;
+}
 
-
+@media (max-width: 768px) {
+    .talent-tree-container h1 {
+        font-size: clamp(1.25rem, 2vh, 1.75rem);
+    }
 }
 
 #tree-arts { background-image: url('images/arts_bg.png');}
@@ -245,10 +265,30 @@ body {
     cursor: pointer;
 }
 
+@media (max-width: 768px) {
+    .pos-center,
+    .pos-left,
+    .pos-right {
+        transform: none;
+        opacity: 1;
+        filter: none;
+        cursor: default;
+        z-index: 1;
+    }
+}
+
 .pos-left .talent-node,
 .pos-right .talent-node,
 .carousel-animating .talent-node{
     pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .pos-left .talent-node,
+    .pos-right .talent-node,
+    .carousel-animating .talent-node {
+        pointer-events: auto;
+    }
 }
 
 /**/
@@ -354,7 +394,6 @@ body {
     /*invisible to mouse, so that it doesnt interrupt hovering*/
     pointer-events: none;
 
-    /*background and border*/
     background-color: rgba(5, 5, 15, 0.85);
     border: 1px solid #888888;
     border-radius: 0.5vh;
@@ -372,6 +411,16 @@ body {
     /*//hidden by default*/
     opacity: 0;
     transition: opacity 0.1s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .wow-tooltip {
+        min-width: 49vw;
+        max-width: 49vw;
+        padding: 0.5vh 2vw;
+        /*font-size: clamp(0.95rem, 1vw, 2.25rem);*/
+        font-size: clamp(0.85rem, 1vw, 2.25rem);
+    }
 }
 
 /*boolean toggle to show tooltip (handled by javascript)*/
@@ -403,6 +452,19 @@ body {
     color: #40FF40;
     margin-top: 2vh;
     line-height: 1.3;
+}
+
+
+@media (max-width: 768px) {
+    .tooltip-title {
+        /*font-size: 1.3rem;*/
+        font-size: clamp(0.95rem, 3vw, 2.25rem);
+    }
+
+    .tooltip-type,
+    .tooltip-req {
+        font-size: clamp(0.7rem, 1.5vw, 2.25rem);
+    }
 }
 
 /**/

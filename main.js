@@ -208,7 +208,7 @@ document.querySelectorAll('.talent-tree-container').forEach(tree => {
         updateCarouselUI();
 
         // hide any visible tooltips and prevent any popping up during animation
-        tooltip.classList.remove('visible');
+        // tooltip.classList.remove('visible');
         document.body.classList.add('carousel-animating');
         clearTimeout(carouselAnimTimer);
         carouselAnimTimer = setTimeout(() => {
