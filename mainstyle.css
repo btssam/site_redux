@@ -553,6 +553,7 @@ body {
 /* Navigation Links Styling */
 /**/
 .bottom-nav {
+    position: relative;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -584,6 +585,22 @@ body {
 
 .nav-links a:hover {
     color: #FFD700;
+}
+
+/*toggle: if I want copyright to be on nav bar*/
+/*.nav-copyright {*/
+/*    position: absolute;*/
+/*    right: 4vw;*/
+/*    margin: 0;*/
+/*    color: #888;*/
+/*    font-size: clamp(0.9rem, 1.4vh, 1.2rem);*/
+/*}*/
+
+.site-copyright {
+    text-align: center;
+    margin: 0 0 3vh 0;
+    color: #888;
+    font-size: clamp(0.9rem, 1.4vh, 1.2rem);
 }
 
 /**/
