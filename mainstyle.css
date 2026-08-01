@@ -215,7 +215,7 @@ body {
         min-height: 0;
         max-height: none;
         transition: none;
-        padding: clamp(40px, 6vh, 120px) 3% 3% 3%; /*extra top space for title*/
+        padding: clamp(40px, 7vh, 120px) 3% 3% 3%; /*extra top space for title*/
     }
 }
 
