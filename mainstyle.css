@@ -11,11 +11,9 @@ body {
     color: white;
     font-family: sans-serif;
     padding: 0;
-    /*padding-bottom: 8vh;*/
-    /*for scrolling nav bar*/
 }
 
-/*assures that it doesnt animate when moving elements on the dom on initial load*/
+/*assures that it doesnt animate when moving elements on the dom on initial load. this preload is set via js*/
 .preload * {
     transition: none !important;
 }
@@ -41,6 +39,13 @@ body {
     font-size: clamp(3.5rem, 7.5vh, 5rem);
 }
 
+@media (max-width: 768px) {
+    .top-title-bar h1 {
+        font-size: clamp(2rem, 10vw, 3rem);
+        letter-spacing: 0.9vw;
+    }
+}
+
 /**/
 /* General Section Styling */
 /**/
@@ -48,6 +53,12 @@ body {
     padding: 3vh 2rem 6vh 2rem;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .content-section {
+        padding: 2vh 1rem 4vh 1rem;
+    }
 }
 
 .section-title {
@@ -62,6 +73,13 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.15em;
     color: #FFD700;
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: clamp(1.5rem, 6vw, 2.25rem);
+        letter-spacing: 0.08em;
+    }
 }
 
 /**/
@@ -82,9 +100,24 @@ body {
     margin-bottom: 10vh;
 }
 
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        align-items: stretch;
+        margin-bottom: 0vh;
+    }
+}
+
 .image-placeholder {
     flex: 0 0 45%;
     max-width: 46.4vh;
+}
+
+@media (max-width: 768px) {
+    .image-placeholder {
+        flex: 0 0 auto;
+        max-width: 100%;
+    }
 }
 
 .image-placeholder img {
@@ -93,6 +126,12 @@ body {
     max-height: 65vh;
     border-radius: 0.5vh;
     box-shadow: 0 0 1vh rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 768px) {
+    .image-placeholder img {
+        max-height: 75vh;
+    }
 }
 
 .about-text {
@@ -105,6 +144,13 @@ body {
 @media (min-width: 1400px) {
     .about-text {
         font-size: clamp(0.9rem, 2.0vh, 1.1rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .about-text {
+        /*font-size: clamp(0.9rem, 2.0vh, 1.1rem);*/
+        font-size: clamp(0.95rem, 1vw, 2.25rem);
     }
 }
 
@@ -611,6 +657,12 @@ body {
 /**/
 html {
     scroll-snap-type: y mandatory;
+}
+
+@media (max-width: 768px){
+    html{
+        scroll-snap-type: none;
+    }
 }
 
 .top-title-bar {
