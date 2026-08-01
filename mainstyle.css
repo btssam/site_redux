@@ -1,3 +1,21 @@
+/*Compatibility @media Targets*/
+/**/
+/*1. Generic Monitor*/
+/*No @media tag - generic behavior*/
+/*2. 4K/TV*/
+/*@media (min-width: 1400px)*/
+/*3.Vertical Phones*/
+/*@media (max-width: 767px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4)*/
+/*4. Square Tablet/Foldable Phone*/
+/*@media (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4)*/
+/*5. Portrait Tablet*/
+/*@media (min-width: 768px) and (max-width: 1024px) */
+/*6. Landscape Phones*/
+/*@media (max-height: 500px) and (orientation: landscape) and (pointer: coarse)*/
+/*7. Landscape Tablets*/
+/*@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) and (min-height: 501px) and (pointer: coarse)*/
+
+
 /**/
 /*Global Resets*/
 /**/
@@ -39,7 +57,7 @@ body {
     font-size: clamp(3.5rem, 7.5vh, 5rem);
 }
 
-@media (max-width: 767px) and (orientation: portrait) {
+@media (max-width: 767px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     .top-title-bar h1 {
         font-size: clamp(2rem, 10vw, 3rem);
         letter-spacing: 0.9vw;
@@ -55,7 +73,7 @@ body {
     margin: 0 auto;
 }
 
-@media (max-width: 767px) and (orientation: portrait) {
+@media (max-width: 767px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     .content-section {
         padding: 2vh 1rem 4vh 1rem;
     }
@@ -75,7 +93,7 @@ body {
     color: #FFD700;
 }
 
-@media (max-width: 767px) and (orientation: portrait) {
+@media (max-width: 767px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     .section-title {
         font-size: clamp(1.5rem, 6vw, 2.25rem);
         letter-spacing: 0.08em;
@@ -103,7 +121,7 @@ body {
     margin-bottom: 10vh;
 }
 
-@media (max-width: 767px) and (orientation: portrait) {
+@media (max-width: 767px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     .about-container {
         flex-direction: column;
         align-items: stretch;
@@ -117,7 +135,7 @@ body {
     max-width: 46.4vh;
 }
 
-@media (max-width: 767px) and (orientation: portrait) {
+@media (max-width: 767px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     .image-placeholder {
         flex: 0 0 auto;
         max-width: 100%;
@@ -132,7 +150,7 @@ body {
     box-shadow: 0 0 1vh rgba(0, 0, 0, 0.8);
 }
 
-@media (max-width: 767px) and (orientation: portrait) {
+@media (max-width: 767px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     .image-placeholder img {
         max-height: 75vh;
     }
@@ -151,7 +169,7 @@ body {
     }
 }
 
-@media (max-width: 767px) and (orientation: portrait) {
+@media (max-width: 767px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     .about-text {
         /*font-size: clamp(0.9rem, 2.0vh, 1.1rem);*/
         font-size: clamp(0.95rem, 1vw, 2.25rem);
@@ -176,7 +194,7 @@ body {
     padding: 2vh 0;
 }
 
-@media (max-width: 767px) and (orientation: portrait) {
+@media (max-width: 767px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     .carousel-wrapper {
         flex-direction: column;
         gap: 4vh;
@@ -206,7 +224,7 @@ body {
     transition: all 0.5s ease-in-out;
 }
 
-@media (max-width: 767px) and (orientation: portrait) {
+@media (max-width: 767px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     .talent-tree-container {
         position: relative;
         width: 92vw;
@@ -236,7 +254,7 @@ body {
     text-shadow: 4px 4px 8px #000000;
 }
 
-@media (max-width: 767px) and (orientation: portrait) {
+@media (max-width: 767px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     .talent-tree-container h1 {
         font-size: clamp(1.25rem, 2vh, 1.75rem);
     }
@@ -269,7 +287,7 @@ body {
     cursor: pointer;
 }
 
-@media (max-width: 767px) and (orientation: portrait) {
+@media (max-width: 767px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     .pos-center,
     .pos-left,
     .pos-right {
@@ -287,11 +305,62 @@ body {
     pointer-events: none;
 }
 
-@media (max-width: 767px) and (orientation: portrait) {
+@media (max-width: 767px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     .pos-left .talent-node,
     .pos-right .talent-node,
     .carousel-animating .talent-node {
         pointer-events: auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) and (pointer: coarse) {
+    .carousel-wrapper {
+        flex-direction: column;
+        gap: 4vh;
+    }
+
+    .talent-tree-container {
+        position: relative;
+        width: 85vw;
+        max-width: 650px;
+        height: auto;
+        min-height: 0;
+        max-height: none;
+        transition: none;
+    }
+
+    .pos-center, .pos-left, .pos-right {
+        transform: none;
+        opacity: 1;
+        filter: none;
+        cursor: default;
+        z-index: 1;
+    }
+
+    .pos-left .talent-node,
+    .pos-right .talent-node,
+    .carousel-animating .talent-node {
+        pointer-events: auto;
+    }
+}
+
+@media (max-height: 500px) and (orientation: landscape) and (pointer: coarse) {
+    .top-title-bar h1 {
+        font-size: clamp(1.5rem, 6vh, 2.5rem);
+    }
+
+    .content-section {
+        padding: 1vh 2rem 2vh 2rem;
+    }
+
+    .section-title {
+        font-size: clamp(1.25rem, 5vh, 2rem);
+        margin-bottom: 1vh;
+    }
+
+    .talent-tree-container {
+        height: 90vh;
+        min-height: 0;
     }
 }
 
@@ -417,7 +486,7 @@ body {
     transition: opacity 0.1s ease-in-out;
 }
 
-@media (max-width: 767px) and (orientation: portrait) {
+@media (max-width: 767px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     .wow-tooltip {
         min-width: 49vw;
         max-width: 49vw;
@@ -459,7 +528,7 @@ body {
 }
 
 
-@media (max-width: 767px) and (orientation: portrait) {
+@media (max-width: 767px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     .tooltip-title {
         /*font-size: 1.3rem;*/
         font-size: clamp(0.95rem, 3vw, 2.25rem);
@@ -508,7 +577,7 @@ body {
     pointer-events: auto;
 }
 
-@media (max-width: 767px) and (orientation: portrait) {
+@media (max-width: 767px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     .project-card,
     .project-card.focused {
         opacity: 1;
@@ -532,7 +601,7 @@ body {
     margin-top: 10vh;
 }
 
-@media (max-width: 767px) and (orientation: portrait) {
+@media (max-width: 767px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     #first-project{
         margin-top: 0;
     }
@@ -542,7 +611,7 @@ body {
     margin-bottom: 14vh;
 }
 
-@media (max-width: 767px) and (orientation: portrait) {
+@media (max-width: 767px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     #last-project {
         margin-bottom: 0;
     }
@@ -566,7 +635,7 @@ body {
 }
 
 
-@media (max-width: 767px) and (orientation: portrait) {
+@media (max-width: 767px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     .project-media{
         height: auto;
         width: 100%;
@@ -765,8 +834,8 @@ html {
     scroll-snap-type: y mandatory;
 }
 
-@media (max-width: 767px) and (orientation: portrait){
-    html{
+@media (pointer: coarse) {
+    html {
         scroll-snap-type: none;
     }
 }
