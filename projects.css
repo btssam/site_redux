@@ -82,6 +82,16 @@
     }
 }
 
+/*Landscape Phones*/
+@media (max-height: 500px) and (orientation: landscape) and (pointer: coarse) {
+    .project-card,
+    .project-card.focused {
+        max-width: 90vw;
+        height: clamp(10rem, 65vh, 20rem);
+        padding: 3% 4% 3% 4%;
+    }
+}
+
 /*Landscape Tablets*/
 @media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) and (min-height: 501px) and (pointer: coarse) {
     .project-card,
@@ -240,6 +250,17 @@
     }
 }
 
+/*Landscape Phones*/
+@media (max-height: 500px) and (orientation: landscape) and (pointer: coarse) {
+    .project-info h3 {
+        font-size: clamp(1.3rem, 3.2vh, 1.6rem);
+    }
+
+    .project-info p {
+        font-size: clamp(0.6rem, 3.2vh, 1.2rem);
+    }
+}
+
 .button.project-button {
     position: relative;
     margin-top: auto;
@@ -262,6 +283,13 @@
 @media (min-width: 3400px) {
     .button.project-button {
         font-size: clamp(0.5rem, 1.3vh, 1.2rem);
+    }
+}
+
+/*Landscape Phones*/
+@media (max-height: 500px) and (orientation: landscape) and (pointer: coarse) {
+    .button.project-button {
+        font-size: clamp(0.4rem, 1.6vh, 0.6rem);
     }
 }
 
