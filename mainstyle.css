@@ -51,7 +51,7 @@ body {
 /*Large Monitor*/
 @media (min-width: 1800px) {
     .content-section {
-        max-width: 1800px;
+        max-width: clamp(1800px, 75vw, 2560px);
     }
 }
 
