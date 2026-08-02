@@ -3,9 +3,9 @@
 /*1. Generic Monitor*/
 /*No @media tag - generic behavior*/
 /*2. 4K/TV*/
-/*@media (min-width: 1400px)*/
+/*@media (min-width: 1800px)* and media (min-width: 3400px) for ultra HD/
 /*3.Vertical Phones*/
-/*@media (max-width: 767px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4)*/
+/*@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4)*/
 /*4. Square Tablet/Foldable Phone*/
 /*@media (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4)*/
 /*5. Portrait Tablet*/
@@ -57,10 +57,16 @@ body {
     font-size: clamp(3.5rem, 7.5vh, 5rem);
 }
 
-@media (max-width: 767px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     .top-title-bar h1 {
         font-size: clamp(2rem, 10vw, 3rem);
         letter-spacing: 0.9vw;
+    }
+}
+
+@media (max-height: 500px) and (orientation: landscape) and (pointer: coarse) {
+    .top-title-bar h1 {
+        font-size: clamp(1.5rem, 6vh, 2.5rem);
     }
 }
 
@@ -73,9 +79,27 @@ body {
     margin: 0 auto;
 }
 
-@media (max-width: 767px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+@media (min-width: 1800px) {
+    .content-section {
+        max-width: 1800px;
+    }
+}
+
+@media (min-width: 3400px) {
+    .content-section {
+        max-width: 2560px;
+    }
+}
+
+@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     .content-section {
         padding: 2vh 1rem 4vh 1rem;
+    }
+}
+
+@media (max-height: 500px) and (orientation: landscape) and (pointer: coarse) {
+    .content-section {
+        padding: 1vh 2rem 2vh 2rem;
     }
 }
 
@@ -93,7 +117,13 @@ body {
     color: #FFD700;
 }
 
-@media (max-width: 767px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+@media (min-width: 1800px) {
+    .section-title {
+        margin-bottom: 3vh;
+    }
+}
+
+@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     .section-title {
         font-size: clamp(1.5rem, 6vw, 2.25rem);
         letter-spacing: 0.08em;
@@ -103,8 +133,16 @@ body {
     }
 }
 
+
+@media (max-height: 500px) and (orientation: landscape) and (pointer: coarse) {
+    .section-title {
+        font-size: clamp(1.25rem, 5vh, 2rem);
+        margin-bottom: 1vh;
+    }
+}
+
 /**/
-/* About Section Grid/Flex */
+/* About Section */
 /**/
 #about .section-title{
     margin-bottom: 2vh;
@@ -121,7 +159,13 @@ body {
     margin-bottom: 10vh;
 }
 
-@media (max-width: 767px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+@media (min-width: 1800px) {
+    .about-container {
+        margin-bottom: 6vh;
+    }
+}
+
+@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     .about-container {
         flex-direction: column;
         align-items: stretch;
@@ -130,12 +174,18 @@ body {
     }
 }
 
+@media (min-width: 601px) and (max-width: 1024px) and (orientation: portrait) and (pointer: coarse) {
+    .about-container {
+        margin-bottom: 0;
+    }
+}
+
 .image-placeholder {
     flex: 0 0 45%;
     max-width: 46.4vh;
 }
 
-@media (max-width: 767px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     .image-placeholder {
         flex: 0 0 auto;
         max-width: 100%;
@@ -150,7 +200,7 @@ body {
     box-shadow: 0 0 1vh rgba(0, 0, 0, 0.8);
 }
 
-@media (max-width: 767px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     .image-placeholder img {
         max-height: 75vh;
     }
@@ -163,15 +213,20 @@ body {
     color: #ccc;
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1800px) {
     .about-text {
-        font-size: clamp(0.9rem, 2.0vh, 1.1rem);
+        font-size: clamp(1.3rem, 2.2vh, 1.6rem);
     }
 }
 
-@media (max-width: 767px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+@media (min-width: 3400px) {
     .about-text {
-        /*font-size: clamp(0.9rem, 2.0vh, 1.1rem);*/
+        font-size: clamp(2.0rem, 3.0vh, 2.2rem);
+    }
+}
+
+@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+    .about-text {
         font-size: clamp(0.95rem, 1vw, 2.25rem);
     }
 }
@@ -194,7 +249,7 @@ body {
     padding: 2vh 0;
 }
 
-@media (max-width: 767px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     .carousel-wrapper {
         flex-direction: column;
         gap: 4vh;
@@ -224,7 +279,13 @@ body {
     transition: all 0.5s ease-in-out;
 }
 
-@media (max-width: 767px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+@media (min-width: 1800px) {
+    .talent-tree-container {
+        max-height: 1800px;
+    }
+}
+
+@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     .talent-tree-container {
         position: relative;
         width: 92vw;
@@ -234,6 +295,13 @@ body {
         max-height: none;
         transition: none;
         padding: clamp(40px, 7vh, 120px) 3% 3% 3%; /*extra top space for title*/
+    }
+}
+
+@media (max-height: 500px) and (orientation: landscape) and (pointer: coarse) {
+    .talent-tree-container {
+        height: 80vh;
+        min-height: 0;
     }
 }
 
@@ -254,9 +322,16 @@ body {
     text-shadow: 4px 4px 8px #000000;
 }
 
-@media (max-width: 767px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     .talent-tree-container h1 {
         font-size: clamp(1.25rem, 2vh, 1.75rem);
+    }
+}
+
+@media (max-height: 500px) and (orientation: landscape) and (pointer: coarse) {
+    .talent-tree-container h1{
+        font-size: clamp(0.85rem, 2.2vh, 1.1rem);
+        letter-spacing: 0.1vw;
     }
 }
 
@@ -287,7 +362,7 @@ body {
     cursor: pointer;
 }
 
-@media (max-width: 767px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     .pos-center,
     .pos-left,
     .pos-right {
@@ -305,7 +380,7 @@ body {
     pointer-events: none;
 }
 
-@media (max-width: 767px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     .pos-left .talent-node,
     .pos-right .talent-node,
     .carousel-animating .talent-node {
@@ -341,26 +416,6 @@ body {
     .pos-right .talent-node,
     .carousel-animating .talent-node {
         pointer-events: auto;
-    }
-}
-
-@media (max-height: 500px) and (orientation: landscape) and (pointer: coarse) {
-    .top-title-bar h1 {
-        font-size: clamp(1.5rem, 6vh, 2.5rem);
-    }
-
-    .content-section {
-        padding: 1vh 2rem 2vh 2rem;
-    }
-
-    .section-title {
-        font-size: clamp(1.25rem, 5vh, 2rem);
-        margin-bottom: 1vh;
-    }
-
-    .talent-tree-container {
-        height: 90vh;
-        min-height: 0;
     }
 }
 
@@ -486,13 +541,34 @@ body {
     transition: opacity 0.1s ease-in-out;
 }
 
-@media (max-width: 767px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+
+/*@media (min-width: 1800px) {*/
+/*    min-width: 49vw;*/
+/*    max-width: 49vw;*/
+/*    padding: 0.5vh 2vw;*/
+/*    font-size: clamp(1.6rem, 2vw, 5.5rem);*/
+/*}*/
+
+
+/*@media (min-width: 3400px) {*/
+
+/*}*/
+
+@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     .wow-tooltip {
         min-width: 49vw;
         max-width: 49vw;
         padding: 0.5vh 2vw;
-        /*font-size: clamp(0.95rem, 1vw, 2.25rem);*/
         font-size: clamp(0.85rem, 1vw, 2.25rem);
+    }
+}
+
+@media (max-height: 500px) and (orientation: landscape) and (pointer: coarse) {
+    .wow-tooltip {
+        min-width: 47vw;
+        max-width: 47vw;
+        padding: 1.5vh 1.1vw;
+        font-size: clamp(0.65rem, 0.55vw, 0.9rem);;
     }
 }
 
@@ -527,16 +603,25 @@ body {
     line-height: 1.3;
 }
 
-
-@media (max-width: 767px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     .tooltip-title {
-        /*font-size: 1.3rem;*/
         font-size: clamp(0.95rem, 3vw, 2.25rem);
     }
 
     .tooltip-type,
     .tooltip-req {
         font-size: clamp(0.7rem, 1.5vw, 2.25rem);
+    }
+}
+
+@media (max-height: 500px) and (orientation: landscape) and (pointer: coarse) {
+    .tooltip-title {
+        font-size: clamp(0.85rem, 1.75vw, 2rem);
+    }
+
+    .tooltip-type,
+    .tooltip-req {
+        font-size: clamp(0.65rem, 1.4vw, 1.8rem);
     }
 }
 
@@ -577,14 +662,25 @@ body {
     pointer-events: auto;
 }
 
-@media (max-width: 767px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+@media (pointer: coarse) {
     .project-card,
     .project-card.focused {
         opacity: 1;
         transform: scale(1.0);
         pointer-events: auto;
         transition: none;
+    }
+}
 
+@media (min-width: 1800px) {
+    .project-card {
+        height: clamp(12rem, 28vh, 36rem);
+    }
+}
+
+@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+    .project-card,
+    .project-card.focused {
         margin-bottom: 2vh;
         border-radius: 0.5vh;
         padding: 4% 4% 4% 4%;
@@ -597,12 +693,36 @@ body {
     }
 }
 
+@media (min-width: 601px) and (max-width: 1024px) and (orientation: portrait) and (pointer: coarse) {
+    .project-card,
+    .project-card.focused {
+        flex-direction: column;
+        max-width: 90vw;
+        height: clamp(16rem, 55vh, 55rem);
+        padding: 3%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) and (min-height: 501px) and (pointer: coarse) {
+    .project-card,
+    .project-card.focused {
+        height: clamp(14rem, 34vh, 28rem);
+    }
+}
+
+
 #first-project{
     margin-top: 10vh;
 }
 
-@media (max-width: 767px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     #first-project{
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) and (orientation: portrait) and (pointer: coarse) {
+    #first-project {
         margin-top: 0;
     }
 }
@@ -611,7 +731,19 @@ body {
     margin-bottom: 14vh;
 }
 
-@media (max-width: 767px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+@media (min-width: 601px) and (max-width: 1024px) and (orientation: portrait) and (pointer: coarse) {
+    #last-project {
+        margin-bottom: 0;
+    }
+}
+
+/*@media (min-width: 1800px) {*/
+/*    #last-project {*/
+/*        margin-bottom: 12vh;*/
+/*    }*/
+/*}*/
+
+@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     #last-project {
         margin-bottom: 0;
     }
@@ -635,13 +767,24 @@ body {
 }
 
 
-@media (max-width: 767px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     .project-media{
         height: auto;
         width: 100%;
         max-width: 100%;
     }
 }
+
+
+@media (min-width: 601px) and (max-width: 1024px) and (orientation: portrait) and (pointer: coarse) {
+    .project-media {
+        height: auto;
+        width: 90%;
+        max-width: 90%;
+    }
+}
+
+
 
 .project-media a {
     display: block;
@@ -700,12 +843,21 @@ body {
     color: #ccc;
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1800px) {
     .project-info h3 {
-        font-size: clamp(1.2rem, 4vh, 3rem);
+        font-size: clamp(1.3rem, 3.8vh, 2.8rem);
     }
     .project-info p {
-        font-size: clamp(0.6rem, 0.9rem, 1.1rem);
+        font-size: clamp(0.55rem, 1.3vh, 1.2rem);
+    }
+}
+
+@media (min-width: 3400px) {
+    .project-info h3 {
+        font-size: clamp(2.8rem, 7.5vh, 4.75rem);
+    }
+    .project-info p {
+        font-size: clamp(0.7rem, 1.6vh, 1.75rem);
     }
 }
 
@@ -720,11 +872,17 @@ body {
     box-shadow: 0 0.5vh 0 #ccac00;
 }
 
-/*@media (min-width: 1400px) {*/
-/*    .button.project-button {*/
-/*        font-size: clamp(0.3rem, 1.2vh, 0.6rem);*/
-/*    }*/
-/*}*/
+@media (min-width: 1800px) {
+    .button.project-button {
+        font-size: clamp(0.4rem, 1.2vh, 1.2rem);
+    }
+}
+
+@media (min-width: 3400px) {
+    .button.project-button {
+        font-size: clamp(0.5rem, 1.3vh, 1.2rem);
+    }
+}
 
 .button.project-button:hover {
     transform: translateY(0.2vh);
@@ -756,6 +914,19 @@ body {
     text-transform: uppercase;
     font-size: clamp(0.9rem, 1.5vh, 1.1rem);
     transition: all 0.15s ease;
+}
+
+
+@media (min-width: 1800px) {
+    .button.cv-button {
+        font-size: clamp(0.4rem, 1.2vh, 1.2rem);
+    }
+}
+
+@media (min-width: 3400px) {
+    .button.cv-button {
+        font-size: clamp(2.0rem, 3.0vh, 2.4rem);
+    }
 }
 
 .button:hover {
