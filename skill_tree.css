@@ -1,0 +1,427 @@
+/**/
+/**/
+/*Carousel and Tree Containers*/
+/**/
+/**/
+.tree-page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel-wrapper {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 2vh 0;
+}
+
+/*Vertical Phones and Square Tablets/Foldables*/
+@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+    .carousel-wrapper {
+        flex-direction: column;
+        gap: 4vh;
+    }
+}
+
+/*Portrait Tablets*/
+@media (min-width: 601px) and (max-width: 1024px) and (orientation: portrait) and (pointer: coarse) {
+    .carousel-wrapper {
+        flex-direction: column;
+        gap: 4vh;
+    }
+}
+
+.talent-tree-container {
+    height: 85vh;
+    max-height: 1200px;
+    min-height: 400px;
+    aspect-ratio: 2 / 3;
+    width: auto;
+    background-size: cover;
+    background-position: center;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    gap: 1%; /*spacing between icons */
+    padding: clamp(40px, 9vh, 120px) 1.5% 1.5% 1.5%; /*extra top space for title*/
+
+    border: 2px solid #333;
+    box-shadow: 0 0 2vh rgba(0, 0, 0, 0.8);
+
+    position: absolute;
+
+    transition: all 0.5s ease-in-out;
+}
+
+/*Large Monitor*/
+@media (min-width: 1800px) {
+    .talent-tree-container {
+        max-height: 1800px;
+    }
+}
+
+/*Vertical Phones and Square Tablets/Foldables*/
+@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+    .talent-tree-container {
+        position: relative;
+        width: 92vw;
+        max-width: 550px;
+        height: auto;
+        min-height: 0;
+        max-height: none;
+        transition: none;
+        padding: clamp(40px, 7vh, 120px) 3% 3% 3%; /*extra top space for title*/
+    }
+}
+
+/*Landscape Phones*/
+@media (max-height: 500px) and (orientation: landscape) and (pointer: coarse) {
+    .talent-tree-container {
+        height: 80vh;
+        min-height: 0;
+    }
+}
+
+/*Portrait Tablets*/
+@media (min-width: 601px) and (max-width: 1024px) and (orientation: portrait) and (pointer: coarse) {
+    .talent-tree-container {
+        position: relative;
+        width: 85vw;
+        max-width: 650px;
+        height: auto;
+        min-height: 0;
+        max-height: none;
+        transition: none;
+    }
+}
+
+.talent-tree-container h1 {
+    position: absolute;
+    top: clamp(8px, 1.5vh, 24px);
+    left: 0;
+    right: 0;
+
+    z-index: 10;
+
+    text-align: center;
+    font-size: clamp(1.25rem, 3.25vh, 1.75rem);
+    font-weight: 300;
+    letter-spacing: 0.2vw;
+    color: rgba(255, 255, 255, 1);
+
+    text-shadow: 4px 4px 8px #000000;
+}
+
+/*Vertical Phones and Square Tablets/Foldables*/
+@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+    .talent-tree-container h1 {
+        font-size: clamp(1.25rem, 2vh, 1.75rem);
+    }
+}
+
+/*Landscape Phones*/
+@media (max-height: 500px) and (orientation: landscape) and (pointer: coarse) {
+    .talent-tree-container h1 {
+        font-size: clamp(0.85rem, 2.2vh, 1.1rem);
+        letter-spacing: 0.1vw;
+    }
+}
+
+#tree-arts {
+    background-image: url('images/arts_bg.png');
+}
+
+#tree-games {
+    background-image: url('images/games_bg.png');
+}
+
+#tree-computers {
+    background-image: url('images/computers_bg.png');
+}
+
+.pos-center {
+    transform: translateX(0) scale(1.0);
+    z-index: 10;
+    opacity: 1;
+    filter: saturate(100%);
+}
+
+.pos-left {
+    transform: translateX(-75%) scale(0.8);
+    z-index: 5;
+    opacity: 0.5;
+    filter: saturate(35%);
+    cursor: pointer;
+}
+
+.pos-right {
+    transform: translateX(75%) scale(0.8);
+    z-index: 5;
+    opacity: 0.5;
+    filter: saturate(35%);
+    cursor: pointer;
+}
+
+/*Vertical Phones and Square Tablets/Foldables*/
+@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+    .pos-center,
+    .pos-left,
+    .pos-right {
+        transform: none;
+        opacity: 1;
+        filter: none;
+        cursor: default;
+        z-index: 1;
+    }
+}
+
+/*Portrait Tablets*/
+@media (min-width: 601px) and (max-width: 1024px) and (orientation: portrait) and (pointer: coarse) {
+    .pos-center, .pos-left, .pos-right {
+        transform: none;
+        opacity: 1;
+        filter: none;
+        cursor: default;
+        z-index: 1;
+    }
+}
+
+.pos-left .talent-node,
+.pos-right .talent-node,
+.carousel-animating .talent-node {
+    pointer-events: none;
+}
+
+/*Vertical Phones and Square Tablets/Foldables*/
+@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+    .pos-left .talent-node,
+    .pos-right .talent-node,
+    .carousel-animating .talent-node {
+        pointer-events: auto;
+    }
+}
+
+/**/
+/*Portrait Tablets*/
+@media (min-width: 601px) and (max-width: 1024px) and (orientation: portrait) and (pointer: coarse) {
+    .pos-left .talent-node,
+    .pos-right .talent-node,
+    .carousel-animating .talent-node {
+        pointer-events: auto;
+    }
+}
+
+/**/
+/**/
+/*Nodes and Skills*/
+/**/
+/**/
+.talent-node {
+    width: 75%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    background-image: url('images/wow_icon_bg.png');
+    background-size: cover;
+    background-position: center;
+
+    /*center the text inside the box */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    /*text styling */
+    color: white;
+    font-size: clamp(0.5rem, 1.2vh, 0.8rem);
+    font-weight: bold;
+    text-shadow: 0.1vh 0.1vh 0.2vh black;
+
+    /*center the icon itself within its grid cell */
+    justify-self: center;
+    align-self: center;
+    cursor: pointer;
+
+    z-index: 1;
+    position: relative;
+}
+
+.talent-icon-img {
+    width: 85%;
+    height: 85%;
+    object-fit: contain;
+
+    image-rendering: pixelated;
+
+    z-index: 2;
+    position: relative;
+
+    pointer-events: none;
+}
+
+.skill-points {
+    position: absolute;
+    bottom: -8%;
+    right: -8%;
+
+    background-color: black;
+    padding: 0.2vh 0.5vw;
+    border-radius: 0.5vh;
+
+    font-size: clamp(0.6rem, 1.2vh, 0.8rem);
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 0.1vw;
+    text-shadow: none;
+
+    z-index: 5;
+
+    pointer-events: none;
+}
+
+.skill-points.full {
+    color: #FFD700;
+}
+
+.skill-points.partial {
+    color: #40FF40;
+}
+
+.skill-points.zero {
+    color: #999999;
+}
+
+/**/
+/**/
+/*SVG line elements*/
+/**/
+/**/
+.talent-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2; /* Sits below icons, above background */
+    pointer-events: none; /* lets your mouse click through the invisible SVG box to hit the icons */
+}
+
+.dynamic-connection {
+    stroke: #FFD700;
+    stroke-width: 1.2vh;
+    marker-end: url(#arrow);
+    fill: none; /* Good to have here so paths don't accidentally fill with black */
+}
+
+/**/
+/**/
+/*Tooltip*/
+/**/
+/**/
+.wow-tooltip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    /*invisible to mouse, so that it doesnt interrupt hovering*/
+    pointer-events: none;
+
+    background-color: rgba(5, 5, 15, 0.85);
+    border: 1px solid #888888;
+    border-radius: 0.5vh;
+    padding: 1vh 1vw;
+    min-width: 15vw;
+    max-width: 25vw;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    font-family: sans-serif;
+    font-size: clamp(1.2rem, 1.7vh, 1.4rem);
+
+    /*//hidden by default*/
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+}
+
+/*Vertical Phones and Square Tablets/Foldables*/
+@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+    .wow-tooltip {
+        min-width: 49vw;
+        max-width: 49vw;
+        padding: 0.5vh 2vw;
+        font-size: clamp(0.85rem, 1vw, 2.25rem);
+    }
+}
+
+/*Landscape Phones*/
+@media (max-height: 500px) and (orientation: landscape) and (pointer: coarse) {
+    .wow-tooltip {
+        min-width: 47vw;
+        max-width: 47vw;
+        padding: 1.5vh 1.1vw;
+        font-size: clamp(0.65rem, 0.55vw, 0.9rem);;
+    }
+}
+
+/*boolean toggle to show tooltip (handled by javascript)*/
+.wow-tooltip.visible {
+    opacity: 1;
+}
+
+.tooltip-title {
+    color: white;
+    font-size: clamp(1.5rem, 2.0vh, 1.7rem);
+    font-weight: bold;
+}
+
+.tooltip-type {
+    color: #aaaaaa;
+    font-size: clamp(0.9rem, 1.4vh, 1.1rem);
+}
+
+.tooltip-req {
+    color: white;
+    font-size: clamp(0.9rem, 1.4vh, 1.1rem);
+}
+
+.tooltip-desc {
+    color: #FFD700;
+    margin-top: 0.2vh;
+    line-height: 1.3;
+}
+
+.tooltip-green {
+    color: #40FF40;
+    margin-top: 2vh;
+    line-height: 1.3;
+}
+
+/*Vertical Phones and Square Tablets/Foldables*/
+@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+    .tooltip-title {
+        font-size: clamp(0.95rem, 3vw, 2.25rem);
+    }
+
+    .tooltip-type,
+    .tooltip-req {
+        font-size: clamp(0.7rem, 1.5vw, 2.25rem);
+    }
+}
+
+/*Landscape Phones*/
+@media (max-height: 500px) and (orientation: landscape) and (pointer: coarse) {
+    .tooltip-title {
+        font-size: clamp(0.85rem, 1.75vw, 2rem);
+    }
+
+    .tooltip-type,
+    .tooltip-req {
+        font-size: clamp(0.65rem, 1.4vw, 1.8rem);
+    }
+}

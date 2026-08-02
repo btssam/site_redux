@@ -35,3 +35,59 @@
         font-size: clamp(1.5rem, 6vh, 2.5rem);
     }
 }
+
+/**/
+/**/
+/* Navigation Bar */
+/**/
+/**/
+.bottom-nav {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5vh;
+    min-height: 60px;
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4vw;
+    z-index: 100;
+    box-shadow: 0 -1vh 2vh rgba(0, 0, 0, 0.5);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 3vw;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: clamp(1rem, 1.5vh, 1.2rem);
+    transition: color 0.2s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #FFD700;
+}
+
+/*toggle: if I want copyright to be on nav bar*/
+/*.nav-copyright {*/
+/*    position: absolute;*/
+/*    right: 4vw;*/
+/*    margin: 0;*/
+/*    color: #888;*/
+/*    font-size: clamp(0.9rem, 1.4vh, 1.2rem);*/
+/*}*/
+
+.site-copyright {
+    text-align: center;
+    margin: 0 0 3vh 0;
+    color: #888;
+    font-size: clamp(0.9rem, 1.4vh, 1.2rem);
+}

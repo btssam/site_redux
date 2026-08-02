@@ -1,0 +1,119 @@
+/**/
+/**/
+/* About Section */
+/**/
+/**/
+#about .section-title {
+    margin-bottom: 2vh;
+}
+
+.about-container {
+    display: flex;
+    gap: 4%;
+    align-items: center;
+    background-color: #1a1a1a;
+    padding: 3vh 3% 4vh 3%;
+    border-radius: 1vh;
+    box-shadow: 0 0 2vh rgba(0, 0, 0, 0.5);
+    margin-bottom: 10vh;
+}
+
+/*Large Monitor*/
+@media (min-width: 1800px) {
+    .about-container {
+        margin-bottom: 6vh;
+    }
+}
+
+/*Vertical Phones and Square Tablets/Foldables*/
+@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+    .about-container {
+        flex-direction: column;
+        align-items: stretch;
+        margin-bottom: 0;
+        padding: 2vh 3% 3vh 3%;
+    }
+}
+
+/*Portrait Tablets*/
+@media (min-width: 601px) and (max-width: 1024px) and (orientation: portrait) and (pointer: coarse) {
+    .about-container {
+        margin-bottom: 0;
+    }
+}
+
+.image-placeholder {
+    flex: 0 0 45%;
+    max-width: 46.4vh;
+}
+
+/*Vertical Phones and Square Tablets/Foldables*/
+@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+    .image-placeholder {
+        flex: 0 0 auto;
+        max-width: 100%;
+    }
+}
+
+.image-placeholder img {
+    width: 100%;
+    height: auto;
+    max-height: 65vh;
+    border-radius: 0.5vh;
+    box-shadow: 0 0 1vh rgba(0, 0, 0, 0.8);
+}
+
+/*Vertical Phones and Square Tablets/Foldables*/
+@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+    .image-placeholder img {
+        max-height: 75vh;
+    }
+}
+
+.about-text {
+    flex: 1;
+    font-size: clamp(0.9rem, 1.9vh, 1.1rem);
+    line-height: 1.6;
+    color: #ccc;
+}
+
+/*Large Monitor*/
+@media (min-width: 1800px) {
+    .about-text {
+        font-size: clamp(1.3rem, 2.2vh, 1.6rem);
+    }
+}
+
+/*4K+ Monitor*/
+@media (min-width: 3400px) {
+    .about-text {
+        font-size: clamp(2.0rem, 3.0vh, 2.2rem);
+    }
+}
+
+/*Vertical Phones and Square Tablets/Foldables*/
+@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+    .about-text {
+        font-size: clamp(0.95rem, 1vw, 2.25rem);
+    }
+}
+
+/**/
+/**/
+/*Button*/
+/**/
+/**/
+
+/*Large Monitor*/
+@media (min-width: 1800px) {
+    .button.cv-button {
+        font-size: clamp(0.4rem, 1.2vh, 1.2rem);
+    }
+}
+
+/*4K+ Monitor*/
+@media (min-width: 3400px) {
+    .button.cv-button {
+        font-size: clamp(2.0rem, 3.0vh, 2.4rem);
+    }
+}
