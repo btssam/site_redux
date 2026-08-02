@@ -1,0 +1,37 @@
+/**/
+/**/
+/*Title Bar*/
+/**/
+/**/
+.top-title-bar {
+    text-align: center;
+}
+
+.top-title-bar h1 {
+    font-family: 'Lato', sans-serif;
+    color: #FFFFFF;
+    text-align: center;
+
+    border-bottom: 0.75vh solid #A94F2A;
+    letter-spacing: 0.6vw;
+    font-weight: normal;
+
+    padding-top: 1vh;
+    margin: 0;
+    font-size: clamp(3.5rem, 7.5vh, 5rem);
+}
+
+/*Vertical Phones and Square Tablets/Foldables*/
+@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+    .top-title-bar h1 {
+        font-size: clamp(2rem, 10vw, 3rem);
+        letter-spacing: 0.9vw;
+    }
+}
+
+/*Landscape Phones*/
+@media (max-height: 500px) and (orientation: landscape) and (pointer: coarse) {
+    .top-title-bar h1 {
+        font-size: clamp(1.5rem, 6vh, 2.5rem);
+    }
+}
