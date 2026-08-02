@@ -160,6 +160,19 @@ body {
     transition: all 0.05s ease-out;
 }
 
+/*Landscape Phones*/
+@media (max-height: 500px) and (orientation: landscape) and (pointer: coarse) {
+    .button {
+        box-shadow: 0 2vh 0 #ccac00;
+        /*transition: all 0.15s ease;*/
+    }
+
+    .button:hover .button:active {
+        transform: translateY(2vh);
+        box-shadow: 0 0 0 #ccac00;
+    }
+}
+
 /**/
 /**/
 /* Scroll Snapping Rules */

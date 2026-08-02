@@ -65,7 +65,7 @@
 }
 
 /*Vertical Phones and Square Tablets/Foldables*/
-@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+@media (max-width: 600px) and (orientation: portrait) {
     .talent-tree-container {
         position: relative;
         width: 92vw;
@@ -78,11 +78,22 @@
     }
 }
 
+/*Square Tablets/Foldables*/
+@media (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+    .talent-tree-container {
+        width: auto;
+        height: auto;
+        max-width: 70vw;
+        max-height: 75vh;
+    }
+}
+
 /*Landscape Phones*/
 @media (max-height: 500px) and (orientation: landscape) and (pointer: coarse) {
     .talent-tree-container {
         height: 80vh;
         min-height: 0;
+        /*aspect-ratio: 1 / 1;*/
     }
 }
 
@@ -297,7 +308,15 @@
     }
 }
 
-    .skill-points.full {
+/*Landscape Phones*/
+@media (max-height: 500px) and (orientation: landscape) and (pointer: coarse) {
+    .skill-points {
+        font-size: clamp(0.35rem, 0.8vh, 0.5rem);
+        padding: 0.1vh 0.3vw;
+    }
+}
+
+.skill-points.full {
     color: #FFD700;
 }
 
@@ -383,13 +402,23 @@
     }
 }
 
+/*Portrait Tablets*/
+@media (min-width: 601px) and (max-width: 1024px) and (orientation: portrait) and (pointer: coarse) {
+    .wow-tooltip {
+        min-width: 45vw;
+        max-width: 49vw;
+        font-size: clamp(1.05rem, 0.95vw, 1.4rem);
+    }
+}
+
 /*Landscape Phones*/
 @media (max-height: 500px) and (orientation: landscape) and (pointer: coarse) {
     .wow-tooltip {
-        min-width: 47vw;
-        max-width: 47vw;
-        padding: 1.5vh 1.1vw;
-        font-size: clamp(0.65rem, 0.55vw, 0.9rem);;
+        min-width: 48vw;
+        max-width: 48vw;
+        padding: 0.8vh 1.1vw;
+        gap: 2px;
+        font-size: clamp(0.55rem, 0.5vw, 0.75rem);
     }
 }
 
