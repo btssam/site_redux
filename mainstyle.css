@@ -9,7 +9,7 @@
 /*4. Square Tablet/Foldable Phone*/
 /*@media (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4)*/
 /*5. Portrait Tablet*/
-/*@media (min-width: 768px) and (max-width: 1024px) */
+/*@media (min-width: 601px) and (max-width: 1024px) */
 /*6. Landscape Phones*/
 /*@media (max-height: 500px) and (orientation: landscape) and (pointer: coarse)*/
 /*7. Landscape Tablets*/
@@ -256,6 +256,13 @@ body {
     }
 }
 
+@media (min-width: 601px) and (max-width: 1024px) and (orientation: portrait) and (pointer: coarse) {
+    .carousel-wrapper {
+        flex-direction: column;
+        gap: 4vh;
+    }
+}
+
 .talent-tree-container {
     height: 85vh;
     max-height: 1200px;
@@ -302,6 +309,18 @@ body {
     .talent-tree-container {
         height: 80vh;
         min-height: 0;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) and (orientation: portrait) and (pointer: coarse) {
+    .talent-tree-container {
+        position: relative;
+        width: 85vw;
+        max-width: 650px;
+        height: auto;
+        min-height: 0;
+        max-height: none;
+        transition: none;
     }
 }
 
@@ -374,6 +393,16 @@ body {
     }
 }
 
+@media (min-width: 601px) and (max-width: 1024px) and (orientation: portrait) and (pointer: coarse) {
+    .pos-center, .pos-left, .pos-right {
+        transform: none;
+        opacity: 1;
+        filter: none;
+        cursor: default;
+        z-index: 1;
+    }
+}
+
 .pos-left .talent-node,
 .pos-right .talent-node,
 .carousel-animating .talent-node{
@@ -387,31 +416,8 @@ body {
         pointer-events: auto;
     }
 }
-
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) and (pointer: coarse) {
-    .carousel-wrapper {
-        flex-direction: column;
-        gap: 4vh;
-    }
-
-    .talent-tree-container {
-        position: relative;
-        width: 85vw;
-        max-width: 650px;
-        height: auto;
-        min-height: 0;
-        max-height: none;
-        transition: none;
-    }
-
-    .pos-center, .pos-left, .pos-right {
-        transform: none;
-        opacity: 1;
-        filter: none;
-        cursor: default;
-        z-index: 1;
-    }
-
+/**/
+@media (min-width: 601px) and (max-width: 1024px) and (orientation: portrait) and (pointer: coarse) {
     .pos-left .talent-node,
     .pos-right .talent-node,
     .carousel-animating .talent-node {
@@ -540,19 +546,6 @@ body {
     opacity: 0;
     transition: opacity 0.1s ease-in-out;
 }
-
-
-/*@media (min-width: 1800px) {*/
-/*    min-width: 49vw;*/
-/*    max-width: 49vw;*/
-/*    padding: 0.5vh 2vw;*/
-/*    font-size: clamp(1.6rem, 2vw, 5.5rem);*/
-/*}*/
-
-
-/*@media (min-width: 3400px) {*/
-
-/*}*/
 
 @media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     .wow-tooltip {
@@ -731,19 +724,13 @@ body {
     margin-bottom: 14vh;
 }
 
-@media (min-width: 601px) and (max-width: 1024px) and (orientation: portrait) and (pointer: coarse) {
+@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     #last-project {
         margin-bottom: 0;
     }
 }
 
-/*@media (min-width: 1800px) {*/
-/*    #last-project {*/
-/*        margin-bottom: 12vh;*/
-/*    }*/
-/*}*/
-
-@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+@media (min-width: 601px) and (max-width: 1024px) and (orientation: portrait) and (pointer: coarse) {
     #last-project {
         margin-bottom: 0;
     }
