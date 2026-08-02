@@ -157,12 +157,15 @@ body {
 }
 
 /**/
+/**/
 /* Scroll Snapping Rules */
+/**/
 /**/
 html {
     scroll-snap-type: y mandatory;
 }
 
+/*Touch Screens*/
 @media (pointer: coarse) {
     html {
         scroll-snap-type: none;

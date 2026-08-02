@@ -37,6 +37,7 @@
     pointer-events: auto;
 }
 
+/*Touch Screens*/
 @media (pointer: coarse) {
     .project-card,
     .project-card.focused {
