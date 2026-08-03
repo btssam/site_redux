@@ -7,6 +7,10 @@
     margin-bottom: 2vh;
 }
 
+#about.content-section {
+    padding-top: 1vh;
+}
+
 .about-container {
     display: flex;
     gap: 4%;
@@ -95,19 +99,6 @@
 @media (max-width: 600px) and (orientation: portrait){
     .about-text {
         font-size: clamp(0.95rem, 1vw, 2.25rem);
-    }
-}
-
-.about-text h2{
-    margin-top: 0;
-    text-align: center;
-    justify-content: center;
-}
-
-/*Vertical Phones*/
-@media (max-width: 600px) and (orientation: portrait) {
-    .about-text h2 {
-        margin-top: 0.6em;
     }
 }
 
