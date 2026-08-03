@@ -119,7 +119,13 @@
     }
 }
 
-.talent-tree-container h1 {
+@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) and (min-height: 501px) and (pointer: coarse) {
+    .talent-tree-container {
+        padding: clamp(40px, 7vh, 120px) 3% 3% 3%; /*extra top space for title*/
+    }
+}
+
+    .talent-tree-container h1 {
     position: absolute;
     top: clamp(8px, 1.5vh, 24px);
     left: 0;
@@ -162,6 +168,12 @@
     .talent-tree-container h1 {
         font-size: clamp(0.85rem, 2.2vh, 1.1rem);
         letter-spacing: 0.1vw;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) and (min-height: 501px) and (pointer: coarse){
+    .talent-tree-container h1 {
+        font-size: clamp(1rem, 2.5vh, 2rem);
     }
 }
 

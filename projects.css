@@ -1,12 +1,12 @@
 /**/
 /**/
-/* Projects Section Grid/Flex */
+/* Projects Section */
 /**/
 /**/
 .project-card {
     display: flex;
     gap: 3%;
-    background-color: #1a1a1a;
+    background-color: #252525;
     padding: 1.7% 3% 1.7% 1%;
 
     margin-bottom: 8vh;
@@ -98,7 +98,9 @@
     .project-card,
     .project-card.focused {
         height: clamp(14rem, 34vh, 28rem);
+        min-width: 80vw;
         max-width: 90vw;
+        margin-bottom: 4vh;
     }
 }
 
