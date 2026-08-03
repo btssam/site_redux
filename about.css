@@ -47,10 +47,18 @@
 }
 
 .image-placeholder {
-    flex: 0 0 45%;
-    max-width: 46.4vh;
+    flex: 0 0 30%;
+    max-width: 45vh;
 }
 
+
+/*Large Monitor*/
+@media (min-width: 1800px) {
+    .image-placeholder {
+        flex: 0 0 45%;
+        max-width: 45vh;
+    }
+}
 /*Vertical Phones*/
 @media (max-width: 600px) and (orientation: portrait){
     .image-placeholder {
@@ -84,7 +92,7 @@
 /*Large Monitor*/
 @media (min-width: 1800px) {
     .about-text {
-        font-size: clamp(1.3rem, 2.2vh, 1.6rem);
+        font-size: clamp(1.1rem, 2vh, 1.35rem);
     }
 }
 
