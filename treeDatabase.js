@@ -241,7 +241,7 @@ const treeDatabase = {
                 title: "Narrative Design",
                 type: "Game Development Skill",
                 req: "Requires Game Design Fundamentals",
-                desc: "Structuring interactive stories, integrating narrative elements. and applying world-building directly into game mechanics.",
+                desc: "Structuring interactive stories, integrating narrative elements and applying world-building directly into game mechanics.",
                 descLong: "I have studied narrative design through independent courses and tutorials. I have applied these concepts practically by engineering interactive, branching text-based experiences using tools like Twine, blending story progression with conditional logic.",
                 points: "2/3",
                 pointClass: "partial",
