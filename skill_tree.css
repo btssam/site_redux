@@ -283,6 +283,14 @@
     position: relative;
 }
 
+.talent-node.full {
+    background-image: url('images/wow_icon_bg_ylw.png');
+}
+
+.talent-node.partial {
+    background-image: url('images/wow_icon_bg_grn.png');
+}
+
 .talent-icon-img {
     width: 85%;
     height: 85%;

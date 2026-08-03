@@ -20,7 +20,7 @@ function buildTreeHTML(treeKey, containerId) {
 
     treeData.nodes.forEach(nodeData => {
         const nodeDiv = document.createElement('div');
-        nodeDiv.className = `talent-node ${nodeData.id}`;
+        nodeDiv.className = `talent-node ${nodeData.id} ${nodeData.pointClass}`;
         nodeDiv.style.gridArea = nodeData.gridPos;
 
         const nodeContent = nodeData.icon
