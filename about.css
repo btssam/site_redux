@@ -128,7 +128,7 @@
 /*Large Monitor*/
 @media (min-width: 1800px) {
     .button.cv-button {
-        font-size: clamp(0.6rem, 1.4vh, 1.4rem);
+        font-size: clamp(0.7rem, 1.45vh, 1.5rem);
     }
 }
 

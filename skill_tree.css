@@ -119,6 +119,7 @@
     }
 }
 
+/*Landscape Tablet*/
 @media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) and (min-height: 501px) and (pointer: coarse) {
     .talent-tree-container {
         padding: clamp(40px, 7vh, 120px) 3% 3% 3%; /*extra top space for title*/
@@ -171,6 +172,7 @@
     }
 }
 
+/*Landscape Tablet*/
 @media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) and (min-height: 501px) and (pointer: coarse){
     .talent-tree-container h1 {
         font-size: clamp(1rem, 2.5vh, 2rem);
