@@ -24,10 +24,6 @@
     box-sizing: border-box; /*forces padding/borders to calculate inwards, not outwards*/
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     margin: 0;
     background-color: #111;
@@ -171,37 +167,4 @@ body {
         transform: translateY(2vh);
         box-shadow: 0 0 0 #ccac00;
     }
-}
-
-/**/
-/**/
-/* Scroll Snapping Rules */
-/**/
-/**/
-html {
-    scroll-snap-type: y mandatory;
-}
-
-/*Touch Screens*/
-@media (pointer: coarse) {
-    html {
-        scroll-snap-type: none;
-    }
-}
-
-.top-title-bar {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-}
-
-/*#about,*/
-/*#projects,*/
-#skills-tree {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-}
-
-.project-card {
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
 }

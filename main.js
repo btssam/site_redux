@@ -274,3 +274,71 @@ document.addEventListener("DOMContentLoaded", function () {
     const cards = document.querySelectorAll('.project-card');
     cards.forEach(card => observer.observe(card));
 });
+
+//Scroll Snapping
+let isAnimating = false;
+
+window.addEventListener('wheel', (e) => {
+    //disable on touch screen
+    if (window.matchMedia("(pointer: coarse)").matches) {
+        return;
+    }
+    e.preventDefault();
+    if (isAnimating) return;
+    //scroll direction (1 for down, -1 for up)
+    const direction = e.deltaY > 0 ? 1 : -1;
+    const sections = Array.from(document.querySelectorAll('.top-title-bar, #skills-tree, .project-card'));
+
+    //find the currently active section
+    let currentIndex = 0;
+    let minDistance = Infinity;
+    const viewportCenter = window.innerHeight / 2;
+    sections.forEach((sec, index) => {
+        const rect = sec.getBoundingClientRect();
+        let distance;
+        if (sec.classList.contains('project-card')) {
+            const elementCenter = rect.top + (rect.height / 2);
+            distance = Math.abs(elementCenter - viewportCenter);
+        } else {
+            distance = Math.abs(rect.top);
+        }
+        if (distance < minDistance) {
+            minDistance = distance;
+            currentIndex = index;
+        }
+    });
+    //calculate next index
+    const nextIndex = Math.max(0, Math.min(sections.length - 1, currentIndex + direction));
+    //trigger the scroll
+    if (nextIndex !== currentIndex) {
+        isAnimating = true;
+        const target = sections[nextIndex];
+        const alignMode = target.classList.contains('project-card') ? 'center' : 'start';
+        target.scrollIntoView({
+            behavior: 'smooth',
+            block: alignMode
+        });
+        setTimeout(() => {
+            isAnimating = false;
+        }, 800);
+    }
+}, {passive: false});
+
+//Nav Link Scrolling. Needed custom for the project section specifically to work right.
+document.querySelectorAll('.nav-links a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+        if (targetId.startsWith('#')) {
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                e.preventDefault();
+                //center for project cards, top for everything else
+                const alignMode = targetElement.classList.contains('project-card') ? 'center' : 'start';
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: alignMode
+                });
+            }
+        }
+    });
+});
