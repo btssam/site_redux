@@ -64,7 +64,7 @@
     }
 }
 
-/*Vertical Phones and Square Tablets/Foldables*/
+/*Vertical Phones*/
 @media (max-width: 600px) and (orientation: portrait) {
     .talent-tree-container {
         position: relative;
@@ -78,24 +78,14 @@
     }
 }
 
-/*Square Tablets/Foldables*/
-@media (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
-    .talent-tree-container {
-        width: auto;
-        height: auto;
-        max-width: 70vw;
-        max-height: 75vh;
-    }
-}
-
 /*Landscape Phones*/
-@media (max-height: 500px) and (orientation: landscape) and (pointer: coarse) {
-    .talent-tree-container {
-        height: 80vh;
-        min-height: 0;
-        /*aspect-ratio: 1 / 1;*/
-    }
-}
+/*@media (max-height: 500px) and (orientation: landscape) and (pointer: coarse) {*/
+/*    .talent-tree-container {*/
+/*        height: 80vh;*/
+/*        min-height: 0;*/
+/*        aspect-ratio: 1 / 1;*/
+/*    }*/
+/*}*/
 
 /*Portrait Tablets*/
 @media (min-width: 601px) and (max-width: 1024px) and (orientation: portrait) and (pointer: coarse) {
@@ -107,6 +97,20 @@
         min-height: 0;
         max-height: none;
         transition: none;
+    }
+}
+
+/*Square Tablets/Foldables*/
+@media (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+    .talent-tree-container {
+        position: relative;
+        width: min(99vw, 55vh);
+        height: auto;
+        min-height: 0;
+        max-height: none;
+        transition: none;
+
+        /*gap: 1%;*/
     }
 }
 
@@ -127,10 +131,17 @@
     text-shadow: 4px 4px 8px #000000;
 }
 
-/*Vertical Phones and Square Tablets/Foldables*/
-@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+/*Vertical Phones*/
+@media (max-width: 600px) and (orientation: portrait) {
     .talent-tree-container h1 {
         font-size: clamp(1.25rem, 2vh, 1.75rem);
+    }
+}
+
+/*Square Tablets/Foldables*/
+@media (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+    .talent-tree-container h1 {
+        font-size: clamp(2rem, 4vh, 2.75rem);
     }
 }
 
@@ -267,6 +278,16 @@
     position: relative;
 }
 
+/*Landscape Phones*/
+/*@media (max-height: 500px) and (orientation: landscape) and (pointer: coarse) {*/
+/*    .talent-node {*/
+/*        width: auto;*/
+/*        height: 70%;*/
+/*        aspect-ratio: 1.5 / 1;*/
+/*        !*display: block;*!*/
+/*    }*/
+/*}*/
+
 .talent-icon-img {
     width: 85%;
     height: 85%;
@@ -305,6 +326,13 @@
 @media (min-width: 1800px) {
     .skill-points {
         font-size: clamp(0.8rem, 1.4vh, 1.2rem);
+    }
+}
+
+/*Square Tablets/Foldables*/
+@media (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+    .skill-points {
+        font-size: clamp(0.9rem, 1.5vh, 1.3rem);
     }
 }
 
@@ -393,12 +421,22 @@
 }
 
 /*Vertical Phones and Square Tablets/Foldables*/
-@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+@media (max-width: 600px) and (orientation: portrait){
     .wow-tooltip {
         min-width: 49vw;
         max-width: 49vw;
         padding: 0.5vh 2vw;
         font-size: clamp(0.85rem, 1vw, 2.25rem);
+    }
+}
+
+/*Square Tablets/Foldables*/
+@media (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+    .wow-tooltip {
+        min-width: 55vw;
+        max-width: 60vw;
+        padding: 1.5vh 2vw;
+        font-size: clamp(1.1rem, 2vh, 1.5rem);
     }
 }
 
@@ -469,7 +507,7 @@
 }
 
 /*Vertical Phones and Square Tablets/Foldables*/
-@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+@media (max-width: 600px) and (orientation: portrait){
     .tooltip-title {
         font-size: clamp(0.95rem, 3vw, 2.25rem);
     }
@@ -477,6 +515,18 @@
     .tooltip-type,
     .tooltip-req {
         font-size: clamp(0.7rem, 1.5vw, 2.25rem);
+    }
+}
+
+/*Square Tablets/Foldables*/
+@media (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+    .tooltip-title {
+        font-size: clamp(1.3rem, 2.5vh, 1.8rem);
+    }
+
+    .tooltip-type,
+    .tooltip-req {
+        font-size: clamp(0.9rem, 1.8vh, 1.2rem);
     }
 }
 
