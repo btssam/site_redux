@@ -99,8 +99,25 @@
 }
 
 .about-text h2{
+    margin-top: 0;
     text-align: center;
     justify-content: center;
+}
+
+/*Vertical Phones*/
+@media (max-width: 600px) and (orientation: portrait) {
+    .about-text h2 {
+        margin-top: 0.6em;
+    }
+}
+
+.about-text .email-link {
+    color: #ffd700;
+}
+
+.about-text .email-link:hover,
+.about-text .email-link:focus-visible {
+    color: #ffe657;
 }
 
 /**/
