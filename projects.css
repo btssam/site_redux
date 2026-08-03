@@ -98,6 +98,7 @@
     .project-card,
     .project-card.focused {
         height: clamp(14rem, 34vh, 28rem);
+        max-width: 90vw;
     }
 }
 
@@ -163,16 +164,6 @@
     }
 }
 
-/*Square Tablets/Foldables*/
-@media (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
-    .project-media {
-        width: auto;
-        height: auto;
-        max-width: 100%;
-        max-height: 25vh;
-    }
-}
-
 /*Portrait Tablets*/
 @media (min-width: 601px) and (max-width: 1024px) and (orientation: portrait) and (pointer: coarse) {
     .project-media {
@@ -180,6 +171,16 @@
         height: auto;
         max-width: 90%;
         max-height: 30vh;
+    }
+}
+
+/*Square Tablets/Foldables*/
+@media (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+    .project-media {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 25vh;
     }
 }
 
@@ -265,7 +266,7 @@
 /*Landscape Phones*/
 @media (max-height: 500px) and (orientation: landscape) and (pointer: coarse) {
     .project-info{
-        padding-bottom: 2vh;
+        padding-bottom: 1vh;
     }
 
     .project-info h3 {
@@ -277,7 +278,22 @@
     }
 }
 
-.button.project-button {
+/*Landscape Tablets*/
+@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) and (min-height: 501px) and (pointer: coarse) {
+    .project-info {
+        padding-bottom: 1vh;
+    }
+
+    .project-info h3 {
+        font-size: clamp(1.3rem, 3.2vh, 1.6rem);
+    }
+
+    .project-info p {
+        font-size: clamp(0.2rem, 2.8vh, 0.9rem);
+    }
+}
+
+    .button.project-button {
     position: relative;
     margin-top: auto;
 
@@ -314,7 +330,7 @@
     .button.project-button {
         font-size: clamp(0.6rem, 1.8vh, 0.8rem);
         padding: clamp(0.4rem, 0.8vh, 0.6rem) clamp(0.9rem, 1.5vw, 1.4rem);
-        box-shadow: 0 2vh 0 #ccac00;
+        box-shadow: 0 1vh 0 #ccac00;
     }
 }
 
