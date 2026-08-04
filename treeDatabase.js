@@ -104,7 +104,7 @@ const treeDatabase = {
                 type: "[2/3] - Proficient",
                 req: "Requires 3D Digital Art",
                 desc: "Unwrapping and mapping 3D models to apply 2D textures onto their surfaces.",
-                descLong: "I unwrap 3D models and arrange UV layouts for texturing, working through these pipeline tasks in Blender. I've also set up UV structures specifically for WebGL implementations",
+                descLong: "I unwrap 3D models and arrange UV layouts for texturing, working through these pipeline tasks in Blender. I've also set up UV structures specifically for WebGL implementations.",
                 points: "2/3",
                 pointClass: "partial",
                 gridPos: "4 / 2"
@@ -144,7 +144,7 @@ const treeDatabase = {
                 type: "[1/3] - Familiar",
                 req: "Requires 3D Digital Art and Rigging",
                 desc: "Animating three-dimensional models and environments across timelines.",
-                descLong: "I have a foundational understanding of 3D animation from coursework in high school, including keyframing, timeline manipulation, and basic camera and lighting setup",
+                descLong: "I have a foundational understanding of 3D animation from coursework in high school, including keyframing, timeline manipulation, and basic camera and lighting setup.",
                 points: "1/3",
                 pointClass: "partial",
                 gridPos: "5 / 1"
@@ -432,7 +432,7 @@ const treeDatabase = {
                 type: "[3/3] - Advanced",
                 req: "",
                 desc: "The theoretical and structural paradigms of writing software, including object-oriented design, algorithms, and systems programming.",
-                descLong: "I've taken university courses in Object-Oriented Design, Systems Programming Concepts, and Algorithms, and have applied these structures both to write game logic and to help architect scalable deployment systems in a professional environment",
+                descLong: "I've taken university courses in Object-Oriented Design, Systems Programming Concepts, and Algorithms, and have applied these structures both to write game logic and to help architect scalable deployment systems in a professional environment.",
                 points: "3/3",
                 pointClass: "full",
                 gridPos: "1 / 2"
