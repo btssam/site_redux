@@ -418,8 +418,8 @@ const treeDatabase = {
                 title: "Architecture",
                 type: "[1/3] - Familiar",
                 req: "",
-                desc: "How computer hardware and software interface at a low level, including interfacing with RAM and CPU, threading, and other related concepts.",
-                descLong: "I have learned about the high-level interactions between computer hardware through academic coursework and personal study.<br><br>My formal study of architecture is currently in progress, as I am registered for Introduction to Machine Organization and Assembly Language, alongside several Electrical and Computer Engineering courses.",
+                desc: "How computer hardware and software interact at a low level, including memory management, CPU operations, and threading.",
+                descLong: "My understanding of computer architecture comes from academic coursework and personal study, and is currently in progress. I'm registered for Introduction to Machine Organization and Assembly Language, alongside several Electrical and Computer Engineering courses that build toward this foundation.",
                 points: "1/3",
                 pointClass: "partial",
                 gridPos: "1 / 1"
@@ -432,7 +432,7 @@ const treeDatabase = {
                 type: "[3/3] - Advanced",
                 req: "",
                 desc: "The theoretical and structural paradigms of writing software, including object-oriented design, algorithms, and systems programming.",
-                descLong: "I have a foundation in programming concepts established through academic coursework and practical application.<br><br>I have taken university courses in Object-Oriented Design, Systems Programming Concepts, and Algorithms. I apply these structures to author game logic and have helped to architect scalable deployment systems in a professional environment.",
+                descLong: "I've taken university courses in Object-Oriented Design, Systems Programming Concepts, and Algorithms, and have applied these structures both to write game logic and to help architect scalable deployment systems in a professional environment",
                 points: "3/3",
                 pointClass: "full",
                 gridPos: "1 / 2"
@@ -446,7 +446,7 @@ const treeDatabase = {
                 type: "[3/3] - Advanced",
                 req: "",
                 desc: "The methodologies and pipelines used to plan, construct, test, and deploy software in a professional environment, including agile software development.",
-                descLong: "I gained experience with the software development process as a Software Engineering Contractor at Cisco and regularly use practices such as version control in my personal projects.<br><br>I have experience with Git, GitHub, and Jira in the context of professional teams.",
+                descLong: "I gained hands-on experience with professional development processes as a Software Engineering Contractor at Cisco, working with Git, GitHub, and Jira across professional teams. I apply these same practices, including version control, in my personal projects as well.",
                 points: "3/3",
                 pointClass: "full",
                 gridPos: "2 / 1"
@@ -459,7 +459,7 @@ const treeDatabase = {
                 type: "[3/3] - Advanced",
                 req: "Requires Programming Concepts",
                 desc: "Proficiency in coding languages used across software engineering, scripting, web development, and game development.",
-                descLong: "I am proficient in Python and Bash from my time engineering deployment pipelines at Cisco. Academically, I have utilized Java and C for algorithms and systems programming<br><br>I have experience with multiple programming languages from academic and personal study, and I regularly learn new languages as needed, with a preference for Python.",
+                descLong: "I'm proficient in Python and Bash from engineering deployment pipelines at Cisco, and have used Java and C academically for algorithms and systems programming. I regularly pick up new languages as projects require, with a general preference for Python.",
                 points: "3/3",
                 pointClass: "full",
                 gridPos: "2 / 2"
@@ -486,8 +486,7 @@ const treeDatabase = {
                 type: "[2/3] - Proficient",
                 req: "",
                 desc: "The protocols and infrastructure that allow devices and systems to communicate across networks.",
-                //also read that whole book cisco networking
-                descLong: "At Cisco, I worked directly with network infrastructures, engineering telemetry platforms that handled real-time data from approximately 2,500 routers.<br><br>To supplement this enterprise experience with formal theory, I am enrolled in a Computer Networks course. I have read Cisco Networking Simplified and am familiar with networking concepts such as the layers of the OSI Model. I have also hosted projects using GitHub Pages and Node.js.",
+                descLong: "At Cisco, I worked directly with network infrastructure, engineering telemetry platforms that handled real-time data from approximately 2,500 routers. To supplement that enterprise experience with formal theory, I'm enrolled in a Computer Networks course, have read Cisco Networking Simplified, and am familiar with concepts like the OSI Model's layered structure.",
                 points: "2/3",
                 pointClass: "partial",
                 gridPos: "3 / 1"
@@ -499,7 +498,7 @@ const treeDatabase = {
                 title: "Web Frameworks",
                 type: "[2/3] - Proficient",
                 req: "Requires Networking, Programming Languages, and HTML/CSS",
-                desc: "Utilizing architectural frameworks to develop, maintain, and scale web applications and services.",
+                desc: "Using architectural frameworks to develop, maintain, and scale web applications and services.",
                 descLong: "My primary experience with web frameworks involves Django, which I utilized at Cisco to maintain deployment pipelines handling real-time router telemetry. I also have familiarity with React and AngularJS.",
                 points: "2/3",
                 pointClass: "partial",
@@ -513,7 +512,7 @@ const treeDatabase = {
                 type: "[3/3] - Advanced",
                 req: "",
                 desc: "The fundamental markup and styling languages used to structure and visually format content across the web.",
-                descLong: "I am comfortable using HTML and CSS to build user interfaces and web content. I have created several web projects, including this portfolio website, using HTML, CSS, and JavaScript. I have also created a text-based game using Twine integrated with custom HTML and CSS, and I have exported games to HTML.",
+                descLong: "I build interfaces and web content with HTML and CSS, including this very portfolio site alongside its JavaScript. I've also used Twine with HTML and CSS to build a text-based game, and have exported other game projects to HTML directly.",
                 points: "3/3",
                 pointClass: "full",
                 gridPos: "3 / 3"
@@ -527,7 +526,7 @@ const treeDatabase = {
                 type: "[2/3] - Proficient",
                 req: "",
                 desc: "Structuring, querying, and maintaining data storage systems for applications.",
-                descLong: "During my time at Cisco, I architected containerized infrastructure configurations that supported router data visualization. This required working directly with TimescaleDB, PostgreSQL, and Redis. I have taken online courses using SQL and will be taking Database Systems at the university level.",
+                descLong: "At Cisco, I worked directly with TimescaleDB, PostgreSQL, and Redis to support containerized infrastructure for router data visualization. I've also taken online coursework in SQL, and will be taking Database Systems at the university level to build on that foundation.",
                 points: "2/3",
                 pointClass: "partial",
                 gridPos: "4 / 1"
@@ -539,8 +538,8 @@ const treeDatabase = {
                 title: "Full Stack Development",
                 type: "[2/3] - Proficient",
                 req: "Requires Databases, Web Frameworks, and Message Brokers",
-                desc: "Developing and integrating front-end user interfaces with back-end infrastructures of software applications.",
-                descLong: "My engineering experience at Cisco required an understanding of the full stack to facilitate deployments. I was responsible for integrating back-end Django pipelines, databases, and message brokers to ensure the front-end telemetry platforms functioned reliably.",
+                desc: "Developing and integrating front-end interfaces with back-end infrastructure of software applications.",
+                descLong: "My work at Cisco required a full-stack understanding to keep deployments running end to end. I integrated back-end Django pipelines, databases, and message brokers to ensure front-end telemetry platforms functioned reliably.",
                 points: "2/3",
                 pointClass: "partial",
                 gridPos: "4 / 2"
@@ -553,7 +552,7 @@ const treeDatabase = {
                 type: "[2/3] - Proficient",
                 req: "",
                 desc: "Intermediary software modules that route, translate, and manage real-time data streams between distributed applications.",
-                descLong: "To manage real-time router telemetry at Cisco, we utilized RabbitMQ and Kafka. These message brokers were essential in ensuring that data streams from thousands of routers were processed reliably without dropping telemetry payloads.",
+                descLong: "To manage real-time router telemetry at Cisco, I worked with RabbitMQ and Kafka, which were essential for reliably processing data streams from approximately 2,500 routers without dropping telemetry payloads.",
                 points: "2/3",
                 pointClass: "partial",
                 gridPos: "4 / 3"
@@ -567,7 +566,7 @@ const treeDatabase = {
                 type: "[3/3] - Advanced",
                 req: "Requires Full Stack Development",
                 desc: "The alignment of software development and IT operations to optimize CI/CD workflows and provide continuous delivery.",
-                descLong: "As a deployment contractor for Cisco, I maintained Docker-based pipelines and engineered multi-stage deployment strategies. I developed custom Bash and Python automation that reduced deployment latency and minimized manual intervention for complex integrations.",
+                descLong: "As a deployment contractor at Cisco, I maintained Docker-based pipelines and engineered multi-stage deployment strategies, developing custom Bash and Python automation that reduced deployment latency and minimized manual intervention for complex integrations.",
                 points: "3/3",
                 pointClass: "full",
                 gridPos: "5 / 2"
@@ -580,7 +579,7 @@ const treeDatabase = {
                 type: "[3/3] - Advanced",
                 req: "",
                 desc: "Packaging software code and its dependencies into isolated units to ensure consistent execution across different environments.",
-                descLong: "I have professional experience architecting containerized infrastructure using Docker and Kubernetes. At Cisco, I designed and maintained Docker-based pipelines to support deployments, streamlining environments for distributed teams.",
+                descLong: "I have professional experience architecting containerized infrastructure with Docker and Kubernetes. At Cisco, I built and maintained isolated, reproducible environments so teams could deploy consistently across different systems.",
                 points: "3/3",
                 pointClass: "full",
                 gridPos: "5 / 3"
@@ -594,7 +593,7 @@ const treeDatabase = {
                 type: "[2/3] - Proficient",
                 req: "",
                 desc: "Proficiency in navigating, configuring, and developing within major operating systems.",
-                descLong: "I am comfortable developing and troubleshooting across Windows, macOS, and Linux/Unix environments. Professionally, I utilized Unix for deployment scripting at Cisco. To deepen my structural and theoretical understanding of these environments, I will be taking a dedicated Operating Systems course in the future.",
+                descLong: "I'm comfortable developing and troubleshooting across Windows, macOS, and Linux/Unix environments, and used Unix professionally for deployment scripting at Cisco. I'll be taking a dedicated Operating Systems course in the future to deepen my theoretical understanding of these systems.",
                 points: "2/3",
                 pointClass: "partial",
                 gridPos: "6 / 1"
@@ -606,8 +605,8 @@ const treeDatabase = {
                 title: "Computer Graphics",
                 type: "[2/3] - Proficient",
                 req: "Requires Math",
-                desc: "Generating, rendering, and manipulating visual imagery using programmatic mathematics and graphic APIs.",
-                descLong: "I have established a foundation in computer graphics through academic coursework at WPI. I have executed matrix transformations in WebGL to render scenes, and I am enrolled in Computer Graphics to expand my knowledge of rendering techniques. I will also be taking Computer Animation in the future as a direct follow-up to my WebGL coursework.",
+                desc: "Generating and rendering visual imagery through graphics APIs and applied mathematics.",
+                descLong: "I've built a foundation in computer graphics through coursework at WPI, applying matrix transformations in WebGL to render scenes. I've taken a Computer Graphics course to expand my knowledge of rendering techniques, with Computer Animation planned as a direct follow-up.",
                 points: "2/3",
                 pointClass: "partial",
                 gridPos: "6 / 4"
@@ -621,7 +620,7 @@ const treeDatabase = {
                 type: "[2/3] - Proficient",
                 req: "Requires Operating Systems",
                 desc: "Configuring, maintaining, and operating computer systems, servers, and automated protocols for distributed teams.",
-                descLong: "While my background is centered on software engineering and DevOps, these roles often require system administration. I have experience setting up and troubleshooting servers and virtual machines in clustered environments. This work involved handling administrative tasks such as disk partitioning, configuring networking, and authoring standard operating procedures to ensure system stability.",
+                descLong: "My system administration experience comes through software engineering and DevOps work, where I've set up and troubleshot servers and virtual machines in clustered environments. This included tasks like disk partitioning, network configuration, and authoring standard operating procedures to maintain system stability.",
                 points: "2/3",
                 pointClass: "partial",
                 gridPos: "7 / 1"
@@ -634,7 +633,7 @@ const treeDatabase = {
                 type: "[3/3] - Advanced",
                 req: "",
                 desc: "Writing and maintaining structured technical guides, deployment protocols, and project design documents.",
-                descLong: "At Cisco, I authored technical documentation to standardize deployment protocols for distributed engineering teams.",
+                descLong: "At Cisco, I authored technical documentation to standardize deployment protocols across distributed engineering teams. I also maintain project design documentation for Acolytes, structuring scope and production details for a multidisciplinary team.",
                 points: "3/3",
                 pointClass: "full",
                 gridPos: "7 / 2"
@@ -646,8 +645,8 @@ const treeDatabase = {
                 title: "Artificial Intelligence",
                 type: "[1/3] - Familiar",
                 req: "",
-                desc: "The foundational logic and algorithmic structures required to simulate decision-making or intelligent behavior in software.",
-                descLong: "My background as a programmer and game developer provides a foundation in the logic structures, state machines, and algorithmic decision-making that serve as the building blocks for AI. To formally develop this skill set, I will be taking three dedicated classes next year: Machine Learning, Introduction to Artificial Intelligence, and Artificial Intelligence in Games.",
+                desc: "The logic, algorithms, and models used to simulate decision-making or intelligent behavior in software.",
+                descLong: "My background in programming and game development gives me a foundation in the logic structures, state machines, and algorithmic decision-making that underpin AI. I'll be formalizing this next year with three dedicated courses: Machine Learning, Introduction to Artificial Intelligence, and Artificial Intelligence in Games.",
                 points: "1/3",
                 pointClass: "partial",
                 gridPos: "7 / 3"
