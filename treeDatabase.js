@@ -10,7 +10,7 @@ const treeDatabase = {
                 type: "[2/3] - Proficient",
                 req: "",
                 desc: "Foundational principles of visual design, including composition, layout, and color theory.",
-                descLong: "My understanding of visual design principles was established during my Associate's program studying Interactive Media. I completed coursework in Digital Design Concepts to understand how to structure visual information effectively.",
+                descLong: "I built my foundation in visual design through coursework in Digital Design Concepts during my Associate's program, learning to structure and communicate visual information clearly.",
                 points: "2/3",
                 pointClass: "partial",
                 gridPos: "1 / 2"
@@ -23,7 +23,7 @@ const treeDatabase = {
                 type: "[2/3] - Proficient",
                 req: "",
                 desc: `Producing physical and digital drawings to explore visual concepts, capture forms, and establish proportions.`,
-                descLong: "I have sketched periodically throughout my life and completed two courses during my Associate's program that involved working with pencil, colored pencils, and graphite. I am proficient with sketching from references, focusing my practice on capturing form and proportion.",
+                descLong: "I've sketched consistently for most of my life, and completed two courses during my Associate's program working in pencil, colored pencil, and graphite. My practice focuses on sketching from reference, capturing accurate form and proportion.",
                 points: "2/3",
                 pointClass: "partial",
                 gridPos: "1 / 3"
@@ -36,8 +36,8 @@ const treeDatabase = {
                 title: "Writing",
                 type: "[3/3] - Advanced",
                 req: "",
-                desc: "Composing structured text, narrative elements, and technical documentation.",
-                descLong: "I structure narrative and technical writing for game documents and text-based experiences. I ensure documentation is clear, functional, and organized for proper project scoping and development.",
+                desc: "Composing structured narrative, technical documentation, and other written content.",
+                descLong: "I write structured narrative and technical documentation across game projects, from branching interactive fiction to design documents used to scope and coordinate development. For Merc, I wrote a 29,828-word branching narrative across 117 passages, and I maintain the core design documentation for Acolytes.",
                 points: "3/3",
                 pointClass: "full",
                 gridPos: "2 / 1"
@@ -50,7 +50,7 @@ const treeDatabase = {
                 type: "[1/3] - Familiar",
                 req: "",
                 desc: "Recording, editing, and implementing sound effects and music tracks.",
-                descLong: "I have a foundational understanding of music theory and introductory experience with keyboards. I utilize software such as Audacity and navigate basic Digital Audio Workstations to edit existing audio tracks for engine implementation.",
+                descLong: "I have a foundational understanding of music theory and some introductory experience with keyboards. I use software like Audacity and basic Digital Audio Workstations to edit existing audio tracks for implementation in-engine.",
                 points: "1/3",
                 pointClass: "partial",
                 gridPos: "2 / 2"
@@ -63,7 +63,7 @@ const treeDatabase = {
                 type: "[2/3] - Proficient",
                 req: "Requires Sketching",
                 desc: `Studying and capturing the human form through live observation and gesture studies.`,
-                descLong: "I completed a Drawing the Human Form course in my Associate's Program. I have also executed figure drawing gesture studies and speed sketches independently to practice form and proportion.",
+                descLong: "I completed a Drawing the Human Form course during my Associate's program, and have continued practicing independently through gesture studies and speed sketches to sharpen form and proportion.",
                 points: "2/3",
                 pointClass: "partial",
                 gridPos: "2 / 4"
@@ -76,8 +76,8 @@ const treeDatabase = {
                 title: "3D Digital Art",
                 type: "[2/3] - Proficient",
                 req: "",
-                desc: "Modeling and shaping three-dimensional digital objects and environments.",
-                descLong: "I utilize Blender for 3D modeling, having explored the software through periodic tutorials over the past fifteen years. I also established an understanding of 3D asset pipelines by completing a 3D Modeling for Game Design course using Maya during my Associate's degree.",
+                desc: "Modeling and sculpting three-dimensional digital objects and environments.",
+                descLong: "I use Blender for 3D modeling, having worked with it on and off for the past fifteen years through independent tutorials. I also built an understanding of 3D asset pipelines through a 3D Modeling for Game Design course using Maya during my Associate's degree.",
                 points: "2/3",
                 pointClass: "partial",
                 gridPos: "3 / 2"
@@ -90,7 +90,7 @@ const treeDatabase = {
                 type: "[1/3] - Familiar",
                 req: "Requires Sketching",
                 desc: "Creating two-dimensional digital graphics and modifying existing visual assets.",
-                descLong: "My focus in 2D digital art centers on modifying existing assets and creating functional graphics for games, as I typically source free assets for the majority of my personal projects. This practical work ensures familiarity with art pipelines and engine requirements.",
+                descLong: "My focus in 2D digital art centers on modifying existing assets and creating functional graphics for games, since I typically source free assets for the majority of my personal projects. This hands-on work has given me a working familiarity with art pipelines and engine requirements.",
                 points: "1/3",
                 pointClass: "partial",
                 gridPos: "3 / 3"
@@ -103,8 +103,8 @@ const treeDatabase = {
                 title: "Texturing",
                 type: "[2/3] - Proficient",
                 req: "Requires 3D Digital Art",
-                desc: "Projecting a 2D image onto a 3D model's surface for texture application.",
-                descLong: "I can unwrap 3D models and arrange UV layouts for texturing. I have executed these pipeline tasks within Blender and have experience establishing UV structures for WebGL implementations.",
+                desc: "Unwrapping and mapping 3D models to apply 2D textures onto their surfaces.",
+                descLong: "I unwrap 3D models and arrange UV layouts for texturing, working through these pipeline tasks in Blender. I've also set up UV structures specifically for WebGL implementations",
                 points: "2/3",
                 pointClass: "partial",
                 gridPos: "4 / 2"
@@ -117,7 +117,7 @@ const treeDatabase = {
                 type: "[3/3] - Advanced",
                 req: "Requires 2D Digital Art",
                 desc: "Editing and manipulating pixel-based imagery, photos, and UI icons.",
-                descLong: "I am highly proficient in photo editing and the creation of simple pixel graphics using software like GIMP, which I have used since childhood. I completed Digital Imaging and Media coursework during my Associate's program, which was done using Adobe Photoshop, and routinely manipulate raster images to fit specific game engine requirements.",
+                descLong: "I've used GIMP for photo editing and simple pixel graphics since childhood, and completed Digital Imaging and Media coursework using Adobe Photoshop during my Associate's program. I routinely manipulate raster images to meet specific game engine requirements.",
                 points: "3/3",
                 pointClass: "full",
                 gridPos: "4 / 3"
@@ -129,8 +129,8 @@ const treeDatabase = {
                 title: "Vector Graphics",
                 type: "[1/3] - Familiar",
                 req: "Requires 2D Digital Art",
-                desc: "Creating scalable, mathematically defined digital graphics and illustrations.",
-                descLong: "I learned the basic interfaces and tools of Inkscape and Adobe Illustrator during my Associate's degree, including coursework in Digital Illustration & Animation. I understand the fundamental difference between vector and raster formats within the production pipeline.",
+                desc: "Creating scalable digital graphics and illustrations built from vector paths.",
+                descLong: "I learned the fundamentals of Inkscape and Adobe Illustrator through Digital Illustration & Animation coursework during my Associate's degree, gaining a working familiarity with vector-based workflows.",
                 points: "1/3",
                 pointClass: "partial",
                 gridPos: "4 / 4"
@@ -144,7 +144,7 @@ const treeDatabase = {
                 type: "[1/3] - Familiar",
                 req: "Requires 3D Digital Art and Rigging",
                 desc: "Animating three-dimensional models and environments across timelines.",
-                descLong: "I understand foundational 3D animation principles from previous academic coursework in high school. I am familiar with the concepts of keyframing and timeline manipulation, alongside camera and lighting set-ups, within a three-dimensional workspace.",
+                descLong: "I have a foundational understanding of 3D animation from coursework in high school, including keyframing, timeline manipulation, and basic camera and lighting setup",
                 points: "1/3",
                 pointClass: "partial",
                 gridPos: "5 / 1"
@@ -157,7 +157,7 @@ const treeDatabase = {
                 type: "[1/3] - Familiar",
                 req: "",
                 desc: "Constructing digital skeletons and control structures to deform and animate models.",
-                descLong: "I understand the mechanical processes required to rig a model for animation including inverse kinematics. My practical experience of these concepts is focused on implementing 2D bone-based animations within the Godot engine.",
+                descLong: "I've implemented 2D bone-based rigging and animation within the Godot engine, working with inverse kinematics to build functional control structures for character models.",
                 points: "1/3",
                 pointClass: "partial",
                 gridPos: "5 / 2"
@@ -169,8 +169,8 @@ const treeDatabase = {
                 title: "2D Animation",
                 type: "[1/3] - Familiar",
                 req: "Requires Raster Graphics and Rigging",
-                desc: "Creating movement and motion sequences using two-dimensional digital assets.",
-                descLong: "I manipulate screen elements over time using video editors and game engines. I completed Motion Graphics and digital animation coursework at Quinsigamond Community College, focusing on positional animation rather than traditional frame-by-frame drawing.",
+                desc: "Creating movement and animated sequences using two-dimensional digital assets.",
+                descLong: "I completed Motion Graphics and digital animation coursework at Quinsigamond Community College, focusing on positional animation, moving and transforming existing assets over time, rather than traditional frame-by-frame drawing.",
                 points: "1/3",
                 pointClass: "partial",
                 gridPos: "5 / 3"
@@ -183,8 +183,8 @@ const treeDatabase = {
                 title: "UI/UX Design",
                 type: "[3/3] - Advanced",
                 req: "",
-                desc: "Designing user interfaces and optimizing the user experience for digital applications.",
-                descLong: "I design functional interfaces that prioritize user navigation and clear information display. The focus is on establishing intuitive layouts that communicate game mechanics or application functions effectively.",
+                desc: "Designing user interfaces and structuring intuitive, functional user experiences for digital applications.",
+                descLong: "I design interfaces that prioritize clear navigation and information display, building intuitive layouts that communicate game mechanics and application functions effectively. This site's interface, along with the battle and menu UI in my game projects, are both direct examples of this work.",
                 points: "3/3",
                 pointClass: "full",
                 gridPos: "6 / 2"
@@ -197,8 +197,8 @@ const treeDatabase = {
                 title: "Web Design",
                 type: "[3/3] - Advanced",
                 req: "Requires UI/UX Design",
-                desc: "Structuring and designing visual layouts and interfaces for web environments.",
-                descLong: "I build web layouts and structure user interfaces. I approach web design by focusing on clean navigation hierarchies and ensuring elements are positioned logically within the browser environment.",
+                desc: "Applying visual design and interface structure specifically to the web, across layout, navigation, and responsiveness.",
+                descLong: "I build and structure web interfaces with clean navigation hierarchies and logical element placement, this very site being a direct example, including its responsive design across desktop, tablet, and mobile devices.",
                 points: "3/3",
                 pointClass: "full",
                 gridPos: "7 / 2"
@@ -227,8 +227,8 @@ const treeDatabase = {
                 title: "Game Design Fundamentals",
                 type: "[3/3] - Advanced",
                 req: "",
-                desc: "Core principles of game design, including mechanics, player psychology, and interaction loops.",
-                descLong: "My understanding of game design fundamentals has been developed through academic coursework, independent study, and practical application across digital and analog formats. I apply these concepts to structure mechanics, manage pacing, and establish clear progression.",
+                desc: "Core principles of game design, including meaningful decision-making, player psychology, and player expression.",
+                descLong: "I've built my understanding of game design fundamentals through academic coursework, independent study, and hands-on practice across both digital and analog formats. I apply these principles to shape player choices, pace experiences, and build progression that keeps players engaged.",
                 points: "3/3",
                 pointClass: "full",
                 gridPos: "1 / 2"
@@ -241,8 +241,8 @@ const treeDatabase = {
                 title: "Narrative Design",
                 type: "[2/3] - Proficient",
                 req: "Requires Game Design Fundamentals",
-                desc: "Structuring interactive stories, integrating narrative elements and applying world-building directly into game mechanics.",
-                descLong: "I have studied narrative design through independent courses and tutorials. I have applied these concepts practically by engineering interactive, branching text-based experiences using tools like Twine, blending story progression with conditional logic.",
+                desc: "Structuring interactive stories and applying world-building directly into game mechanics.",
+                descLong: "I've studied narrative design through independent courses and tutorials, and applied it practically by engineering interactive, branching narratives in Twine, blending story progression with conditional logic to shape player choice.",
                 points: "2/3",
                 pointClass: "partial",
                 gridPos: "2 / 1"
@@ -255,7 +255,7 @@ const treeDatabase = {
                 type: "[3/3] - Advanced",
                 req: "Requires Game Design Fundamentals",
                 desc: "Creating and balancing the underlying rules, economies, and mathematical systems that govern gameplay.",
-                descLong: "I design and balance interrelated game systems, frequently blending genres and prioritizing unique mechanics as the primary driver for play. I applied these principles directly to my project, Arena, structuring rule sets and interlocking systems to dictate the flow of the game and provide distinct tactical choices.",
+                descLong: "I design and balance interrelated game systems, often blending genres and prioritizing unique mechanics. For my project Arena, I structured rule sets and interconnected systems to shape the game's flow and offer distinct tactical choices.",
                 points: "3/3",
                 pointClass: "full",
                 gridPos: "2 / 2"
@@ -268,7 +268,7 @@ const treeDatabase = {
                 type: "[2/3] - Proficient",
                 req: "Requires Game Design Fundamentals",
                 desc: "Crafting playable environments that guide player movement, pace challenges, and support core mechanics.",
-                descLong: "My level design experience is primarily focused on 2D environments. I build layouts that introduce mechanics progressively, facilitate spatial flow, and control game pacing within custom engine setups.",
+                descLong: "My level design experience is primarily focused on 2D environments, where I build layouts that introduce mechanics progressively, guide player navigation, and control pacing.",
                 points: "2/3",
                 pointClass: "partial",
                 gridPos: "2 / 3"
@@ -281,8 +281,8 @@ const treeDatabase = {
                 title: "Digital Game Design",
                 type: "[3/3] - Advanced",
                 req: "",
-                desc: "The specific application of game design principles to digital mediums and video game software.",
-                descLong: "I have a firm understanding of digital design paradigms across a wide variety of genres, developed through extensive gameplay experience and analysis. Practically, I have developed roughly a half-dozen small games and prototypes outside of guided tutorials, primarily focusing on 2D experiences.",
+                desc: "Applying game design principles within digital software, working around engine constraints while emphasizing iteration and technical interaction.",
+                descLong: "I've built a broad understanding of digital game design across many genres through both extensive play and critical analysis. Practically, I've developed roughly half a dozen small games and prototypes outside of guided tutorials, primarily focused on 2D experiences.",
                 points: "3/3",
                 pointClass: "full",
                 gridPos: "3 / 2"
@@ -295,7 +295,7 @@ const treeDatabase = {
                 type: "[2/3] - Proficient",
                 req: "",
                 desc: "Designing mechanics, rulesets, and physical components for non-digital board, card, and roleplaying games.",
-                descLong: "I have drafted custom mechanics and built physical models through analog design exercises prior to digital implementation. This practical design work is informed by a familiarity with rule interactions gained from playing TCGs and running TTRPG campaigns.",
+                descLong: "I draft custom mechanics and build physical prototypes as analog design exercises. This work is grounded in experiencing running TTRPG campaigns and playing both casual and competitive TCGs, which gave me firsthand experience with how rule interactions actually play out at the table.",
                 points: "2/3",
                 pointClass: "partial",
                 gridPos: "3 / 4"
@@ -309,7 +309,7 @@ const treeDatabase = {
                 type: "[3/3] - Advanced",
                 req: "Requires Tabletop Game Design",
                 desc: "Quickly developing functional models of game mechanics to test viability and iterate on core concepts.",
-                descLong: "I build functional, isolated prototypes to quickly validate core mechanics and fail fast. I have developed these bare-minimum test builds for digital concepts across multiple engines, and utilize paper prototyping for tabletop mechanics to test viability before committing to full production",
+                descLong: "I build isolated, bare-minimum prototypes to quickly validate whether a core mechanic actually works before investing further. I've developed these test builds for digital concepts across multiple engines, and use paper prototyping to check viability before committing to full production.",
                 points: "3/3",
                 pointClass: "full",
                 gridPos: "4 / 4"
@@ -323,7 +323,7 @@ const treeDatabase = {
                 type: "[3/3] - Advanced",
                 req: "Requires Digital Game Design",
                 desc: "Translating game design documentation and mechanics into functional code within a game engine.",
-                descLong: "I program core game logic, character controllers, and system interactions. I have experience scripting mechanics across multiple engines, utilizing programming languages such as C++, C#, and GDScript to bring design concepts to functional states.",
+                descLong: "I program core game logic, character controllers, and system interactions, scripting mechanics across multiple engines in languages like C++, Python, C#, and GDScript to turn design concepts into working gameplay.",
                 points: "3/3",
                 pointClass: "full",
                 gridPos: "5 / 2"
@@ -336,8 +336,8 @@ const treeDatabase = {
                 title: "Unity Game Engine",
                 type: "[2/3] - Proficient",
                 req: "Requires Gameplay Programming",
-                desc: "Developing digital games utilizing the Unity engine.",
-                descLong: "I utilized Unity extensively during my Associate's program. I am familiar with its component-based architecture and UI implementation to script interactions and build functional digital environments.",
+                desc: "Developing digital games in Unity, working within its component-based architecture.",
+                descLong: "I used Unity extensively during my Associate's program, working with its component-based architecture and UI implementation to script interactions and build functional digital environments.",
                 points: "2/3",
                 pointClass: "partial",
                 gridPos: "6 / 1"
@@ -349,8 +349,8 @@ const treeDatabase = {
                 title: "Godot Game Engine",
                 type: "[3/3] - Advanced",
                 req: "Requires Gameplay Programming",
-                desc: "Developing 2D and 3D games utilizing the Godot engine and GDScript.",
-                descLong: "I have comprehensive knowledge of the Godot engine, having read the entire official documentation. I leverage its node-based scene architecture and GDScript to construct hierarchies and build responsive 2D mechanics natively.",
+                desc: "Developing 2D and 3D games in Godot, using its node-based architecture and GDScript.",
+                descLong: "I have comprehensive knowledge of the Godot engine, having read through its entire official documentation. I use its node-based scene architecture and GDScript to construct clean hierarchies and build responsive mechanics natively.",
                 points: "3/3",
                 pointClass: "full",
                 gridPos: "6 / 2"
@@ -362,8 +362,8 @@ const treeDatabase = {
                 title: "Unreal Game Engine",
                 type: "[1/3] - Familiar",
                 req: "Requires Gameplay Programming",
-                desc: "Developing digital games utilizing the Unreal Engine environment and its associated systems.",
-                descLong: "I have a foundational familiarity with Unreal Engine. I understand the general structure and interface of the environment and have studied C++ in academic settings.",
+                desc: "Developing digital games in Unreal Engine, working within its C++ based architecture.",
+                descLong: "I have a foundational familiarity with Unreal Engine, understanding its general structure and interface, along with academic experience in C++.",
                 points: "1/3",
                 pointClass: "partial",
                 gridPos: "6 / 3"
@@ -376,7 +376,7 @@ const treeDatabase = {
                 type: "[3/3] - Advanced",
                 req: "",
                 desc: "The production pipeline of scheduling, scoping, and coordinating a game from concept to completion.",
-                descLong: "I have an understanding of the game development pipeline, including  of how art and software pipelines integrate during cross-discipline studio interaction. For my 2D tactical RPG and deck-builder project, Acolytes, I will serve as the producer, establishing the initial project scope and assigning production tasks to coordinate a multidisciplinary team.",
+                descLong: "I understand the game development pipeline, including how art and software workflows integrate across a multidisciplinary team. For my project Acolytes, a 2D tactical RPG deckbuilder, I will serve as producer, establishing the initial project scope and assigning production tasks to coordinate the team.",
                 points: "3/3",
                 pointClass: "full",
                 gridPos: "6 / 4"
@@ -390,7 +390,7 @@ const treeDatabase = {
                 type: "[3/3] - Advanced",
                 req: "Requires Game Production Process",
                 desc: "Formulating and presenting game concepts to potential team members or faculty.",
-                descLong: "I have experience structuring and delivering project pitches. For Acolytes, I formulated the core vision and scope, successfully pitching the concept to both university faculty and students to secure approval and recruiting my development team.",
+                descLong: "I have experience structuring and delivering project pitches. For Acolytes, I formulated the core vision and scope, successfully pitching the concept to university faculty and students to secure approval and recruit my development team.",
                 points: "3/3",
                 pointClass: "full",
                 gridPos: "7 / 4"
