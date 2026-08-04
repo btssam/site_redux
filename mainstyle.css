@@ -9,7 +9,7 @@
 /*4. Portrait Tablet*/
 /*@media (min-width: 601px) and (max-width: 1024px) and (orientation: portrait) and (pointer: coarse) */
 /*5. Square Tablet/Foldable Phone*/
-/*@media (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4)*/
+/*@media (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) and (pointer:coarse)*/
 /*6. Landscape Phones*/
 /*@media (max-height: 500px) and (orientation: landscape) and (pointer: coarse)*/
 /*7. Landscape Tablets*/
