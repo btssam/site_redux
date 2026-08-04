@@ -4,15 +4,17 @@
 /*No @media tag - generic behavior*/
 /*2. 4K/TV*/
 /*@media (min-width: 1800px) and @media (min-width: 3400px) for ultra HD*/
-/*3.Vertical Phones*/
+/*3. Compact Desktop Windows*/
+/*@media (min-width: 1025px) and (max-height: 950px) and (pointer: fine)*/
+/*4. Vertical Phones*/
 /*@media (max-width: 600px) and (orientation: portrait)*/
-/*4. Portrait Tablet*/
+/*5. Portrait Tablet*/
 /*@media (min-width: 601px) and (max-width: 1024px) and (orientation: portrait) and (pointer: coarse) */
-/*5. Square Tablet/Foldable Phone*/
+/*6. Square Tablet/Foldable Phone*/
 /*@media (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) and (pointer:coarse)*/
-/*6. Landscape Phones*/
+/*7. Landscape Phones*/
 /*@media (max-height: 500px) and (orientation: landscape) and (pointer: coarse)*/
-/*7. Landscape Tablets*/
+/*8. Landscape Tablets*/
 /*@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) and (min-height: 501px) and (pointer: coarse)*/
 
 /**/

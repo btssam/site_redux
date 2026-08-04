@@ -103,7 +103,14 @@
     }
 }
 
-/*Vertical Phones and Square Tablets/Foldables*/
+/*Compact Desktop Windows*/
+@media (min-width: 1025px) and (max-height: 950px) and (pointer: fine) {
+    .about-text {
+        font-size: clamp(0.85rem, 1.7vh, .97rem);
+    }
+}
+
+/*Vertical Phones*/
 @media (max-width: 600px) and (orientation: portrait){
     .about-text {
         font-size: clamp(0.95rem, 1vw, 2.25rem);

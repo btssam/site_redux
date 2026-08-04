@@ -72,6 +72,13 @@
     }
 }
 
+/*Compact Desktop Windows*/
+@media (min-width: 1025px) and (max-height: 950px) and (pointer: fine) {
+    .talent-tree-container {
+        height: 75vh;
+    }
+}
+
 /*Vertical Phones*/
 @media (max-width: 600px) and (orientation: portrait) {
     .talent-tree-container {
