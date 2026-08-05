@@ -277,8 +277,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //Scroll Snapping
 let isAnimating = false;
+let scrollEndTimer;
 
-// when to disable scroll snapping i.e. compact windows that cant show all content in one screen
+//releases the lock only once scrolling has fully stopped, prevent trackpad issues
+function armScrollEndListener() {
+    window.addEventListener('scroll', handleScrollEnd);
+    handleScrollEnd();
+}
+
+function handleScrollEnd() {
+    clearTimeout(scrollEndTimer);
+    scrollEndTimer = setTimeout(() => {
+        isAnimating = false;
+        window.removeEventListener('scroll', handleScrollEnd);
+    }, 120); //time after scroll has ended
+}
+
+
+
+// when to disable scroll snapping entirely i.e. compact windows that cant show all content in one screen
 const compactLayoutQuery = window.matchMedia(
     "(max-width: 600px) and (orientation: portrait)," +
     "(min-width: 601px) and (max-width: 1450px) and (orientation: portrait)," +
@@ -328,9 +345,7 @@ window.addEventListener('wheel', (e) => {
             behavior: 'smooth',
             block: alignMode
         });
-        setTimeout(() => {
-            isAnimating = false;
-        }, 800);
+        armScrollEndListener();
     }
 }, {passive: false});
 
