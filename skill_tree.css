@@ -142,7 +142,7 @@
     }
 }
 
-.talent-tree-container h1 {
+.talent-tree-container h3 {
     position: absolute;
     top: clamp(8px, 1.5vh, 24px);
     left: 0;
@@ -161,21 +161,21 @@
 
 /*Vertical Phones*/
 @media (max-width: 600px) and (orientation: portrait) {
-    .talent-tree-container h1 {
+    .talent-tree-container h3 {
         font-size: clamp(1.25rem, 2vh, 1.75rem);
     }
 }
 
 /*Large Monitor*/
 @media (min-width: 1800px) {
-    .talent-tree-container h1 {
+    .talent-tree-container h3 {
         font-size: clamp(1.75rem, 3.25vh, 3rem);
     }
 }
 
 /*Landscape Phones*/
 @media (max-height: 500px) and (orientation: landscape)  {
-    .talent-tree-container h1 {
+    .talent-tree-container h3 {
         font-size: clamp(0.85rem, 2.2vh, 1.1rem);
         letter-spacing: 0.1vw;
     }
@@ -183,14 +183,14 @@
 
 /*Landscape Tablet*/
 @media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) and (min-height: 501px) {
-    .talent-tree-container h1 {
+    .talent-tree-container h3 {
         font-size: clamp(1rem, 2.5vh, 2rem);
     }
 }
 
 /*Square Tablets/Foldables*/
 @media (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
-    .talent-tree-container h1 {
+    .talent-tree-container h3 {
         font-size: clamp(1rem, 3vh, 1.75rem);
     }
 }

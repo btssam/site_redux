@@ -564,7 +564,7 @@ const treeDatabase = {
                 icon: "Computer_Icons/dev_ops.png",
                 title: "Dev Ops",
                 type: "[3/3] - Advanced",
-                req: "Requires Full Stack Development",
+                req: "Requires Full Stack Development and Containers",
                 desc: "The alignment of software development and IT operations to optimize CI/CD workflows and provide continuous delivery.",
                 descLong: "As a deployment contractor at Cisco, I maintained Docker-based pipelines and engineered multi-stage deployment strategies, developing custom Bash and Python automation that reduced deployment latency and minimized manual intervention for complex integrations.",
                 points: "3/3",
