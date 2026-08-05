@@ -37,11 +37,12 @@
     pointer-events: auto;
 }
 
-/*Compact/Stacked Viewports - matches Vertical Phones, Portrait Tablet/Monitors, Square Tablet/Foldable, and Landscape Phones*/
+/*Compact/Stacked Viewports - Vertical Phones, Portrait Tablet/Monitors, Square Tablet/Foldable, and Landscape Phones*/
 @media (max-width: 600px) and (orientation: portrait),
 (min-width: 601px) and (max-width: 1450px) and (orientation: portrait),
 (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4),
-(max-height: 500px) and (orientation: landscape) {
+(max-height: 500px) and (orientation: landscape),
+(min-width: 768px) and (max-width: 1366px) and (orientation: landscape) and (min-height: 501px) {
     .project-card,
     .project-card.focused {
         opacity: 1;
@@ -58,8 +59,8 @@
     }
 }
 
-/*Vertical Phones and Square Tablets/Foldables*/
-@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+/*Vertical Phones*/
+@media (max-width: 600px) and (orientation: portrait){
     .project-card,
     .project-card.focused {
         margin-bottom: 2vh;
@@ -97,7 +98,7 @@
 }
 
 /*Landscape Tablets*/
-@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) and (min-height: 501px)  {
+@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) and (min-height: 501px){
     .project-card,
     .project-card.focused {
         height: clamp(14rem, 34vh, 28rem);
@@ -107,12 +108,27 @@
     }
 }
 
+/*Square Tablets/Foldables*/
+@media (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+    .project-card,
+    .project-card.focused {
+        max-width: 90vw;
+        height: clamp(12rem, 58vh, 50rem);
+        padding: 2% 2% 2% 2%;
+        margin-top: 5vh;
+        flex-direction: row;
+        margin-bottom: 2vh;
+        /*margin-top: 1vh;*/
+        /*margin-bottom:*/
+    }
+}
+
 #first-project {
     margin-top: 10vh;
 }
 
-/*Vertical Phones and Square Tablets/Foldables*/
-@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+/*Vertical Phones*/
+@media (max-width: 600px) and (orientation: portrait) {
     #first-project {
         margin-top: 0;
     }
@@ -125,12 +141,19 @@
     }
 }
 
+/*Square Tablets/Foldables*/
+@media (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+    #first-project {
+        margin-top: 5vh;
+    }
+}
+
 #last-project {
     margin-bottom: 14vh;
 }
 
-/*Vertical Phones and Square Tablets/Foldables*/
-@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+/*Vertical Phones */
+@media (max-width: 600px) and (orientation: portrait) {
     #last-project {
         margin-bottom: 0;
     }
@@ -149,7 +172,16 @@
         margin-bottom: 0;
     }
 }
-    .project-media {
+
+
+/*Square Tablets/Foldables*/
+@media (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+    #last-project {
+        margin-bottom: 0;
+    }
+}
+
+.project-media {
     height: 100%;
     width: auto;
     flex: 0 0 auto;
@@ -166,7 +198,7 @@
     transition: all 0.3s ease;
 }
 
-/*Vertical Phones and Square Tablets/Foldables*/
+/*Vertical Phones*/
 @media (max-width: 600px) and (orientation: portrait){
     .project-media {
         height: auto;
@@ -314,7 +346,23 @@
     }
 }
 
-    .button.project-button {
+
+/*Square Tablets/Foldables*/
+@media (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+    .project-info {
+        padding-bottom: 1vh;
+    }
+
+    .project-info h3 {
+        font-size: clamp(2.3rem, 4.2vh, 2.6rem);
+    }
+
+    .project-info p {
+        font-size: clamp(0.4rem, 2.8vh, 1.0rem);
+    }
+}
+
+.button.project-button {
     position: relative;
     margin-top: auto;
 
@@ -323,6 +371,16 @@
     border-radius: 0.6vh;
 
     box-shadow: 0 0.5vh 0 #ccac00;
+}
+
+.button.project-button:hover {
+    transform: translateY(0.2vh);
+    box-shadow: 0 0.3vh 0 #ccac00;
+}
+
+.button.project-button:active {
+    transform: translateY(0.5vh);
+    box-shadow: 0 0 0 #ccac00;
 }
 
 /*Large Monitor*/
@@ -347,19 +405,20 @@
 }
 
 /*Landscape Phones*/
-@media (max-height: 500px) and (orientation: landscape)  {
+@media (max-height: 500px) and (orientation: landscape) {
     .button.project-button {
         font-size: clamp(0.6rem, 1.8vh, 0.8rem);
         padding: clamp(0.4rem, 0.8vh, 0.6rem) clamp(0.9rem, 1.5vw, 1.4rem);
         box-shadow: 0 1vh 0 #ccac00;
     }
-}
 
-.button.project-button:hover {
-    transform: translateY(0.2vh);
-    box-shadow: 0 0.3vh 0 #ccac00;
-}
+    .button.project-button:hover {
+        transform: translateY(0.4vh);
+        box-shadow: 0 0.6vh 0 #ccac00;
+    }
 
-.button.project-button:active {
-    box-shadow: 0 0 0 #ccac00;
+    .button.project-button:active {
+        transform: translateY(1vh);
+        box-shadow: 0 0 0 #ccac00;
+    }
 }

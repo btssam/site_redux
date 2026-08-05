@@ -283,7 +283,8 @@ const compactLayoutQuery = window.matchMedia(
     "(max-width: 600px) and (orientation: portrait)," +
     "(min-width: 601px) and (max-width: 1450px) and (orientation: portrait)," +
     "(max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4)," +
-    "(max-height: 500px) and (orientation: landscape)"
+    "(max-height: 500px) and (orientation: landscape)," +
+    "(min-width: 768px) and (max-width: 1366px) and (orientation: landscape) and (min-height: 501px)"
 );
 
 window.addEventListener('wheel', (e) => {

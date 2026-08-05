@@ -18,7 +18,7 @@
     padding: 2vh 0;
 }
 
-/*Vertical Phones and Square Tablets/Foldables*/
+/*Vertical Phones*/
 @media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     .carousel-wrapper {
         flex-direction: column;
@@ -39,6 +39,14 @@
     .carousel-wrapper {
         height: 110vh;
         min-height: 0;
+    }
+}
+
+/* Square Tablets/Foldables*/
+@media (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+    .carousel-wrapper {
+        flex-direction: column;
+        gap: 4vh;
     }
 }
 
@@ -114,6 +122,13 @@
     }
 }
 
+/*Landscape Tablet*/
+@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) and (min-height: 501px)  {
+    .talent-tree-container {
+        padding: clamp(40px, 7vh, 120px) 3% 3% 3%; /*extra top space for title*/
+    }
+}
+
 /*Square Tablets/Foldables*/
 @media (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     .talent-tree-container {
@@ -123,17 +138,11 @@
         min-height: 0;
         max-height: none;
         transition: none;
+        /*padding: clamp(40px, 7vh, 120px) 3% 3% 3%; !*extra top space for title*!*/
     }
 }
 
-/*Landscape Tablet*/
-@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) and (min-height: 501px)  {
-    .talent-tree-container {
-        padding: clamp(40px, 7vh, 120px) 3% 3% 3%; /*extra top space for title*/
-    }
-}
-
-    .talent-tree-container h1 {
+.talent-tree-container h1 {
     position: absolute;
     top: clamp(8px, 1.5vh, 24px);
     left: 0;
@@ -157,13 +166,6 @@
     }
 }
 
-/*Square Tablets/Foldables*/
-@media (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
-    .talent-tree-container h1 {
-        font-size: clamp(2rem, 4vh, 2.75rem);
-    }
-}
-
 /*Large Monitor*/
 @media (min-width: 1800px) {
     .talent-tree-container h1 {
@@ -183,6 +185,13 @@
 @media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) and (min-height: 501px) {
     .talent-tree-container h1 {
         font-size: clamp(1rem, 2.5vh, 2rem);
+    }
+}
+
+/*Square Tablets/Foldables*/
+@media (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+    .talent-tree-container h1 {
+        font-size: clamp(1rem, 3vh, 1.75rem);
     }
 }
 
@@ -221,8 +230,8 @@
     cursor: pointer;
 }
 
-/*Vertical Phones and Square Tablets/Foldables*/
-@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+/*Vertical Phones */
+@media (max-width: 600px) and (orientation: portrait) {
     .pos-center,
     .pos-left,
     .pos-right {
@@ -245,14 +254,28 @@
     }
 }
 
+
+/*Square Tablets/Foldables*/
+@media (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+    .pos-center,
+    .pos-left,
+    .pos-right {
+        transform: none;
+        opacity: 1;
+        filter: none;
+        cursor: default;
+        z-index: 1;
+    }
+}
+
 .pos-left .talent-node,
 .pos-right .talent-node,
 .carousel-animating .talent-node {
     pointer-events: none;
 }
 
-/*Vertical Phones and Square Tablets/Foldables*/
-@media (max-width: 600px) and (orientation: portrait), (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+/*Vertical Phones*/
+@media (max-width: 600px) and (orientation: portrait) {
     .pos-left .talent-node,
     .pos-right .talent-node,
     .carousel-animating .talent-node {
@@ -263,6 +286,15 @@
 /**/
 /*Portrait Tablet/Monitors*/
 @media (min-width: 601px) and (max-width: 1450px) and (orientation: portrait)  {
+    .pos-left .talent-node,
+    .pos-right .talent-node,
+    .carousel-animating .talent-node {
+        pointer-events: auto;
+    }
+}
+
+/*Square Tablets/Foldables*/
+@media (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     .pos-left .talent-node,
     .pos-right .talent-node,
     .carousel-animating .talent-node {
@@ -444,7 +476,7 @@
     }
 }
 
-/*Vertical Phones and Square Tablets/Foldables*/
+/*Vertical Phones*/
 @media (max-width: 600px) and (orientation: portrait){
     .wow-tooltip {
         min-width: 49vw;
@@ -463,15 +495,6 @@
     }
 }
 
-/*Square Tablets/Foldables*/
-@media (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
-    .wow-tooltip {
-        min-width: 45vw;
-        max-width: 49vw;
-        padding: 1.5vh 2vw;
-        font-size: clamp(1.1rem, 2vh, 1.5rem);
-    }
-}
 
 /*Landscape Phones*/
 @media (max-height: 500px) and (orientation: landscape)  {
@@ -480,7 +503,17 @@
         max-width: 48vw;
         padding: 0.8vh 1.1vw;
         gap: 2px;
-        font-size: clamp(0.55rem, 0.5vw, 0.75rem);
+        font-size: clamp(0.75rem, 0.65vw, .95rem);
+    }
+}
+
+/*Square Tablets/Foldables*/
+@media (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+    .wow-tooltip {
+        min-width: 45vw;
+        max-width: 49vw;
+        padding: 1.5vh 2vw;
+        font-size: clamp(1.1rem, 2vh, 1.5rem);
     }
 }
 
@@ -531,7 +564,7 @@
     }
 }
 
-/*Vertical Phones and Square Tablets/Foldables*/
+/*Vertical Phones */
 @media (max-width: 600px) and (orientation: portrait){
     .tooltip-title {
         font-size: clamp(0.95rem, 3vw, 2.25rem);
@@ -540,18 +573,6 @@
     .tooltip-type,
     .tooltip-req {
         font-size: clamp(0.7rem, 1.5vw, 2.25rem);
-    }
-}
-
-/*Square Tablets/Foldables*/
-@media (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
-    .tooltip-title {
-        font-size: clamp(1.3rem, 2.5vh, 1.8rem);
-    }
-
-    .tooltip-type,
-    .tooltip-req {
-        font-size: clamp(0.9rem, 1.8vh, 1.2rem);
     }
 }
 
@@ -564,5 +585,17 @@
     .tooltip-type,
     .tooltip-req {
         font-size: clamp(0.65rem, 1.4vw, 1.8rem);
+    }
+}
+
+/*Square Tablets/Foldables*/
+@media (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
+    .tooltip-title {
+        font-size: clamp(1.3rem, 2.5vh, 1.8rem);
+    }
+
+    .tooltip-type,
+    .tooltip-req {
+        font-size: clamp(0.9rem, 1.8vh, 1.2rem);
     }
 }
