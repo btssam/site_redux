@@ -317,9 +317,41 @@ const compactLayoutQuery = window.matchMedia(
     "(min-width: 768px) and (max-width: 1366px) and (orientation: landscape) and (min-height: 501px)"
 );
 
+//Trackpad Detection Heuristic
+//mouse wheels send large, discrete deltas (~100-120). trackpads send small,
+//often fractional deltas in rapid bursts. we sample early events to classify,
+//then cache the result since a user isn't switching input devices mid-session
+let inputDevice = null; //null = undetected yet, 'mouse' or 'trackpad' once known
+let detectionSamples = [];
+const DETECTION_SAMPLE_SIZE = 3; //safe to fudge - more samples = more confident, slower to kick in
+
+function detectInputDevice(e) {
+    detectionSamples.push(e.deltaY);
+
+    if (detectionSamples.length < DETECTION_SAMPLE_SIZE) return;
+
+    //trackpad signature: small and/or non-integer deltas
+    const looksLikeTrackpad = detectionSamples.every(d =>
+        Math.abs(d) < 50 || !Number.isInteger(d)
+    );
+
+    inputDevice = looksLikeTrackpad ? 'trackpad' : 'mouse';
+    detectionSamples = []; //free the array, no longer needed
+}
+
 window.addEventListener('wheel', (e) => {
     //disable when the layout is in compact/stacked mode
     if (compactLayoutQuery.matches) {
+        return;
+    }
+
+    //classify input device from the first few events, then remember it
+    if (inputDevice === null) {
+        detectInputDevice(e);
+    }
+
+    //once we know it's a trackpad, bail out entirely and let native scroll take over
+    if (inputDevice === 'trackpad') {
         return;
     }
 
