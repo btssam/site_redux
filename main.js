@@ -11,7 +11,7 @@ const SVG_NS = 'http://www.w3.org/2000/svg';
 //Build The Tree
 //
 
-//html generator (based on database)
+//HTML generator (based on database)
 function buildTreeHTML(treeKey, containerId) {
     const targetContainer = document.getElementById(containerId);
     const treeData = treeDatabase[treeKey];
@@ -275,25 +275,38 @@ document.addEventListener("DOMContentLoaded", function () {
     cards.forEach(card => observer.observe(card));
 });
 
-//Scroll Snapping
+// Scroll Snapping
 let isAnimating = false;
 let scrollEndTimer;
 
 //releases the lock only once scrolling has fully stopped, prevent trackpad issues
+const supportsScrollEnd = 'onscrollend' in window;
+
 function armScrollEndListener() {
-    window.addEventListener('scroll', handleScrollEnd);
-    handleScrollEnd();
+    if (supportsScrollEnd) {
+        window.addEventListener('scrollend', releaseLock, {once: true});
+    } else {
+        //fallback for older browsers: gap-based timer, same as before
+        window.addEventListener('scroll', handleScrollEnd);
+        handleScrollEnd();
+    }
+
+    //safety valve: never stay locked longer than this, in case scrollend
+    //never fires (e.g. the scroll distance was 0, or a browser quirk)
+    clearTimeout(scrollEndTimer);
+    scrollEndTimer = setTimeout(releaseLock, 1000);
+}
+
+function releaseLock() {
+    isAnimating = false;
+    clearTimeout(scrollEndTimer);
+    window.removeEventListener('scroll', handleScrollEnd);
 }
 
 function handleScrollEnd() {
     clearTimeout(scrollEndTimer);
-    scrollEndTimer = setTimeout(() => {
-        isAnimating = false;
-        window.removeEventListener('scroll', handleScrollEnd);
-    }, 120); //time after scroll has ended
+    scrollEndTimer = setTimeout(releaseLock, 120); //fallback only
 }
-
-
 
 // when to disable scroll snapping entirely i.e. compact windows that cant show all content in one screen
 const compactLayoutQuery = window.matchMedia(
