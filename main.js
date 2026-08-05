@@ -278,11 +278,20 @@ document.addEventListener("DOMContentLoaded", function () {
 //Scroll Snapping
 let isAnimating = false;
 
+// when to disable scroll snapping i.e. compact windows that cant show all content in one screen
+const compactLayoutQuery = window.matchMedia(
+    "(max-width: 600px) and (orientation: portrait)," +
+    "(min-width: 601px) and (max-width: 1450px) and (orientation: portrait)," +
+    "(max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4)," +
+    "(max-height: 500px) and (orientation: landscape)"
+);
+
 window.addEventListener('wheel', (e) => {
-    //disable on touch screen
-    if (window.matchMedia("(pointer: coarse)").matches) {
+    //disable when the layout is in compact/stacked mode
+    if (compactLayoutQuery.matches) {
         return;
     }
+
     e.preventDefault();
     if (isAnimating) return;
     //scroll direction (1 for down, -1 for up)

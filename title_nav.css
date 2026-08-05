@@ -30,7 +30,7 @@
 }
 
 /*Landscape Phones*/
-@media (max-height: 500px) and (orientation: landscape) and (pointer: coarse) {
+@media (max-height: 500px) and (orientation: landscape)  {
     .top-title-bar h1 {
         font-size: clamp(1.5rem, 6vh, 2.5rem);
     }
