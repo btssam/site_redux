@@ -23,6 +23,16 @@
     .carousel-wrapper {
         flex-direction: column;
         gap: 4vh;
+
+        #tree-games {
+            order: 1;
+        }
+        #tree-computers {
+            order: 2;
+        }
+        #tree-arts {
+            order: 3;
+        }
     }
 }
 
@@ -31,6 +41,16 @@
     .carousel-wrapper {
         flex-direction: column;
         gap: 4vh;
+
+        #tree-games {
+            order: 1;
+        }
+        #tree-computers {
+            order: 2;
+        }
+        #tree-arts {
+            order: 3;
+        }
     }
 }
 
@@ -47,6 +67,16 @@
     .carousel-wrapper {
         flex-direction: column;
         gap: 4vh;
+
+        #tree-games {
+            order: 1;
+        }
+        #tree-computers {
+            order: 2;
+        }
+        #tree-arts {
+            order: 3;
+        }
     }
 }
 
