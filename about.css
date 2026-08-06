@@ -104,7 +104,7 @@
 }
 
 /*Compact Desktop Windows*/
-@media (min-width: 1367px) and (max-width: 1799px) and (min-height: 501px) and (max-height: 950px) and (orientation: landscape) {
+@media (min-width: 1369px) and (max-width: 1799px) and (min-height: 501px) and (max-height: 950px) and (orientation: landscape) {
     .about-text {
         font-size: clamp(0.85rem, 1.7vh, .97rem);
     }

@@ -42,7 +42,7 @@
 (min-width: 601px) and (max-width: 1450px) and (orientation: portrait),
 (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4),
 (max-width: 1799px) and (max-height: 500px) and (orientation: landscape),
-(min-width: 768px) and (max-width: 1366px) and (orientation: landscape) and (min-height: 501px) {
+(min-width: 768px) and (max-width: 1368px) and (orientation: landscape) and (min-height: 501px) {
     .project-card,
     .project-card.focused {
         opacity: 1;
@@ -99,10 +99,10 @@
 }
 
 /*Landscape Tablets*/
-@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) and (min-height: 501px){
+@media (min-width: 768px) and (max-width: 1368px) and (orientation: landscape) and (min-height: 501px){
     .project-card,
     .project-card.focused {
-        height: clamp(17rem, 41vh, 31rem);
+        height: clamp(19rem, 45vh, 31rem);
         min-width: 80vw;
         max-width: 90vw;
         margin-bottom: 4vh;
@@ -168,7 +168,7 @@
 }
 
 /*Landscape Tablets*/
-@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) and (min-height: 501px)  {
+@media (min-width: 768px) and (max-width: 1368px) and (orientation: landscape) and (min-height: 501px)  {
     #last-project {
         margin-bottom: 0;
     }
@@ -308,12 +308,15 @@
 }
 
 /*Compact Desktop Windows*/
-@media (min-width: 1367px) and (max-width: 1799px) and (min-height: 501px) and (max-height: 950px) and (orientation: landscape) {
+@media (min-width: 1369px) and (max-width: 1799px) and (min-height: 501px) and (max-height: 950px) and (orientation: landscape) {
     .project-info {
         gap: 0.75vh;
     }
+    .project-info h3 {
+        font-size: clamp(1.3rem, 3.2vh, 1.6rem);
+    }
     .project-info p {
-        font-size: clamp(0.75rem, 1.8vh, 1.4rem);
+        font-size: clamp(0.7rem, 1.4vh, 1.75rem);
     }
 }
 
@@ -333,7 +336,7 @@
 }
 
 /*Landscape Tablets*/
-@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) and (min-height: 501px)  {
+@media (min-width: 768px) and (max-width: 1368px) and (orientation: landscape) and (min-height: 501px)  {
     .project-info {
         padding-bottom: 1vh;
     }
@@ -423,3 +426,23 @@
         box-shadow: 0 0 0 #ccac00;
     }
 }
+
+/*Landscape Tablets*/
+@media (min-width: 768px) and (max-width: 1368px) and (orientation: landscape) and (min-height: 501px){
+    .button.project-button {
+        font-size: clamp(0.6rem, 1.8vh, 0.8rem);
+        padding: clamp(0.4rem, 0.8vh, 0.6rem) clamp(0.9rem, 1.5vw, 1.4rem);
+        box-shadow: 0 1vh 0 #ccac00;
+    }
+
+    .button.project-button:hover {
+        transform: translateY(0.4vh);
+        box-shadow: 0 0.6vh 0 #ccac00;
+    }
+
+    .button.project-button:active {
+        transform: translateY(1vh);
+        box-shadow: 0 0 0 #ccac00;
+    }
+}
+

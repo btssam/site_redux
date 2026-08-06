@@ -301,7 +301,7 @@ const compactLayoutQuery = window.matchMedia(
     "(min-width: 601px) and (max-width: 1450px) and (orientation: portrait)," +
     "(max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4)," +
     "(max-width: 1799px) and (max-height: 500px) and (orientation: landscape)," +
-    "(min-width: 768px) and (max-width: 1366px) and (orientation: landscape) and (min-height: 501px)"
+    "(min-width: 768px) and (max-width: 1368px) and (orientation: landscape) and (min-height: 501px)"
 );
 
 //Trackpad Detection Heuristic

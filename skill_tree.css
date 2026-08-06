@@ -111,7 +111,7 @@
 }
 
 /*Compact Desktop Windows*/
-@media (min-width: 1367px) and (max-width: 1799px) and (min-height: 501px) and (max-height: 950px) and (orientation: landscape) {
+@media (min-width: 1369px) and (max-width: 1799px) and (min-height: 501px) and (max-height: 950px) and (orientation: landscape) {
     .talent-tree-container {
         height: 75vh;
     }
@@ -153,7 +153,7 @@
 }
 
 /*Landscape Tablet*/
-@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) and (min-height: 501px)  {
+@media (min-width: 768px) and (max-width: 1368px) and (orientation: landscape) and (min-height: 501px)  {
     .talent-tree-container {
         padding: clamp(40px, 7vh, 120px) 3% 3% 3%; /*extra top space for title*/
     }
@@ -199,7 +199,7 @@
 /*Large Monitor*/
 @media (min-width: 1800px) {
     .talent-tree-container h1 {
-        font-size: clamp(1.75rem, 3.25vh, 3rem);
+        font-size: clamp(1.3rem, 1.25vh, 2rem);
     }
 }
 
@@ -212,7 +212,7 @@
 }
 
 /*Landscape Tablet*/
-@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) and (min-height: 501px) {
+@media (min-width: 768px) and (max-width: 1368px) and (orientation: landscape) and (min-height: 501px) {
     .talent-tree-container h1 {
         font-size: clamp(1rem, 2.5vh, 2rem);
     }
@@ -521,7 +521,7 @@
     .wow-tooltip {
         min-width: 45vw;
         max-width: 49vw;
-        font-size: clamp(1.05rem, 0.95vw, 1.4rem);
+        font-size: clamp(1.4rem, 1.2vw, 1.8rem);
     }
 }
 
@@ -538,7 +538,7 @@
 }
 
 /*Landscape Tablet*/
-@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) and (min-height: 501px) {
+@media (min-width: 768px) and (max-width: 1368px) and (orientation: landscape) and (min-height: 501px) {
     .wow-tooltip {
         min-width: 42vw;
         max-width: 46vw;
