@@ -5,13 +5,13 @@
 /*2. 4K/TV*/
 /*@media (min-width: 1800px) and @media (min-width: 3400px) for ultra HD*/
 /*3. Compact Desktop Windows*/
-/*@media (min-width: 1025px) and (max-height: 950px) */
+/*@media @media (min-width: 1367px) and (max-width: 1799px) and (min-height: 501px) and (max-height: 950px) and (orientation: landscape) { */
 /*4. Vertical Phones*/
 /*@media (max-width: 600px) and (orientation: portrait)*/
 /*5. Portrait Tablet/Monitors*/
 /*@media (min-width: 601px) and (max-width: 1450px) and (orientation: portrait)  */
 /*6. Landscape Phones*/
-/*@media (max-height: 500px) and (orientation: landscape) */
+/*@media (max-width: 1799px) and (max-height: 500px) and (orientation: landscape) */
 /*7. Landscape Tablets*/
 /*@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) and (min-height: 501px) */
 /*8. Square Tablets/Foldable Phone*/
@@ -76,7 +76,7 @@ body {
 }
 
 /*Landscape Phones*/
-@media (max-height: 500px) and (orientation: landscape)  {
+@media (max-width: 1799px) and (max-height: 500px) and (orientation: landscape)  {
     .content-section {
         padding: 1vh 2rem 2vh 2rem;
     }
@@ -122,7 +122,7 @@ body {
 }
 
 /*Landscape Phones*/
-@media (max-height: 500px) and (orientation: landscape)  {
+@media (max-width: 1799px) and (max-height: 500px) and (orientation: landscape)  {
     .section-title {
         font-size: clamp(1.25rem, 5vh, 2rem);
         margin-bottom: 1vh;
@@ -181,7 +181,7 @@ body {
 }
 
 /*Landscape Phones*/
-@media (max-height: 500px) and (orientation: landscape)  {
+@media (max-width: 1799px) and (max-height: 500px) and (orientation: landscape)  {
     .button {
         box-shadow: 0 2vh 0 #ccac00;
     }
