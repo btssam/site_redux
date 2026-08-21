@@ -251,28 +251,54 @@ window.addEventListener('resize', () => {
     }, 10); // 10ms after dragging stops feels instantaneous
 });
 
-//zooming for projects subsection
+// //zooming for projects subsection
 document.addEventListener("DOMContentLoaded", function () {
-    const observerOptions = {
-        root: null, // Uses the browser viewport
-        // This creates a bounding box in the middle of the screen.
-        // It ignores the top and bottom of the window.
-        rootMargin: "-49% 0px -49% 0px",
-        threshold: 0 // Triggers the moment the card touches that middle band
-    };
+    let currentFocused = null;
 
-    const observer = new IntersectionObserver((entries) => {
+    function setFocused(card) {
+        if (currentFocused === card) return;
+        if (currentFocused) currentFocused.classList.remove('focused');
+        card.classList.add('focused');
+        currentFocused = card;
+    }
+
+    const bandObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
+            //compact/stacked layouts don't use the zoom effect
+            if (compactLayoutQuery.matches) {
+                entry.target.classList.toggle('focused', entry.isIntersecting);
+                return;
+            }
             if (entry.isIntersecting) {
-                entry.target.classList.add('focused');
-            } else {
-                entry.target.classList.remove('focused');
+                setFocused(entry.target);
+            }
+            //stays focused until another card becomes focused, never a gap when none are focused
+        });
+    }, {
+        root: null,
+        rootMargin: "-49% 0px -49% 0px",
+        threshold: 0
+    });
+
+    //for grabbing the first focus so the first card lights up as soon as it's on screen
+    const entryObserver = new IntersectionObserver((entries) => {
+        if (compactLayoutQuery.matches) return;
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !currentFocused) {
+                setFocused(entry.target);
             }
         });
-    }, observerOptions);
+    }, {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0
+    });
 
     const cards = document.querySelectorAll('.project-card');
-    cards.forEach(card => observer.observe(card));
+    cards.forEach(card => {
+        bandObserver.observe(card);
+        entryObserver.observe(card);
+    });
 });
 
 // Scroll Snapping
