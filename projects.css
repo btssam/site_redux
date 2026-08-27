@@ -59,6 +59,13 @@
     }
 }
 
+/*Compact Desktop Windows*/
+@media (min-width: 1369px) and (max-width: 1799px) and (min-height: 501px) and (max-height: 950px) and (orientation: landscape) {
+    .project-card {
+        height: clamp(14rem, 30vh, 38rem);
+    }
+}
+
 /*Vertical Phones*/
 @media (max-width: 600px) and (orientation: portrait){
     .project-card,
@@ -127,6 +134,14 @@
 #first-project {
     margin-top: 10vh;
 }
+
+/*Compact Desktop Windows*/
+@media (min-width: 1369px) and (max-width: 1799px) and (min-height: 501px) and (max-height: 950px) and (orientation: landscape) {
+    #first-project {
+        margin-top: 13vh;
+    }
+}
+
 
 /*Vertical Phones*/
 @media (max-width: 600px) and (orientation: portrait) {
