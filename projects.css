@@ -303,7 +303,7 @@
 /*Large Monitor*/
 @media (min-width: 1800px) {
     .project-info h3 {
-        font-size: clamp(1.3rem, 3.8vh, 2.8rem);
+        font-size: clamp(1.2rem, 2.0vh, 2.8rem);
     }
 
     .project-info p {
@@ -314,11 +314,11 @@
 /*4K+ Monitor*/
 @media (min-width: 3400px) {
     .project-info h3 {
-        font-size: clamp(2.8rem, 7.5vh, 4.75rem);
+        font-size: clamp(1.2rem, 2.0vh, 4.75rem);
     }
 
     .project-info p {
-        font-size: clamp(0.7rem, 1.6vh, 1.75rem);
+        font-size: clamp(0.55rem, 1.3vh, 1.75rem);
     }
 }
 
@@ -331,7 +331,7 @@
         font-size: clamp(1.3rem, 3.2vh, 1.6rem);
     }
     .project-info p {
-        font-size: clamp(0.7rem, 1.4vh, 1.75rem);
+        font-size: clamp(0.7rem, 1.4vh, 1.5rem);
     }
 }
 
@@ -357,11 +357,11 @@
     }
 
     .project-info h3 {
-        font-size: clamp(1.6em, 3.7vh, 2.5em);
+        font-size: clamp(1.3rem, 3.7vh, 2.5rem);
     }
 
     .project-info p {
-        font-size: clamp(0.3rem, 2.9vh, 1.0rem);
+        font-size: clamp(0.7rem, 1.4vh, 0.9rem);
     }
 }
 
@@ -405,14 +405,21 @@
 /*Large Monitor*/
 @media (min-width: 1800px) {
     .button.project-button {
-        font-size: clamp(0.4rem, 1.2vh, 1.2rem);
+        font-size: clamp(0.3rem, 1.2vh, 1.2rem);
     }
 }
 
 /*4K+ Monitor*/
 @media (min-width: 3400px) {
     .button.project-button {
-        font-size: clamp(0.5rem, 1.3vh, 1.2rem);
+        font-size: clamp(0.3rem, 1.2vh, 1.2rem);
+    }
+}
+
+/*Compact Desktop Windows*/
+@media (min-width: 1369px) and (max-width: 1799px) and (min-height: 501px) and (max-height: 950px) and (orientation: landscape) {
+    .button.project-button {
+        font-size: clamp(0.5rem, 1.4vh, 0.7rem);
     }
 }
 

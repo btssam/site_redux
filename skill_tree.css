@@ -199,7 +199,7 @@
 /*Large Monitor*/
 @media (min-width: 1800px) {
     .talent-tree-container h1 {
-        font-size: clamp(1.3rem, 1.25vh, 2rem);
+        font-size: clamp(1.3rem, 3.25vh, 2rem);
     }
 }
 
@@ -411,7 +411,7 @@
 /*Large Monitor*/
 @media (min-width: 1800px) {
     .skill-points {
-        font-size: clamp(0.8rem, 1.4vh, 1.2rem);
+        font-size: clamp(0.6rem, 1.2vh, 1.2rem);
     }
 }
 
@@ -502,7 +502,7 @@
     .wow-tooltip {
         min-width: 38vw;
         max-width: 42vw;
-        font-size: clamp(1.5rem, 1.9vh, 1.7rem);
+        font-size: clamp(1.2rem, 1.7vh, 1.7rem);
     }
 }
 
@@ -512,7 +512,7 @@
         min-width: 49vw;
         max-width: 49vw;
         padding: 0.5vh 2vw;
-        font-size: clamp(0.85rem, 1vw, 2.25rem);
+        font-size: clamp(0.85rem, 1vw, 1.4rem);
     }
 }
 
@@ -595,31 +595,31 @@
 /*Large Monitor*/
 @media (min-width: 1800px) {
     .tooltip-title {
-        font-size: clamp(2rem, 2.5vh, 2.2rem);
+        font-size: clamp(1.5rem, 2.0vh, 2.2rem);
     }
 
     .tooltip-type,
     .tooltip-req {
-        font-size: clamp(1.1rem, 1.6vh, 1.3rem);
+        font-size: clamp(0.9rem, 1.4vh, 1.3rem);
     }
 }
 
 /*Vertical Phones */
 @media (max-width: 600px) and (orientation: portrait){
     .tooltip-title {
-        font-size: clamp(0.95rem, 3vw, 2.25rem);
+        font-size: clamp(0.95rem, 3vw, 1.7rem);
     }
 
     .tooltip-type,
     .tooltip-req {
-        font-size: clamp(0.7rem, 1.5vw, 2.25rem);
+        font-size: clamp(0.7rem, 1.5vw, 1.1rem);
     }
 }
 
 /*Landscape Phones*/
 @media (max-width: 1799px) and (max-height: 500px) and (orientation: landscape)  {
     .tooltip-title {
-        font-size: clamp(0.85rem, 1.75vw, 2rem);
+        font-size: clamp(0.85rem, 4vh, 2rem);
     }
 
     .tooltip-type,
