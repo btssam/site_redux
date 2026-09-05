@@ -275,8 +275,26 @@
     gap: 1vh;
     padding-bottom: 0.5vh;
 
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #A94F2A #131313;
+    scrollbar-gutter: stable;
 }
+
+.project-info::-webkit-scrollbar {
+    width: 6px;
+}
+
+.project-info::-webkit-scrollbar-track {
+    background: #252525;
+}
+
+.project-info::-webkit-scrollbar-thumb {
+    background-color: #A94F2A;
+    border-radius: 3px;
+}
+
 
 .project-info a {
     text-decoration: none;
