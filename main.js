@@ -368,6 +368,17 @@ window.addEventListener('wheel', (e) => {
         return;
     }
 
+    //if hovering over an internal scrollable container, let it scroll naturally first
+    const scrollable = e.target.closest('.about-text, .project-info');
+    if (scrollable) {
+        const isScrollingDown = e.deltaY > 0;
+        const canScrollDown = scrollable.scrollTop + scrollable.clientHeight < scrollable.scrollHeight - 1;
+        const canScrollUp = scrollable.scrollTop > 1;
+        if ((isScrollingDown && canScrollDown) || (!isScrollingDown && canScrollUp)) {
+            return; // let native wheel scroll the card content
+        }
+    }
+
     e.preventDefault();
     if (isAnimating) return;
     //scroll direction (1 for down, -1 for up)
