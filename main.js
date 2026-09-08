@@ -327,7 +327,7 @@ const compactLayoutQuery = window.matchMedia(
     "(min-width: 601px) and (max-width: 1450px) and (orientation: portrait)," +
     "(max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4)," +
     "(max-width: 1799px) and (max-height: 500px) and (orientation: landscape)," +
-    "(min-width: 768px) and (max-width: 1368px) and (orientation: landscape) and (min-height: 501px)"
+    "(min-width: 768px) and (max-width: 1199px) and (orientation: landscape) and (min-height: 501px)"
 );
 
 //Trackpad Detection Heuristic
@@ -372,7 +372,7 @@ window.addEventListener('wheel', (e) => {
     if (isAnimating) return;
     //scroll direction (1 for down, -1 for up)
     const direction = e.deltaY > 0 ? 1 : -1;
-    const sections = Array.from(document.querySelectorAll('.top-title-bar, #skills-tree, .project-card'));
+    const sections = Array.from(document.querySelectorAll('.top-title-bar, #skills-tree, .project-card:not(#last-project), .bottom-nav'));
 
     //find the currently active section
     let currentIndex = 0;
@@ -384,6 +384,8 @@ window.addEventListener('wheel', (e) => {
         if (sec.classList.contains('project-card')) {
             const elementCenter = rect.top + (rect.height / 2);
             distance = Math.abs(elementCenter - viewportCenter);
+        } else if (sec.classList.contains('bottom-nav')) {
+            distance = Math.abs(rect.bottom - window.innerHeight);
         } else {
             distance = Math.abs(rect.top);
         }
@@ -398,7 +400,8 @@ window.addEventListener('wheel', (e) => {
     if (nextIndex !== currentIndex) {
         isAnimating = true;
         const target = sections[nextIndex];
-        const alignMode = target.classList.contains('project-card') ? 'center' : 'start';
+        const alignMode = target.classList.contains('project-card') ? 'center' :
+                target.classList.contains('bottom-nav') ? 'end' : 'start';
         target.scrollIntoView({
             behavior: 'smooth',
             block: alignMode
