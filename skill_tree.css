@@ -506,6 +506,18 @@
     }
 }
 
+
+/*Compact Desktop Windows*/
+@media (min-width: 1200px) and (max-width: 1799px) and (min-height: 501px) and (max-height: 930px) and (orientation: landscape) {
+    .wow-tooltip {
+        min-width: 40vw;
+        max-width: 44vw;
+        font-size: clamp(1rem, 1.5vh, 1.5rem);
+    }
+    
+}
+
+
 /*Vertical Phones*/
 @media (max-width: 600px) and (orientation: portrait){
     .wow-tooltip {
