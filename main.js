@@ -357,6 +357,11 @@ function detectInputDevice(e) {
 }
 
 window.addEventListener('wheel', (e) => {
+    //allow ctrl+wheel (and meta+wheel) for browser zoom
+    if (e.ctrlKey || e.metaKey) {
+        return;
+    }
+
     //disable when the layout is in compact/stacked mode
     if (compactLayoutQuery.matches) {
         return;
