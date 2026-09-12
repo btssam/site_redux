@@ -12,7 +12,7 @@ const treeDatabase = {
                 desc: "Foundational principles of visual design, including composition, layout, and color theory.",
                 descLong: "I built my foundation in visual design through coursework in Digital Design Concepts during my Associate's program, learning to structure and communicate visual information clearly.",
                 points: "2/3",
-                pointClass: "partial",
+                pointClass: "proficient",
                 gridPos: "1 / 2"
             },
             {
@@ -25,7 +25,7 @@ const treeDatabase = {
                 desc: `Producing physical and digital drawings to explore visual concepts, capture forms, and establish proportions.`,
                 descLong: "I've sketched consistently for most of my life, and completed two courses during my Associate's program working in pencil, colored pencil, and graphite. My practice focuses on sketching from reference, capturing accurate form and proportion.",
                 points: "2/3",
-                pointClass: "partial",
+                pointClass: "proficient",
                 gridPos: "1 / 3"
             },
             //row2
@@ -52,7 +52,7 @@ const treeDatabase = {
                 desc: "Recording, editing, and implementing sound effects and music tracks.",
                 descLong: "I have a foundational understanding of music theory and some introductory experience with keyboards. I use software like Audacity and basic Digital Audio Workstations to edit existing audio tracks for implementation in-engine.",
                 points: "1/3",
-                pointClass: "partial",
+                pointClass: "familiar",
                 gridPos: "2 / 2"
             },
             {
@@ -65,7 +65,7 @@ const treeDatabase = {
                 desc: `Studying and capturing the human form through live observation and gesture studies.`,
                 descLong: "I completed a Drawing the Human Form course during my Associate's program, and have continued practicing independently through gesture studies and speed sketches to sharpen form and proportion.",
                 points: "2/3",
-                pointClass: "partial",
+                pointClass: "proficient",
                 gridPos: "2 / 4"
             },
             //row3
@@ -79,7 +79,7 @@ const treeDatabase = {
                 desc: "Modeling and sculpting three-dimensional digital objects and environments.",
                 descLong: "I use Blender for 3D modeling, having worked with it on and off for the past fifteen years through independent tutorials. I also built an understanding of 3D asset pipelines through a 3D Modeling for Game Design course using Maya during my Associate's degree.",
                 points: "2/3",
-                pointClass: "partial",
+                pointClass: "proficient",
                 gridPos: "3 / 2"
             },
             {
@@ -92,7 +92,7 @@ const treeDatabase = {
                 desc: "Creating two-dimensional digital graphics and modifying existing visual assets.",
                 descLong: "My focus in 2D digital art centers on modifying existing assets and creating functional graphics for games, since I typically source free assets for the majority of my personal projects. This hands-on work has given me a working familiarity with art pipelines and engine requirements.",
                 points: "1/3",
-                pointClass: "partial",
+                pointClass: "familiar",
                 gridPos: "3 / 3"
             },
             //row4
@@ -106,7 +106,7 @@ const treeDatabase = {
                 desc: "Unwrapping and mapping 3D models to apply 2D textures onto their surfaces.",
                 descLong: "I unwrap 3D models and arrange UV layouts for texturing, working through these pipeline tasks in Blender. I've also set up UV structures specifically for WebGL implementations.",
                 points: "2/3",
-                pointClass: "partial",
+                pointClass: "proficient",
                 gridPos: "4 / 2"
             },
             {
@@ -132,7 +132,7 @@ const treeDatabase = {
                 desc: "Creating scalable digital graphics and illustrations built from vector paths.",
                 descLong: "I learned the fundamentals of Inkscape and Adobe Illustrator through Digital Illustration & Animation coursework during my Associate's degree, gaining a working familiarity with vector-based workflows.",
                 points: "1/3",
-                pointClass: "partial",
+                pointClass: "familiar",
                 gridPos: "4 / 4"
             },
             //row5
@@ -146,7 +146,7 @@ const treeDatabase = {
                 desc: "Animating three-dimensional models and environments across timelines.",
                 descLong: "I have a foundational understanding of 3D animation from coursework in high school, including keyframing, timeline manipulation, and basic camera and lighting setup.",
                 points: "1/3",
-                pointClass: "partial",
+                pointClass: "familiar",
                 gridPos: "5 / 1"
             },
             {
@@ -159,7 +159,7 @@ const treeDatabase = {
                 desc: "Constructing digital skeletons and control structures to deform and animate models.",
                 descLong: "I've implemented 2D bone-based rigging and animation within the Godot engine, working with inverse kinematics to build functional control structures for character models.",
                 points: "1/3",
-                pointClass: "partial",
+                pointClass: "familiar",
                 gridPos: "5 / 2"
             },
             {
@@ -172,7 +172,7 @@ const treeDatabase = {
                 desc: "Creating movement and animated sequences using two-dimensional digital assets.",
                 descLong: "I completed Motion Graphics and digital animation coursework at Quinsigamond Community College, focusing on positional animation, moving and transforming existing assets over time, rather than traditional frame-by-frame drawing.",
                 points: "1/3",
-                pointClass: "partial",
+                pointClass: "familiar",
                 gridPos: "5 / 3"
             },
             //row6
@@ -244,7 +244,7 @@ const treeDatabase = {
                 desc: "Structuring interactive stories and applying world-building directly into game mechanics.",
                 descLong: "I've studied narrative design through independent courses and tutorials, and applied it practically by engineering interactive, branching narratives in Twine, blending story progression with conditional logic to shape player choice.",
                 points: "2/3",
-                pointClass: "partial",
+                pointClass: "proficient",
                 gridPos: "2 / 1"
             },
             {
@@ -270,7 +270,7 @@ const treeDatabase = {
                 desc: "Crafting playable environments that guide player movement, pace challenges, and support core mechanics.",
                 descLong: "My level design experience is primarily focused on 2D environments, where I build layouts that introduce mechanics progressively, guide player navigation, and control pacing.",
                 points: "2/3",
-                pointClass: "partial",
+                pointClass: "proficient",
                 gridPos: "2 / 3"
             },
             //row3
@@ -297,7 +297,7 @@ const treeDatabase = {
                 desc: "Designing mechanics, rulesets, and physical components for non-digital board, card, and roleplaying games.",
                 descLong: "I draft custom mechanics and build physical prototypes as analog design exercises. This work is grounded in experiencing running TTRPG campaigns and playing both casual and competitive TCGs, which gave me firsthand experience with how rule interactions actually play out at the table.",
                 points: "2/3",
-                pointClass: "partial",
+                pointClass: "proficient",
                 gridPos: "3 / 4"
             },
             //row4
@@ -339,7 +339,7 @@ const treeDatabase = {
                 desc: "Developing digital games in Unity, working within its component-based architecture.",
                 descLong: "I used Unity extensively during my Associate's program, working with its component-based architecture and UI implementation to script interactions and build functional digital environments.",
                 points: "2/3",
-                pointClass: "partial",
+                pointClass: "proficient",
                 gridPos: "6 / 1"
             },
             {
@@ -365,7 +365,7 @@ const treeDatabase = {
                 desc: "Developing digital games in Unreal Engine, working within its C++ based architecture.",
                 descLong: "I have a foundational familiarity with Unreal Engine, understanding its general structure and interface, along with academic experience in C++.",
                 points: "1/3",
-                pointClass: "partial",
+                pointClass: "familiar",
                 gridPos: "6 / 3"
             },
             {
@@ -421,7 +421,7 @@ const treeDatabase = {
                 desc: "How computer hardware and software interact at a low level, including memory management, CPU operations, and threading.",
                 descLong: "My understanding of computer architecture comes from academic coursework and personal study, and is currently in progress. I'm registered for Introduction to Machine Organization and Assembly Language, alongside several Electrical and Computer Engineering courses that build toward this foundation.",
                 points: "1/3",
-                pointClass: "partial",
+                pointClass: "familiar",
                 gridPos: "1 / 1"
             },
             {
@@ -488,7 +488,7 @@ const treeDatabase = {
                 desc: "The protocols and infrastructure that allow devices and systems to communicate across networks.",
                 descLong: "At Cisco, I worked directly with network infrastructure, engineering telemetry platforms that handled real-time data from approximately 2,500 routers. To supplement that enterprise experience with formal theory, I'm enrolled in a Computer Networks course, have read Cisco Networking Simplified, and am familiar with concepts like the OSI Model's layered structure.",
                 points: "2/3",
-                pointClass: "partial",
+                pointClass: "proficient",
                 gridPos: "3 / 1"
             },
             {
@@ -501,7 +501,7 @@ const treeDatabase = {
                 desc: "Using architectural frameworks to develop, maintain, and scale web applications and services.",
                 descLong: "My primary experience with web frameworks involves Django, which I utilized at Cisco to maintain deployment pipelines handling real-time router telemetry. I also have familiarity with React and AngularJS.",
                 points: "2/3",
-                pointClass: "partial",
+                pointClass: "proficient",
                 gridPos: "3 / 2"
             },
             {
@@ -528,7 +528,7 @@ const treeDatabase = {
                 desc: "Structuring, querying, and maintaining data storage systems for applications.",
                 descLong: "At Cisco, I worked directly with TimescaleDB, PostgreSQL, and Redis to support containerized infrastructure for router data visualization. I've also taken online coursework in SQL, and will be taking Database Systems at the university level to build on that foundation.",
                 points: "2/3",
-                pointClass: "partial",
+                pointClass: "proficient",
                 gridPos: "4 / 1"
             },
             {
@@ -541,7 +541,7 @@ const treeDatabase = {
                 desc: "Developing and integrating front-end interfaces with back-end infrastructure of software applications.",
                 descLong: "My work at Cisco required a full-stack understanding to keep deployments running end to end. I integrated back-end Django pipelines, databases, and message brokers to ensure front-end telemetry platforms functioned reliably.",
                 points: "2/3",
-                pointClass: "partial",
+                pointClass: "proficient",
                 gridPos: "4 / 2"
             },
             {
@@ -554,7 +554,7 @@ const treeDatabase = {
                 desc: "Intermediary software modules that route, translate, and manage real-time data streams between distributed applications.",
                 descLong: "To manage real-time router telemetry at Cisco, I worked with RabbitMQ and Kafka, which were essential for reliably processing data streams from approximately 2,500 routers without dropping telemetry payloads.",
                 points: "2/3",
-                pointClass: "partial",
+                pointClass: "proficient",
                 gridPos: "4 / 3"
             },
             //row5
@@ -595,7 +595,7 @@ const treeDatabase = {
                 desc: "Proficiency in navigating, configuring, and developing within major operating systems.",
                 descLong: "I'm comfortable developing and troubleshooting across Windows, macOS, and Linux/Unix environments, and used Unix professionally for deployment scripting at Cisco. I'll be taking a dedicated Operating Systems course in the future to deepen my theoretical understanding of these systems.",
                 points: "2/3",
-                pointClass: "partial",
+                pointClass: "proficient",
                 gridPos: "6 / 1"
             },
             {
@@ -608,7 +608,7 @@ const treeDatabase = {
                 desc: "Generating and rendering visual imagery through graphics APIs and applied mathematics.",
                 descLong: "I've built a foundation in computer graphics through coursework at WPI, applying matrix transformations in WebGL to render scenes. I've taken a Computer Graphics course to expand my knowledge of rendering techniques, with Computer Animation planned as a direct follow-up.",
                 points: "2/3",
-                pointClass: "partial",
+                pointClass: "proficient",
                 gridPos: "6 / 4"
             },
             //row7
@@ -622,7 +622,7 @@ const treeDatabase = {
                 desc: "Configuring, maintaining, and operating computer systems, servers, and automated protocols for distributed teams.",
                 descLong: "My system administration experience comes through software engineering and DevOps work, where I've set up and troubleshot servers and virtual machines in clustered environments. This included tasks like disk partitioning, network configuration, and authoring standard operating procedures to maintain system stability.",
                 points: "2/3",
-                pointClass: "partial",
+                pointClass: "proficient",
                 gridPos: "7 / 1"
             },
             {
@@ -648,7 +648,7 @@ const treeDatabase = {
                 desc: "The logic, algorithms, and models used to simulate decision-making or intelligent behavior in software.",
                 descLong: "My background in programming and game development gives me a foundation in the logic structures, state machines, and algorithmic decision-making that underpin AI. I'll be formalizing this next year with three dedicated courses: Machine Learning, Introduction to Artificial Intelligence, and Artificial Intelligence in Games.",
                 points: "1/3",
-                pointClass: "partial",
+                pointClass: "familiar",
                 gridPos: "7 / 3"
             },
         ],

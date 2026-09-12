@@ -6,6 +6,15 @@ const descEl = tooltip.querySelector('.tooltip-desc');
 const greenEl = tooltip.querySelector('.tooltip-green');
 const SVG_NS = 'http://www.w3.org/2000/svg';
 
+// when to disable scroll snapping / desktop layout behaviors i.e. compact windows that cant show all content in one screen
+const compactLayoutQuery = window.matchMedia(
+    "(max-width: 600px) and (orientation: portrait)," +
+    "(min-width: 601px) and (max-width: 1450px) and (orientation: portrait)," +
+    "(max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4)," +
+    "(max-width: 1799px) and (max-height: 500px) and (orientation: landscape)," +
+    "(min-width: 768px) and (max-width: 1299px) and (orientation: landscape) and (min-height: 501px)"
+);
+
 
 //
 //Build The Tree
@@ -96,8 +105,12 @@ function drawDynamicLines(treeKey, containerId) {
     if (!treeData || !treeData.connections || !container) return;
 
     const svgCanvas = container.querySelector('.talent-lines');
-    //clear old lines
+    const svgArrows = container.querySelector('.talent-arrows');
+    //clear old lines and arrows
     svgCanvas.querySelectorAll('.dynamic-connection').forEach(el => el.remove());
+    if (svgArrows) {
+        svgArrows.querySelectorAll('.dynamic-arrow').forEach(el => el.remove());
+    }
 
     //loop through every connection
     treeData.connections.forEach(link => {
@@ -134,6 +147,18 @@ function drawDynamicLines(treeKey, containerId) {
             line.classList.add('dynamic-connection');
             svgCanvas.appendChild(line);
 
+            if (svgArrows) {
+                const arrow = document.createElementNS(SVG_NS, 'line');
+                const stubX = finalX - (Math.cos(angle) * 0.1);
+                const stubY = finalY - (Math.sin(angle) * 0.1);
+                arrow.setAttribute('x1', String(stubX));
+                arrow.setAttribute('y1', String(stubY));
+                arrow.setAttribute('x2', String(finalX));
+                arrow.setAttribute('y2', String(finalY));
+                arrow.classList.add('dynamic-arrow');
+                svgArrows.appendChild(arrow);
+            }
+
         } else if (link.type?.includes('elbow')) {
             //push start point to the right edge of the source icon
             let startX_edge = startX + START_RADIUS;
@@ -159,6 +184,16 @@ function drawDynamicLines(treeKey, containerId) {
 
             path.classList.add('dynamic-connection');
             svgCanvas.appendChild(path);
+
+            if (svgArrows) {
+                const arrow = document.createElementNS(SVG_NS, 'line');
+                arrow.setAttribute('x1', String(finalX));
+                arrow.setAttribute('y1', String(finalY - 0.1));
+                arrow.setAttribute('x2', String(finalX));
+                arrow.setAttribute('y2', String(finalY));
+                arrow.classList.add('dynamic-arrow');
+                svgArrows.appendChild(arrow);
+            }
         }
     });
 }
@@ -168,52 +203,30 @@ buildTreeHTML('games', 'tree-games');
 buildTreeHTML('computers', 'tree-computers');
 
 //
-//Tree Carousel Logic
+//Tree Hover-Focus Logic
 //
+const treeContainers = document.querySelectorAll('.talent-tree-container');
+let currentFocusedTree = document.getElementById('tree-games');
 
-//array representing current positioning - left, center, right
-let carouselTrees = ['tree-arts', 'tree-games', 'tree-computers']
-let carouselAnimTimer;
-
-function updateCarouselUI() {
-    //grab elements based on the new positions
-    const leftEl = document.getElementById(carouselTrees[0]);
-    const centerEl = document.getElementById(carouselTrees[1]);
-    const rightEl = document.getElementById(carouselTrees[2]);
-
-    leftEl.className = 'talent-tree-container pos-left';
-    centerEl.className = 'talent-tree-container pos-center';
-    rightEl.className = 'talent-tree-container pos-right';
+function setFocusedTree(targetTree) {
+    if (!targetTree || currentFocusedTree === targetTree) return;
+    treeContainers.forEach(t => {
+        if (t === targetTree) {
+            t.classList.add('tree-focused');
+            t.classList.remove('tree-unfocused');
+        } else {
+            t.classList.remove('tree-focused');
+            t.classList.add('tree-unfocused');
+        }
+    });
+    currentFocusedTree = targetTree;
 }
 
-document.querySelectorAll('.talent-tree-container').forEach(tree => {
-    tree.addEventListener('click', (e) => {
-        const currentId = e.currentTarget.id;
-        const currentIndex = carouselTrees.indexOf(currentId);
-
-        if (currentIndex === 0 ) {
-            //left tree click. move to center
-            //pop removes the last item (right) unshift puts it at the front (left)
-            //rotates everything one step to the right
-            carouselTrees.unshift(carouselTrees.pop());
-        }else if (currentIndex === 2) {
-            //inverse of above
-            //shift removes the first item (left). push puts it at the end (right)
-            carouselTrees.push(carouselTrees.shift());
-        }else {
-            //middle tree clicked, do nothing
-            return;
+treeContainers.forEach(tree => {
+    tree.addEventListener('mouseenter', () => {
+        if (!compactLayoutQuery.matches) {
+            setFocusedTree(tree);
         }
-
-        updateCarouselUI();
-
-        // hide any visible tooltips and prevent any popping up during animation
-        // tooltip.classList.remove('visible');
-        document.body.classList.add('carousel-animating');
-        clearTimeout(carouselAnimTimer);
-        carouselAnimTimer = setTimeout(() => {
-            document.body.classList.remove('carousel-animating');
-        }, 500);
     });
 });
 
@@ -321,15 +334,6 @@ function releaseLock() {
     window.removeEventListener('scrollend', releaseLock);
 }
 
-// when to disable scroll snapping entirely i.e. compact windows that cant show all content in one screen
-const compactLayoutQuery = window.matchMedia(
-    "(max-width: 600px) and (orientation: portrait)," +
-    "(min-width: 601px) and (max-width: 1450px) and (orientation: portrait)," +
-    "(max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4)," +
-    "(max-width: 1799px) and (max-height: 500px) and (orientation: landscape)," +
-    "(min-width: 768px) and (max-width: 1199px) and (orientation: landscape) and (min-height: 501px)"
-);
-
 //Trackpad Detection Heuristic
 //mouse wheels send large, discrete deltas (~100-120). trackpads send small,
 //often fractional deltas in rapid bursts. we sample early events to classify,
@@ -422,7 +426,7 @@ window.addEventListener('wheel', (e) => {
 }, {passive: false});
 
 //Nav Link Scrolling. Needed custom for the project section specifically to work right.
-document.querySelectorAll('.nav-links a').forEach(anchor => {
+document.querySelectorAll('.nav-links a, .about-button').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         const targetId = this.getAttribute('href');
         if (targetId.startsWith('#')) {
