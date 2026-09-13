@@ -14,6 +14,7 @@ const compactLayoutQuery = window.matchMedia(
     "(max-width: 1799px) and (max-height: 500px) and (orientation: landscape)," +
     "(min-width: 768px) and (max-width: 1299px) and (orientation: landscape) and (min-height: 501px)"
 );
+const coarsePointerQuery = window.matchMedia('(pointer: coarse)');
 
 
 //
@@ -224,7 +225,7 @@ function setFocusedTree(targetTree) {
 
 treeContainers.forEach(tree => {
     tree.addEventListener('mouseenter', () => {
-        if (!compactLayoutQuery.matches) {
+        if (!coarsePointerQuery.matches) {
             setFocusedTree(tree);
         }
     });
