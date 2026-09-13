@@ -3,15 +3,15 @@
 /*1. Generic Monitor*/
 /*No @media tag - generic behavior*/
 /*2. 4K/TV*/
-/*@media (min-width: 1800px) and @media (min-width: 3400px) for ultra HD*/
+/*@media (min-width: 1700px) and @media (min-width: 3400px) for ultra HD*/
 /*3. Compact Desktop Windows*/
-/*@media (min-width: 1300px) and (max-width: 1799px) and (min-height: 501px) and (max-height: 930px) and (orientation: landscape) { */
+/*@media (min-width: 1300px) and (max-width: 1699px) and (min-height: 501px) and (max-height: 930px) and (orientation: landscape) { */
 /*4. Vertical Phones*/
 /*@media (max-width: 600px) and (orientation: portrait)*/
 /*5. Portrait Tablet/Monitors*/
 /*@media (min-width: 601px) and (max-width: 1450px) and (orientation: portrait)  */
 /*6. Landscape Phones*/
-/*@media (max-width: 1799px) and (max-height: 500px) and (orientation: landscape) */
+/*@media (max-width: 1699px) and (max-height: 500px) and (orientation: landscape) */
 /*7. Landscape Tablets*/
 /*@media (min-width: 768px) and (max-width: 1299px) and (orientation: landscape) and (min-height: 501px) */
 /*8. Square Tablets/Foldable Phone*/
@@ -64,9 +64,9 @@ strong {
 }
 
 /*Large Monitor*/
-@media (min-width: 1800px) {
+@media (min-width: 1700px) {
     .content-section {
-        max-width: clamp(1800px, 75vw, 2560px);
+        max-width: clamp(1700px, 75vw, 2560px);
     }
 }
 
@@ -78,7 +78,7 @@ strong {
 }
 
 /*Compact Desktop Windows*/
-@media (min-width: 1300px) and (max-width: 1799px) and (min-height: 501px) and (max-height: 930px) and (orientation: landscape) {
+@media (min-width: 1300px) and (max-width: 1699px) and (min-height: 501px) and (max-height: 930px) and (orientation: landscape) {
     #skills-tree.content-section {
         max-width: clamp(1200px, 94vw, 1500px);
         padding-left: 1rem;
@@ -94,7 +94,7 @@ strong {
 }
 
 /*Landscape Phones*/
-@media (max-width: 1799px) and (max-height: 500px) and (orientation: landscape)  {
+@media (max-width: 1699px) and (max-height: 500px) and (orientation: landscape)  {
     .content-section {
         padding: 1vh 2rem 2vh 2rem;
     }
@@ -131,7 +131,7 @@ strong {
 }
 
 /*Large Monitor*/
-@media (min-width: 1800px) {
+@media (min-width: 1700px) {
     .section-title {
         margin-bottom: 3vh;
     }
@@ -149,7 +149,7 @@ strong {
 }
 
 /*Landscape Phones*/
-@media (max-width: 1799px) and (max-height: 500px) and (orientation: landscape)  {
+@media (max-width: 1699px) and (max-height: 500px) and (orientation: landscape)  {
     .section-title {
         font-size: clamp(1.25rem, 5vh, 2rem);
         margin-bottom: 1vh;
@@ -208,7 +208,7 @@ strong {
 }
 
 /*Landscape Phones*/
-@media (max-width: 1799px) and (max-height: 500px) and (orientation: landscape)  {
+@media (max-width: 1699px) and (max-height: 500px) and (orientation: landscape)  {
     .button {
         box-shadow: 0 2vh 0 #ccac00;
     }
