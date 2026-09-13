@@ -42,7 +42,8 @@
 (min-width: 601px) and (max-width: 1450px) and (orientation: portrait),
 (max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4),
 (max-width: 1699px) and (max-height: 500px) and (orientation: landscape),
-(min-width: 768px) and (max-width: 1299px) and (orientation: landscape) and (min-height: 501px) {
+(min-width: 768px) and (max-width: 999px) and (orientation: landscape) and (min-height: 501px),
+(min-width: 1000px) and (max-width: 1299px) and (orientation: landscape) and (min-height: 501px) and (pointer: coarse) {
     .project-card,
     .project-card.focused {
         opacity: 1;
@@ -60,9 +61,11 @@
 }
 
 /*Compact Desktop Windows*/
-@media (min-width: 1300px) and (max-width: 1699px) and (min-height: 501px) and (max-height: 930px) and (orientation: landscape) {
+@media (min-width: 1000px) and (max-width: 1699px) and (min-height: 501px) and (max-height: 930px) and (orientation: landscape) {
     .project-card {
-        height: clamp(15.5rem, 32vh, 38rem);
+        height: clamp(12rem, 28vh, 18rem);
+        max-width: 54vw;
+        padding: 0.8% 2.5% 1.4% 1%;
     }
 }
 
@@ -106,7 +109,8 @@
 }
 
 /*Landscape Tablets*/
-@media (min-width: 768px) and (max-width: 1299px) and (orientation: landscape) and (min-height: 501px){
+@media (min-width: 768px) and (max-width: 999px) and (orientation: landscape) and (min-height: 501px),
+(min-width: 1000px) and (max-width: 1299px) and (orientation: landscape) and (min-height: 501px) and (pointer: coarse) {
     .project-card,
     .project-card.focused {
         height: clamp(19rem, 45vh, 31rem);
@@ -136,7 +140,7 @@
 }
 
 /*Compact Desktop Windows*/
-@media (min-width: 1300px) and (max-width: 1699px) and (min-height: 501px) and (max-height: 930px) and (orientation: landscape) {
+@media (min-width: 1000px) and (max-width: 1699px) and (min-height: 501px) and (max-height: 930px) and (orientation: landscape) {
     #first-project {
         margin-top: 13vh;
     }
@@ -183,7 +187,8 @@
 }
 
 /*Landscape Tablets*/
-@media (min-width: 768px) and (max-width: 1299px) and (orientation: landscape) and (min-height: 501px)  {
+@media (min-width: 768px) and (max-width: 999px) and (orientation: landscape) and (min-height: 501px),
+(min-width: 1000px) and (max-width: 1299px) and (orientation: landscape) and (min-height: 501px) and (pointer: coarse) {
     #last-project {
         margin-bottom: 0;
     }
@@ -304,19 +309,8 @@
     display: flex;
     align-items: baseline;
     gap: clamp(0.4rem, 0.6vw, 0.8rem);
-    flex-wrap: nowrap;
-    white-space: nowrap;
-}
-
-/*Vertical Phones, Portrait Tablets, Landscape Phones, Square Tablets*/
-@media (max-width: 600px) and (orientation: portrait),
-(min-width: 601px) and (max-width: 1450px) and (orientation: portrait),
-(max-width: 1699px) and (max-height: 500px) and (orientation: landscape),
-(max-width: 900px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
-    .project-title-row {
-        flex-wrap: wrap;
-        white-space: normal;
-    }
+    flex-wrap: wrap;
+    white-space: normal;
 }
 
 .project-info h3 {
@@ -345,6 +339,14 @@
     font-size: clamp(0.6rem, 1.4vh, 1.1rem);
     line-height: 1.5;
     color: #ccc;
+}
+
+.project-info p:first-of-type {
+    margin-top: auto;
+}
+
+.project-info p:last-of-type {
+    margin-bottom: auto;
 }
 
 /*Large Monitor*/
@@ -378,18 +380,20 @@
 }
 
 /*Compact Desktop Windows*/
-@media (min-width: 1300px) and (max-width: 1699px) and (min-height: 501px) and (max-height: 930px) and (orientation: landscape) {
+@media (min-width: 1000px) and (max-width: 1699px) and (min-height: 501px) and (max-height: 930px) and (orientation: landscape) {
     .project-info {
-        gap: 0.75vh;
+        gap: 0.4vh;
+        padding-bottom: 0.8vh;
     }
     .project-info h3 {
-        font-size: clamp(1.3rem, 3.2vh, 1.6rem);
+        font-size: clamp(1.05rem, 2vh, 1.35rem);
     }
     .project-meta {
-        font-size: clamp(0.8rem, 1.6vh, 1.1rem);
+        font-size: clamp(0.68rem, 1.3vh, 0.88rem);
     }
     .project-info p {
-        font-size: clamp(0.7rem, 1.4vh, 1.5rem);
+        font-size: clamp(0.54rem, 1.18vh, 0.76rem);
+        line-height: 1.4;
     }
 }
 
@@ -413,7 +417,8 @@
 }
 
 /*Landscape Tablets*/
-@media (min-width: 768px) and (max-width: 1299px) and (orientation: landscape) and (min-height: 501px)  {
+@media (min-width: 768px) and (max-width: 999px) and (orientation: landscape) and (min-height: 501px),
+(min-width: 1000px) and (max-width: 1299px) and (orientation: landscape) and (min-height: 501px) and (pointer: coarse)  {
     .project-info {
         padding-bottom: 1.4vh;
     }
@@ -453,7 +458,7 @@
 
 .button.project-button {
     position: relative;
-    margin-top: auto;
+    margin-top: 0;
 
     padding: 1em 2.6em;
     font-size: clamp(0.3rem, 1.2vh, 0.6rem);
@@ -487,9 +492,10 @@
 }
 
 /*Compact Desktop Windows*/
-@media (min-width: 1300px) and (max-width: 1699px) and (min-height: 501px) and (max-height: 930px) and (orientation: landscape) {
+@media (min-width: 1000px) and (max-width: 1699px) and (min-height: 501px) and (max-height: 930px) and (orientation: landscape) {
     .button.project-button {
-        font-size: clamp(0.5rem, 1.4vh, 0.7rem);
+        font-size: clamp(0.48rem, 1.05vh, 0.62rem);
+        padding: clamp(0.32rem, 0.7vh, 0.45rem) clamp(0.7rem, 1.1vw, 1.1rem);
     }
 }
 
@@ -520,7 +526,8 @@
 }
 
 /*Landscape Tablets*/
-@media (min-width: 768px) and (max-width: 1299px) and (orientation: landscape) and (min-height: 501px){
+@media (min-width: 768px) and (max-width: 999px) and (orientation: landscape) and (min-height: 501px),
+(min-width: 1000px) and (max-width: 1299px) and (orientation: landscape) and (min-height: 501px) and (pointer: coarse) {
     .button.project-button {
         font-size: clamp(0.6rem, 1.8vh, 0.8rem);
         padding: clamp(0.4rem, 0.8vh, 0.6rem) clamp(0.9rem, 1.5vw, 1.4rem);
