@@ -12,7 +12,7 @@
 }
 
 /*Compact Desktop Windows*/
-@media (min-width: 1000px) and (max-width: 1699px) and (min-height: 501px) and (max-height: 930px) and (orientation: landscape) {
+@media (min-width: 1000px) and (max-width: 1699px) and (min-height: 501px) and (orientation: landscape) {
     #about.content-section {
         padding: 1vh 2rem 2vh 2rem;
     }
@@ -47,7 +47,7 @@
 }
 
 /*Compact Desktop Windows*/
-@media (min-width: 1000px) and (max-width: 1699px) and (min-height: 501px) and (max-height: 930px) and (orientation: landscape) {
+@media (min-width: 1000px) and (max-width: 1699px) and (min-height: 501px) and (orientation: landscape) {
     .about-container {
         height: clamp(22rem, 70vh, 46rem);
         max-height: clamp(22rem, 70vh, 46rem);
@@ -71,6 +71,8 @@
 /*Portrait Tablet/Monitors*/
 @media (min-width: 601px) and (max-width: 1450px) and (orientation: portrait) {
     .about-container {
+        flex-direction: column;
+        align-items: stretch;
         margin-bottom: 0;
         max-height: none;
         overflow: visible;
@@ -86,9 +88,10 @@
 }
 
 /*Landscape Tablets*/
-@media (min-width: 768px) and (max-width: 999px) and (orientation: landscape) and (min-height: 501px),
-(min-width: 1000px) and (max-width: 1299px) and (orientation: landscape) and (min-height: 501px) and (pointer: coarse) {
+@media (min-width: 601px) and (max-width: 999px) and (orientation: landscape) and (min-height: 501px),
+(min-width: 1000px) and (max-width: 1366px) and (orientation: landscape) and (min-height: 501px) and (pointer: coarse) {
     .about-container {
+        height: auto;
         max-height: none;
         overflow: visible;
     }
@@ -124,6 +127,16 @@
     }
 }
 
+/*Portrait Tablet/Monitors*/
+@media (min-width: 601px) and (max-width: 1450px) and (orientation: portrait) {
+    .image-placeholder {
+        flex: 0 0 auto;
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+    }
+}
+
 .image-placeholder img {
     width: 100%;
     height: auto;
@@ -133,7 +146,7 @@
 }
 
 /*Compact Desktop Windows*/
-@media (min-width: 1000px) and (max-width: 1699px) and (min-height: 501px) and (max-height: 930px) and (orientation: landscape) {
+@media (min-width: 1000px) and (max-width: 1699px) and (min-height: 501px) and (orientation: landscape) {
     .image-placeholder img {
         max-height: clamp(200px, 54vh, 380px);
         width: auto;
@@ -146,6 +159,17 @@
 @media (max-width: 600px) and (orientation: portrait){
     .image-placeholder img {
         max-height: 75vh;
+    }
+}
+
+/*Portrait Tablet/Monitors*/
+@media (min-width: 601px) and (max-width: 1450px) and (orientation: portrait) {
+    .image-placeholder img {
+        max-height: clamp(260px, 38vh, 460px);
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        margin: 0 auto;
     }
 }
 
@@ -183,7 +207,7 @@
 }
 
 /*Compact Desktop Windows*/
-@media (min-width: 1000px) and (max-width: 1699px) and (min-height: 501px) and (max-height: 930px) and (orientation: landscape) {
+@media (min-width: 1000px) and (max-width: 1699px) and (min-height: 501px) and (orientation: landscape) {
     .about-text {
         font-size: clamp(0.76rem, 2.22vh, 1.12rem);
         line-height: 1.48;
@@ -221,8 +245,8 @@
 }
 
 /*Landscape Tablets*/
-@media (min-width: 768px) and (max-width: 999px) and (orientation: landscape) and (min-height: 501px),
-(min-width: 1000px) and (max-width: 1299px) and (orientation: landscape) and (min-height: 501px) and (pointer: coarse) {
+@media (min-width: 601px) and (max-width: 999px) and (orientation: landscape) and (min-height: 501px),
+(min-width: 1000px) and (max-width: 1366px) and (orientation: landscape) and (min-height: 501px) and (pointer: coarse) {
     .about-text {
         max-height: none;
         overflow: visible;
@@ -276,7 +300,7 @@
 }
 
 /*Compact Desktop Windows*/
-@media (min-width: 1000px) and (max-width: 1699px) and (min-height: 501px) and (max-height: 930px) and (orientation: landscape) {
+@media (min-width: 1000px) and (max-width: 1699px) and (min-height: 501px) and (orientation: landscape) {
     .about-buttons-row {
         margin-top: 1.3vh;
         margin-bottom: 0.6vh;
@@ -296,8 +320,11 @@
 /*Portrait Tablet/Monitors*/
 @media (min-width: 601px) and (max-width: 1450px) and (orientation: portrait) {
     .about-buttons-row {
-        flex-direction: column;
-        gap: clamp(1rem, 2.2vh, 1.6rem);
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: clamp(0.8rem, 1.5vw, 1.4rem);
+        flex-wrap: wrap;
         padding: 1.5vh 0;
     }
 }
@@ -322,7 +349,7 @@
 }
 
 /*Compact Desktop Windows*/
-@media (min-width: 1000px) and (max-width: 1699px) and (min-height: 501px) and (max-height: 930px) and (orientation: landscape) {
+@media (min-width: 1000px) and (max-width: 1699px) and (min-height: 501px) and (orientation: landscape) {
     .button.about-button {
         font-size: clamp(0.74rem, 1.6vh, 1.0rem);
         padding: clamp(0.52rem, 1.3vh, 0.85rem) clamp(1.15rem, 1.8vw, 1.8rem);
