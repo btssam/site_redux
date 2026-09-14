@@ -432,7 +432,8 @@
     }
 
     .project-info p {
-        font-size: clamp(0.7rem, 1.4vh, 0.9rem);
+        font-size: clamp(0.95rem, 2vh, 1.15rem);
+        line-height: 1.55;
     }
 }
 
@@ -537,8 +538,8 @@
 @media (min-width: 601px) and (max-width: 999px) and (orientation: landscape) and (min-height: 501px),
 (min-width: 1000px) and (max-width: 1366px) and (orientation: landscape) and (min-height: 501px) and (pointer: coarse) {
     .button.project-button {
-        font-size: clamp(0.6rem, 1.8vh, 0.8rem);
-        padding: clamp(0.4rem, 0.8vh, 0.6rem) clamp(0.9rem, 1.5vw, 1.4rem);
+        font-size: clamp(0.75rem, 1.8vh, 0.95rem);
+        padding: clamp(0.45rem, 0.8vh, 0.65rem) clamp(1rem, 1.5vw, 1.5rem);
         box-shadow: 0 1vh 0 #ccac00;
     }
 
