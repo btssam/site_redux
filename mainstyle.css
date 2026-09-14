@@ -92,12 +92,25 @@ strong {
     .content-section {
         padding: 2lvh 1rem 4lvh 1rem;
     }
+    #skills-tree.content-section {
+        padding-bottom: 0;
+    }
+}
+
+/*Portrait Tablet/Monitors*/
+@media (min-width: 601px) and (max-width: 1450px) and (orientation: portrait)  {
+    #skills-tree.content-section {
+        padding-bottom: 0;
+    }
 }
 
 /*Landscape Phones*/
 @media (max-width: 1699px) and (max-height: 500px) and (orientation: landscape)  {
     .content-section {
         padding: 1lvh 2rem 2lvh 2rem;
+    }
+    #skills-tree.content-section {
+        padding-bottom: 0;
     }
 }
 
@@ -108,6 +121,7 @@ strong {
         max-width: 98vw;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
+        padding-bottom: 0;
     }
 }
 
@@ -115,6 +129,9 @@ strong {
 @media (max-width: 900px) and (max-height: 850px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     .content-section {
         padding: 2lvh 1rem 4lvh 1rem;
+    }
+    #skills-tree.content-section {
+        padding-bottom: 0;
     }
 }
 
