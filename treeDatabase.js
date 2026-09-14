@@ -170,7 +170,7 @@ const treeDatabase = {
                 type: "[1/3] - Familiar",
                 req: "Requires Raster Graphics and Rigging",
                 desc: "Creating movement and animated sequences using two-dimensional digital assets.",
-                descLong: "I completed Motion Graphics and digital animation coursework at Quinsigamond Community College, focusing on positional animation, moving and transforming existing assets over time, rather than traditional frame-by-frame drawing.",
+                descLong: "I completed Motion Graphics and digital animation coursework at Quinsigamond Community College, focusing on positional animation (moving and transforming existing assets over time) rather than traditional frame-by-frame drawing.",
                 points: "1/3",
                 pointClass: "familiar",
                 gridPos: "5 / 3"
@@ -198,7 +198,7 @@ const treeDatabase = {
                 type: "[3/3] - Advanced",
                 req: "Requires UI/UX Design",
                 desc: "Applying visual design and interface structure specifically to the web, across layout, navigation, and responsiveness.",
-                descLong: "I build and structure web interfaces with clean navigation hierarchies and logical element placement, this very site being a direct example, including its responsive design across desktop, tablet, and mobile devices.",
+                descLong: "I build and structure web interfaces with clean navigation hierarchies and logical element placement. This very site is a direct example, including its responsive design across desktop, tablet, and mobile devices.",
                 points: "3/3",
                 pointClass: "full",
                 gridPos: "7 / 2"
@@ -295,7 +295,7 @@ const treeDatabase = {
                 type: "[2/3] - Proficient",
                 req: "",
                 desc: "Designing mechanics, rulesets, and physical components for non-digital board, card, and roleplaying games.",
-                descLong: "I draft custom mechanics and build physical prototypes as analog design exercises. This work is grounded in experiencing running TTRPG campaigns and playing both casual and competitive TCGs, which gave me firsthand experience with how rule interactions actually play out at the table.",
+                descLong: "I draft custom mechanics and build physical prototypes as analog design exercises. This work is grounded in experience running TTRPG campaigns and playing both casual and competitive TCGs, which gave me firsthand experience with how rule interactions actually play out at the table.",
                 points: "2/3",
                 pointClass: "proficient",
                 gridPos: "3 / 4"
@@ -418,8 +418,8 @@ const treeDatabase = {
                 title: "Architecture",
                 type: "[1/3] - Familiar",
                 req: "",
-                desc: "How computer hardware and software interact at a low level, including memory management, CPU operations, and threading.",
-                descLong: "My understanding of computer architecture comes from academic coursework and personal study, and is currently in progress. I'm registered for Introduction to Machine Organization and Assembly Language, alongside several Electrical and Computer Engineering courses that build toward this foundation.",
+                desc: "The low-level interactions between computer hardware and software, including memory management, CPU operations, and threading.",
+                descLong: "My background in computer architecture is actively developing through academic coursework and personal study. I'm registered for Introduction to Machine Organization and Assembly Language, alongside several Electrical and Computer Engineering courses that build toward this foundation.",
                 points: "1/3",
                 pointClass: "familiar",
                 gridPos: "1 / 1"
@@ -620,7 +620,7 @@ const treeDatabase = {
                 type: "[2/3] - Proficient",
                 req: "Requires Operating Systems",
                 desc: "Configuring, maintaining, and operating computer systems, servers, and automated protocols for distributed teams.",
-                descLong: "My system administration experience comes through software engineering and DevOps work, where I've set up and troubleshot servers and virtual machines in clustered environments. This included tasks like disk partitioning, network configuration, and authoring standard operating procedures to maintain system stability.",
+                descLong: "My system administration experience comes through software engineering and Dev Ops work, where I've set up and troubleshot servers and virtual machines in clustered environments. This included tasks like disk partitioning, network configuration, and authoring standard operating procedures to maintain system stability.",
                 points: "2/3",
                 pointClass: "proficient",
                 gridPos: "7 / 1"
