@@ -4,17 +4,17 @@
 /**/
 /**/
 #about .section-title {
-    margin-bottom: 2vh;
+    margin-bottom: 2lvh;
 }
 
 #about.content-section {
-    padding-top: 1vh;
+    padding-top: 1lvh;
 }
 
 /*Compact Desktop Windows*/
 @media (min-width: 1000px) and (max-width: 1699px) and (min-height: 501px) and (orientation: landscape) {
     #about.content-section {
-        padding: 1vh 2rem 2vh 2rem;
+        padding: 1lvh 2rem 2lvh 2rem;
     }
 }
 
@@ -23,36 +23,36 @@
     gap: 3%;
     align-items: center;
     background-color: #252525;
-    padding: 3vh 3% 4vh 3%;
-    border-radius: 1vh;
-    box-shadow: 0 0 2vh rgba(0, 0, 0, 0.5);
-    margin-bottom: 4vh;
-    max-height: clamp(26rem, 78vh, 48rem);
+    padding: 3lvh 3% 4lvh 3%;
+    border-radius: 1lvh;
+    box-shadow: 0 0 2lvh rgba(0, 0, 0, 0.5);
+    margin-bottom: 4lvh;
+    max-height: clamp(26rem, 78lvh, 48rem);
     overflow: hidden;
 }
 
 /*Large Monitor*/
 @media (min-width: 1700px) {
     .about-container {
-        margin-bottom: 4vh;
-        max-height: clamp(30rem, 78vh, 65rem);
+        margin-bottom: 4lvh;
+        max-height: clamp(30rem, 78lvh, 65rem);
     }
 }
 
 /*4K+ Monitor*/
 @media (min-width: 3400px) {
     .about-container {
-        max-height: clamp(35rem, 78vh, 85rem);
+        max-height: clamp(35rem, 78lvh, 85rem);
     }
 }
 
 /*Compact Desktop Windows*/
 @media (min-width: 1000px) and (max-width: 1699px) and (min-height: 501px) and (orientation: landscape) {
     .about-container {
-        height: clamp(22rem, 70vh, 46rem);
-        max-height: clamp(22rem, 70vh, 46rem);
-        margin-bottom: 4vh;
-        padding: 2.5vh 3% 2.5vh 3%;
+        height: clamp(22rem, 70lvh, 46rem);
+        max-height: clamp(22rem, 70lvh, 46rem);
+        margin-bottom: 4lvh;
+        padding: 2.5lvh 3% 2.5lvh 3%;
     }
 }
 
@@ -62,7 +62,7 @@
         flex-direction: column;
         align-items: stretch;
         margin-bottom: 0;
-        padding: 2vh 3% 3vh 3%;
+        padding: 2lvh 3% 3lvh 3%;
         max-height: none;
         overflow: visible;
     }
@@ -108,14 +108,14 @@
 .image-placeholder {
     flex: 0 0 auto;
     display: flex;
-    max-width: 45vh;
+    max-width: 45lvh;
 }
 
 /*Large Monitor*/
 @media (min-width: 1700px) {
     .image-placeholder {
         flex: 0 0 auto;
-        max-width: 45vh;
+        max-width: 45lvh;
     }
 }
 
@@ -140,15 +140,15 @@
 .image-placeholder img {
     width: 100%;
     height: auto;
-    max-height: 65vh;
-    border-radius: 0.5vh;
-    box-shadow: 0 0 1vh rgba(0, 0, 0, 0.8);
+    max-height: 65lvh;
+    border-radius: 0.5lvh;
+    box-shadow: 0 0 1lvh rgba(0, 0, 0, 0.8);
 }
 
 /*Compact Desktop Windows*/
 @media (min-width: 1000px) and (max-width: 1699px) and (min-height: 501px) and (orientation: landscape) {
     .image-placeholder img {
-        max-height: clamp(200px, 54vh, 380px);
+        max-height: clamp(200px, 54lvh, 380px);
         width: auto;
         height: auto;
         max-width: 100%;
@@ -158,14 +158,14 @@
 /*Vertical Phones*/
 @media (max-width: 600px) and (orientation: portrait){
     .image-placeholder img {
-        max-height: 75vh;
+        max-height: 75lvh;
     }
 }
 
 /*Portrait Tablet/Monitors*/
 @media (min-width: 601px) and (max-width: 1450px) and (orientation: portrait) {
     .image-placeholder img {
-        max-height: clamp(260px, 38vh, 460px);
+        max-height: clamp(260px, 38lvh, 460px);
         width: auto;
         height: auto;
         max-width: 100%;
@@ -176,14 +176,14 @@
 .about-text {
     flex: 1;
     min-height: 0;
-    max-height: clamp(20rem, 70vh, 42rem);
+    max-height: clamp(20rem, 70lvh, 42rem);
     overflow-y: auto;
     overflow-x: hidden;
     scrollbar-width: thin;
     scrollbar-color: #A94F2A #131313;
     scrollbar-gutter: stable;
-    padding: 0 0.5vw 1.5vh 0;
-    font-size: clamp(0.94rem, 2.05vh, 1.21rem);
+    padding: 0 0.5vw 1.5lvh 0;
+    font-size: clamp(0.94rem, 2.05lvh, 1.21rem);
     line-height: 1.6;
     color: #ccc;
 }
@@ -191,35 +191,35 @@
 /*Large Monitor*/
 @media (min-width: 1700px) {
     .about-text {
-        font-size: clamp(1.15rem, 2.15vh, 1.65rem);
+        font-size: clamp(1.15rem, 2.15lvh, 1.65rem);
         line-height: 1.55;
-        max-height: clamp(28rem, 72vh, 65rem);
+        max-height: clamp(28rem, 72lvh, 65rem);
     }
 }
 
 /*4K+ Monitor*/
 @media (min-width: 3400px) {
     .about-text {
-        font-size: clamp(1.35rem, 1.9vh, 2.35rem);
+        font-size: clamp(1.35rem, 1.9lvh, 2.35rem);
         line-height: 1.55;
-        max-height: clamp(35rem, 72vh, 85rem);
+        max-height: clamp(35rem, 72lvh, 85rem);
     }
 }
 
 /*Compact Desktop Windows*/
 @media (min-width: 1000px) and (max-width: 1699px) and (min-height: 501px) and (orientation: landscape) {
     .about-text {
-        font-size: clamp(0.76rem, 2.22vh, 1.12rem);
+        font-size: clamp(0.76rem, 2.22lvh, 1.12rem);
         line-height: 1.48;
-        max-height: clamp(18rem, 66vh, 44rem);
-        padding: 0 0.5vw 1.2vh 0;
+        max-height: clamp(18rem, 66lvh, 44rem);
+        padding: 0 0.5vw 1.2lvh 0;
     }
 }
 
 /*Vertical Phones*/
 @media (max-width: 600px) and (orientation: portrait){
     .about-text {
-        font-size: clamp(1.05rem, 1.85vh, 1.21rem);
+        font-size: clamp(1.05rem, 1.85lvh, 1.21rem);
         max-height: none;
         overflow: visible;
         padding: 0;
@@ -295,15 +295,15 @@
     align-items: center;
     gap: clamp(0.6rem, 1.2vw, 1.2rem);
     flex-wrap: wrap;
-    margin-top: 1.5vh;
-    margin-bottom: 0.5vh;
+    margin-top: 1.5lvh;
+    margin-bottom: 0.5lvh;
 }
 
 /*Compact Desktop Windows*/
 @media (min-width: 1000px) and (max-width: 1699px) and (min-height: 501px) and (orientation: landscape) {
     .about-buttons-row {
-        margin-top: 1.3vh;
-        margin-bottom: 0.6vh;
+        margin-top: 1.3lvh;
+        margin-bottom: 0.6lvh;
         gap: clamp(0.55rem, 1.1vw, 1.1rem);
     }
 }
@@ -312,8 +312,8 @@
 @media (max-width: 600px) and (orientation: portrait) {
     .about-buttons-row {
         flex-direction: column;
-        gap: clamp(0.9rem, 2vh, 1.4rem);
-        padding: 1.5vh 0;
+        gap: clamp(0.9rem, 2lvh, 1.4rem);
+        padding: 1.5lvh 0;
     }
 }
 
@@ -325,7 +325,7 @@
         align-items: center;
         gap: clamp(0.8rem, 1.5vw, 1.4rem);
         flex-wrap: wrap;
-        padding: 1.5vh 0;
+        padding: 1.5lvh 0;
     }
 }
 
@@ -337,45 +337,45 @@
 /*Large Monitor*/
 @media (min-width: 1700px) {
     .button.about-button {
-        font-size: clamp(0.7rem, 1.45vh, 1.5rem);
+        font-size: clamp(0.7rem, 1.45lvh, 1.5rem);
     }
 }
 
 /*4K+ Monitor*/
 @media (min-width: 3400px) {
     .button.about-button {
-        font-size: clamp(0.7rem, 1.45vh, 2.4rem);
+        font-size: clamp(0.7rem, 1.45lvh, 2.4rem);
     }
 }
 
 /*Compact Desktop Windows*/
 @media (min-width: 1000px) and (max-width: 1699px) and (min-height: 501px) and (orientation: landscape) {
     .button.about-button {
-        font-size: clamp(0.74rem, 1.6vh, 1.0rem);
-        padding: clamp(0.52rem, 1.3vh, 0.85rem) clamp(1.15rem, 1.8vw, 1.8rem);
+        font-size: clamp(0.74rem, 1.6lvh, 1.0rem);
+        padding: clamp(0.52rem, 1.3lvh, 0.85rem) clamp(1.15rem, 1.8vw, 1.8rem);
     }
 }
 
 /*Vertical Phones*/
 @media (max-width: 600px) and (orientation: portrait) {
     .button.about-button {
-        font-size: clamp(0.8rem, 1.8vh, 1rem);
-        padding: clamp(0.7rem, 1.5vh, 1rem) clamp(1.5rem, 4vw, 2.2rem);
+        font-size: clamp(0.8rem, 1.8lvh, 1rem);
+        padding: clamp(0.7rem, 1.5lvh, 1rem) clamp(1.5rem, 4vw, 2.2rem);
     }
 }
 
 /*Portrait Tablet/Monitors*/
 @media (min-width: 601px) and (max-width: 1450px) and (orientation: portrait) {
     .button.about-button {
-        font-size: clamp(0.85rem, 1.6vh, 1.1rem);
-        padding: clamp(0.8rem, 1.6vh, 1.2rem) clamp(1.8rem, 3vw, 2.5rem);
+        font-size: clamp(0.85rem, 1.6lvh, 1.1rem);
+        padding: clamp(0.8rem, 1.6lvh, 1.2rem) clamp(1.8rem, 3vw, 2.5rem);
     }
 }
 
 /*Landscape Phones*/
 @media (max-width: 1699px) and (max-height: 500px) and (orientation: landscape)  {
     .button.about-button {
-        font-size: clamp(0.75rem, 1.5vh, 0.9rem);
-        padding: clamp(0.8rem, 1.5vh, 1.2rem) clamp(1.8rem, 3vw, 2.8rem);
+        font-size: clamp(0.75rem, 1.5lvh, 0.9rem);
+        padding: clamp(0.8rem, 1.5lvh, 1.2rem) clamp(1.8rem, 3vw, 2.8rem);
     }
 }

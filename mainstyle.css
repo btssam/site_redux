@@ -55,14 +55,14 @@ strong {
 /**/
 /**/
 .content-section {
-    padding: 3vh 2rem 6vh 2rem;
+    padding: 3lvh 2rem 6lvh 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 #skills-tree.content-section {
     max-width: clamp(1200px, 92vw, 1600px);
-    padding-bottom: clamp(6rem, 24vh, 22rem);
+    padding-bottom: clamp(6rem, 24lvh, 22rem);
 }
 
 /*Large Monitor*/
@@ -83,21 +83,21 @@ strong {
 @media (min-width: 1000px) and (max-width: 1699px) and (min-height: 501px) and (orientation: landscape) {
     #skills-tree.content-section {
         max-width: clamp(1200px, 94vw, 1500px);
-        padding: 2vh 1rem 26vh 1rem;
+        padding: 2lvh 1rem 26lvh 1rem;
     }
 }
 
 /*Vertical Phones*/
 @media (max-width: 600px) and (orientation: portrait) {
     .content-section {
-        padding: 2vh 1rem 4vh 1rem;
+        padding: 2lvh 1rem 4lvh 1rem;
     }
 }
 
 /*Landscape Phones*/
 @media (max-width: 1699px) and (max-height: 500px) and (orientation: landscape)  {
     .content-section {
-        padding: 1vh 2rem 2vh 2rem;
+        padding: 1lvh 2rem 2lvh 2rem;
     }
 }
 
@@ -114,16 +114,16 @@ strong {
 /*Square Tablets/Foldables*/
 @media (max-width: 900px) and (max-height: 850px) and (min-aspect-ratio: 4/5) and (max-aspect-ratio: 5/4) {
     .content-section {
-        padding: 2vh 1rem 4vh 1rem;
+        padding: 2lvh 1rem 4lvh 1rem;
     }
 }
 
 .section-title {
     text-align: center;
-    font-size: clamp(2rem, 4vh, 3rem);
-    margin-bottom: 5vh;
+    font-size: clamp(2rem, 4lvh, 3rem);
+    margin-bottom: 5lvh;
     border-bottom: 4px solid #333;
-    padding-bottom: 1vh;
+    padding-bottom: 1lvh;
     margin-top: 0;
 
     font-family: 'Inter', sans-serif;
@@ -135,7 +135,7 @@ strong {
 /*Large Monitor*/
 @media (min-width: 1700px) {
     .section-title {
-        margin-bottom: 3vh;
+        margin-bottom: 3lvh;
     }
 }
 
@@ -144,8 +144,8 @@ strong {
     .section-title {
         font-size: clamp(1.5rem, 6vw, 2.25rem);
         letter-spacing: 0.08em;
-        margin-bottom: 1vh;
-        padding-bottom: 0.5vh;
+        margin-bottom: 1lvh;
+        padding-bottom: 0.5lvh;
         /*margin-top: 0;*/
     }
 }
@@ -153,8 +153,8 @@ strong {
 /*Landscape Phones*/
 @media (max-width: 1699px) and (max-height: 500px) and (orientation: landscape)  {
     .section-title {
-        font-size: clamp(1.25rem, 5vh, 2rem);
-        margin-bottom: 1vh;
+        font-size: clamp(1.25rem, 5lvh, 2rem);
+        margin-bottom: 1lvh;
     }
 }
 
@@ -163,8 +163,8 @@ strong {
     .section-title {
         font-size: clamp(1.5rem, 6vw, 2.25rem);
         letter-spacing: 0.08em;
-        margin-bottom: 1vh;
-        padding-bottom: 0.5vh;
+        margin-bottom: 1lvh;
+        padding-bottom: 0.5lvh;
         /*margin-top: 0;*/
     }
 }
@@ -178,50 +178,50 @@ strong {
     display: inline-block;
     text-decoration: none;
     color: black;
-    padding: clamp(1rem, 2vh, 1.5rem) clamp(2rem, 4vw, 3rem);
+    padding: clamp(1rem, 2lvh, 1.5rem) clamp(2rem, 4vw, 3rem);
 
-    border-radius: 1vh;
+    border-radius: 1lvh;
 
     cursor: pointer;
     border: 0;
     background-color: #ffe855;
 
-    box-shadow: 0 1vh 0 #ccac00;
+    box-shadow: 0 1lvh 0 #ccac00;
 
     letter-spacing: 0.1rem;
     text-transform: uppercase;
-    font-size: clamp(0.9rem, 1.5vh, 1.1rem);
+    font-size: clamp(0.9rem, 1.5lvh, 1.1rem);
     transition: all 0.15s ease;
 }
 
 .button:hover {
     letter-spacing: 0.1rem;
     background-color: #FFEA00;
-    transform: translateY(0.4vh);
-    box-shadow: 0 0.6vh 0 #ccac00;
+    transform: translateY(0.4lvh);
+    box-shadow: 0 0.6lvh 0 #ccac00;
 }
 
 .button:active {
     letter-spacing: 0.1rem;
     background-color: #FFEA00;
     box-shadow: 0 0 0 #ccac00;
-    transform: translateY(1vh);
+    transform: translateY(1lvh);
     transition: all 0.05s ease-out;
 }
 
 /*Landscape Phones*/
 @media (max-width: 1699px) and (max-height: 500px) and (orientation: landscape)  {
     .button {
-        box-shadow: 0 2vh 0 #ccac00;
+        box-shadow: 0 2lvh 0 #ccac00;
     }
 
     .button:hover {
-        transform: translateY(0.8vh);
-        box-shadow: 0 1.2vh 0 #ccac00;
+        transform: translateY(0.8lvh);
+        box-shadow: 0 1.2lvh 0 #ccac00;
     }
 
     .button:active {
-        transform: translateY(2vh);
+        transform: translateY(2lvh);
         box-shadow: 0 0 0 #ccac00;
     }
 
