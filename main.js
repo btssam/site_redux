@@ -262,59 +262,102 @@ window.addEventListener('resize', () => {
         drawDynamicLines('games', 'tree-games');
         drawDynamicLines('computers', 'tree-computers');
 
+        ensureSingleCardFocused();
+
         //re-enable CSS transitions
         document.body.classList.remove('preload');
     }, 10); // 10ms after dragging stops feels instantaneous
 });
 
-// //zooming for projects subsection
-document.addEventListener("DOMContentLoaded", function () {
-    let currentFocused = null;
+//
+// Project Card Zoom & Focus Logic
+//
+const cards = document.querySelectorAll('.project-card');
+let currentFocused = null;
 
-    function setFocused(card) {
-        if (currentFocused === card) return;
-        if (currentFocused) currentFocused.classList.remove('focused');
-        card.classList.add('focused');
-        currentFocused = card;
-    }
-
-    const bandObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            //compact/stacked layouts don't use the zoom effect
-            if (compactLayoutQuery.matches) {
-                entry.target.classList.toggle('focused', entry.isIntersecting);
-                return;
-            }
-            if (entry.isIntersecting) {
-                setFocused(entry.target);
-            }
-            //stays focused until another card becomes focused, never a gap when none are focused
-        });
-    }, {
-        root: null,
-        rootMargin: "-49% 0px -49% 0px",
-        threshold: 0
+function setFocused(card) {
+    if (!card) return;
+    cards.forEach(c => {
+        if (c !== card) c.classList.remove('focused');
     });
+    card.classList.add('focused');
+    currentFocused = card;
+}
 
-    //for grabbing the first focus so the first card lights up as soon as it's on screen
-    const entryObserver = new IntersectionObserver((entries) => {
-        if (compactLayoutQuery.matches) return;
-        entries.forEach(entry => {
-            if (entry.isIntersecting && !currentFocused) {
-                setFocused(entry.target);
-            }
-        });
-    }, {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0
-    });
+function ensureSingleCardFocused() {
+    if (compactLayoutQuery.matches) return;
 
-    const cards = document.querySelectorAll('.project-card');
+    const viewportCenter = window.innerHeight / 2;
+    let closestCard = null;
+    let minDistance = Infinity;
+    let anyVisible = false;
+
     cards.forEach(card => {
-        bandObserver.observe(card);
-        entryObserver.observe(card);
+        const rect = card.getBoundingClientRect();
+        // Check if card is visible on screen
+        if (rect.bottom > 0 && rect.top < window.innerHeight) {
+            anyVisible = true;
+            const cardCenter = rect.top + rect.height / 2;
+            const distance = Math.abs(cardCenter - viewportCenter);
+            if (distance < minDistance) {
+                minDistance = distance;
+                closestCard = card;
+            }
+        }
     });
+
+    const focusedCards = Array.from(cards).filter(c => c.classList.contains('focused'));
+
+    // If project cards are visible on screen
+    if (anyVisible && closestCard) {
+        if (focusedCards.length !== 1 || focusedCards[0] !== closestCard) {
+            setFocused(closestCard);
+        }
+    } else if (focusedCards.length > 1) {
+        // If not visible on screen, but multiple cards somehow have .focused, keep only one
+        setFocused(focusedCards[0]);
+    }
+}
+
+const bandObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        //compact/stacked layouts don't use the zoom effect
+        if (compactLayoutQuery.matches) {
+            entry.target.classList.remove('focused');
+            return;
+        }
+        if (entry.isIntersecting) {
+            setFocused(entry.target);
+        }
+        //stays focused until another card becomes focused, never a gap when none are focused
+    });
+}, {
+    root: null,
+    rootMargin: "-49% 0px -49% 0px",
+    threshold: 0
+});
+
+//for grabbing the first focus so the first card lights up as soon as it's on screen
+const entryObserver = new IntersectionObserver((entries) => {
+    if (compactLayoutQuery.matches) return;
+    entries.forEach(entry => {
+        if (entry.isIntersecting && !currentFocused) {
+            setFocused(entry.target);
+        }
+    });
+}, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0
+});
+
+cards.forEach(card => {
+    bandObserver.observe(card);
+    entryObserver.observe(card);
+});
+
+compactLayoutQuery.addEventListener('change', () => {
+    ensureSingleCardFocused();
 });
 
 // Scroll Snapping
@@ -335,6 +378,18 @@ function releaseLock() {
     isAnimating = false;
     clearTimeout(scrollEndTimer);
     window.removeEventListener('scrollend', releaseLock);
+}
+
+function snapToTarget(target) {
+    if (!target) return;
+    isAnimating = true;
+    const alignMode = target.classList.contains('project-card') ? 'center' :
+            target.classList.contains('bottom-nav') ? 'end' : 'start';
+    target.scrollIntoView({
+        behavior: 'smooth',
+        block: alignMode
+    });
+    armScrollEndListener();
 }
 
 //Trackpad Detection Heuristic
@@ -421,17 +476,23 @@ window.addEventListener('wheel', (e) => {
     const nextIndex = Math.max(0, Math.min(sections.length - 1, currentIndex + direction));
     //trigger the scroll
     if (nextIndex !== currentIndex) {
-        isAnimating = true;
-        const target = sections[nextIndex];
-        const alignMode = target.classList.contains('project-card') ? 'center' :
-                target.classList.contains('bottom-nav') ? 'end' : 'start';
-        target.scrollIntoView({
-            behavior: 'smooth',
-            block: alignMode
-        });
-        armScrollEndListener();
+        snapToTarget(sections[nextIndex]);
     }
 }, {passive: false});
+
+// Clicking an unfocused project card scrolls it into focus
+const bottomNav = document.querySelector('.bottom-nav');
+
+cards.forEach(card => {
+    card.addEventListener('click', () => {
+        if (compactLayoutQuery.matches) return;
+        if (card.classList.contains('focused')) return;
+        if (isAnimating) return;
+
+        const target = (card.id === 'last-project') ? bottomNav : card;
+        snapToTarget(target);
+    });
+});
 
 //Nav Link Scrolling. Needed custom for the project section specifically to work right.
 document.querySelectorAll('.nav-links a, .about-button').forEach(anchor => {

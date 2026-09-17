@@ -23,11 +23,16 @@
 
     transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.5s ease;
     transform-origin: center center;
-    pointer-events: none;
+    pointer-events: auto;
+    cursor: pointer;
     height: clamp(12rem, 28lvh, 24rem);
 
     position: relative;
     z-index: 1;
+}
+
+.project-card:not(.focused) * {
+    pointer-events: none;
 }
 
 .project-card.focused {
@@ -35,6 +40,7 @@
     transform: scale(1.6);
     z-index: 10;
     pointer-events: auto;
+    cursor: default;
 }
 
 /*Compact/Stacked Viewports - Vertical Phones, Portrait Tablet/Monitors, Square Tablet/Foldable, Landscape Phones, and Landscape Tablets*/
@@ -49,7 +55,12 @@
         opacity: 1;
         transform: scale(1.0);
         pointer-events: auto;
+        cursor: default;
         transition: none;
+    }
+
+    .project-card:not(.focused) * {
+        pointer-events: auto;
     }
 }
 
