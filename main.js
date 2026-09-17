@@ -207,7 +207,7 @@ buildTreeHTML('computers', 'tree-computers');
 //Tree Hover-Focus Logic
 //
 const treeContainers = document.querySelectorAll('.talent-tree-container');
-let currentFocusedTree = document.getElementById('tree-arts');
+let currentFocusedTree = document.getElementById('tree-computers');
 
 function setFocusedTree(targetTree) {
     if (!targetTree || currentFocusedTree === targetTree) return;
