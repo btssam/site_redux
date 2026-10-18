@@ -342,7 +342,6 @@
     font-size: clamp(0.75rem, 1.4lvh, 1rem);
     font-weight: normal;
     letter-spacing: 0.04em;
-    text-transform: lowercase;
 }
 
 .project-info p {

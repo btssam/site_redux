@@ -255,7 +255,7 @@ const treeDatabase = {
                 type: "[3/3] - Advanced",
                 req: "Requires Game Design Fundamentals",
                 desc: "Creating and balancing the underlying rules, economies, and mathematical systems that govern gameplay.",
-                descLong: "I design and balance interrelated game systems, often blending genres and prioritizing unique mechanics. For my project Arena, I structured rule sets and interconnected systems to shape the game's flow and offer distinct tactical choices.",
+                descLong: "I design and balance interrelated game systems, often blending genres and prioritizing unique mechanics. For my project Super Arena, I structured rule sets and interconnected systems to shape the game's flow and offer distinct tactical choices.",
                 points: "3/3",
                 pointClass: "full",
                 gridPos: "2 / 2"
@@ -350,7 +350,7 @@ const treeDatabase = {
                 type: "[3/3] - Advanced",
                 req: "Requires Gameplay Programming",
                 desc: "Developing 2D and 3D games in Godot, using its node-based architecture and GDScript.",
-                descLong: "I have comprehensive knowledge of the Godot engine, having read through its entire official documentation. I use its node-based scene architecture and GDScript to construct clean hierarchies and build responsive mechanics natively.",
+                descLong: "I have comprehensive knowledge of the Godot engine, having read through its entire official documentation. I use its node-based scene architecture, custom Resources, and GDScript to construct clean hierarchies and build responsive mechanics natively.",
                 points: "3/3",
                 pointClass: "full",
                 gridPos: "6 / 2"
@@ -376,7 +376,7 @@ const treeDatabase = {
                 type: "[3/3] - Advanced",
                 req: "",
                 desc: "The production pipeline of scheduling, scoping, and coordinating a game from concept to completion.",
-                descLong: "I understand the game development pipeline, including how art and software workflows integrate across a multidisciplinary team. For my project Acolytes, a 2D tactical RPG deckbuilder, I will serve as producer, establishing the initial project scope and assigning production tasks to coordinate the team.",
+                descLong: "I understand the game development pipeline, including how art and software workflows integrate across a multidisciplinary team. For my project Acolytes, a 2D tactical RPG deckbuilder, I will serve as producer, establishing the initial project scope and assigning production tasks to coordinate the team. I have also provided production consulting on indie releases, helping developers scope viable MVPs from concept through launch.",
                 points: "3/3",
                 pointClass: "full",
                 gridPos: "6 / 4"
@@ -459,7 +459,7 @@ const treeDatabase = {
                 type: "[3/3] - Advanced",
                 req: "Requires Programming Concepts",
                 desc: "Proficiency in coding languages used across software engineering, scripting, web development, and game development.",
-                descLong: "I'm proficient in Python and Bash from engineering deployment pipelines at Cisco, and have used Java and C academically for algorithms and systems programming. I regularly pick up new languages as projects require, with a general preference for Python.",
+                descLong: "I'm proficient in Python and Bash from engineering deployment pipelines at Cisco, and have used Java, C, and C++ academically for algorithms and systems programming. I regularly pick up new languages as projects require, with a general preference for Python.",
                 points: "3/3",
                 pointClass: "full",
                 gridPos: "2 / 2"
